@@ -34,7 +34,7 @@ class Lab06 {
 
     // da completare
     int harmonicSum(int x) {
-        int result = 0;
+        double result = 0;
         int i = 1;
         while (result < x) {
             result += harmonicFunction(i);
@@ -44,11 +44,11 @@ class Lab06 {
     }
 
     // metodo usato da harmonicSum
-    private int harmonicFunction(int k) {
-        int result = 0;
+    private double harmonicFunction(int k) {
+        double result = 0;
         int i = 1;
         while (i <= k) {
-            result += (1 / i);
+            result += (1.0 / i);
             i++;
         }
         return result;
