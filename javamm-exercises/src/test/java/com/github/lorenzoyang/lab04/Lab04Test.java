@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-class Lab04Test {
+public class Lab04Test {
     private final Lab04 lab = new Lab04();
 
     @Test

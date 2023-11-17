@@ -1,6 +1,8 @@
 package com.github.lorenzoyang.lab04;
 
 class Lab04 {
+    // #inizio: javamm
+    
     boolean isSum(int a, int b, int c) {
         return (a == b + c) || (b == a + c) || (c == a + b);
     }
@@ -20,4 +22,6 @@ class Lab04 {
     boolean six(int a, int b) {
         return a == 6 || b == 6 || (a + b) == 6 || (a - b) == 6 || (b - a) == 6;
     }
+
+    // #fine: javamm
 }

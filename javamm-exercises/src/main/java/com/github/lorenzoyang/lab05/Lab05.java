@@ -1,6 +1,8 @@
 package com.github.lorenzoyang.lab05;
 
 class Lab05 {
+    // #inizio: javamm
+
     int loneSum(int a, int b, int c) {
         int sum = 0;
 
@@ -22,8 +24,8 @@ class Lab05 {
         return fixTeen(a) + fixTeen(b) + fixTeen(c);
     }
 
-    // metodo usato da noTeenSum
-    private int fixTeen(int n) {
+    // metodo privato usato da noTeenSum
+    int fixTeen(int n) {
         return (n >= 13 && n <= 19 && n != 15 && n != 16) ? 0 : n;
     }
 
@@ -31,8 +33,8 @@ class Lab05 {
         return round(a) + round(b) + round(c);
     }
 
-    // metodo usato da roundSum
-    private int round(int n) {
+    // metodo privato usato da roundSum
+    int round(int n) {
         int resto = n % 10;
         if (resto < 5) {
             return n - resto;
@@ -41,12 +43,12 @@ class Lab05 {
         }
     }
 
-    public boolean evenlySpaced(int a, int b, int c) {
+    boolean evenlySpaced(int a, int b, int c) {
         return (max(a, b, c) - mid(a, b, c)) == (mid(a, b, c) - min(a, b, c));
     }
 
-    // metodo usato da evenlySpaced
-    private int max(int a, int b, int c) {
+    // metodo privato usato da evenlySpaced
+    int max(int a, int b, int c) {
         if (a > b && a > c) {
             return a;
         } else if (b > c) {
@@ -56,8 +58,8 @@ class Lab05 {
         }
     }
 
-    // metodo usato da evenlySpaced
-    private int min(int a, int b, int c) {
+    // metodo privato usato da evenlySpaced
+    int min(int a, int b, int c) {
         if (a < b && a < c) {
             return a;
         } else if (b < c) {
@@ -67,8 +69,8 @@ class Lab05 {
         }
     }
 
-    // metodo usato da evenlySpaced
-    private int mid(int a, int b, int c) {
+    // metodo privato usato da evenlySpaced
+    int mid(int a, int b, int c) {
         if ((a > b && a < c) || (a < b && a > c)) {
             return a;
         } else if ((b > a && b < c) || (b < a && b > c)) {
@@ -77,4 +79,6 @@ class Lab05 {
             return c;
         }
     }
+    
+    // #fine: javamm
 }

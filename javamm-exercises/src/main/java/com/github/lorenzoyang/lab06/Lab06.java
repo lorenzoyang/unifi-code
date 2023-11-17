@@ -1,6 +1,8 @@
 package com.github.lorenzoyang.lab06;
 
 class Lab06 {
+    // #inizio: javamm
+
     int integerSquareRoot(int n) {
         int i = 0;
         while (i * i <= n) {
@@ -43,8 +45,8 @@ class Lab06 {
         return i - 1;
     }
 
-    // metodo usato da harmonicSum
-    private double harmonicFunction(int k) {
+    // metodo privato usato da harmonicSum
+    double harmonicFunction(int k) {
         double result = 0;
         int i = 1;
         while (i <= k) {
@@ -74,4 +76,6 @@ class Lab06 {
 
         return risultato;
     }
+
+    // fine: javamm
 }

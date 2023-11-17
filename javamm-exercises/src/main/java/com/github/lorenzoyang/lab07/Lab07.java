@@ -1,6 +1,8 @@
 package com.github.lorenzoyang.lab07;
 
 class Lab07 {
+    // #inizio: javamm
+
     int scalarProduct(int[] a, int[] b) {
         if (a.length > 0 && b.length > 0 && a.length == b.length) {
             int result = 0;
@@ -56,4 +58,6 @@ class Lab07 {
         }
         return true;
     }
+    
+    // #fine: javamm
 }
