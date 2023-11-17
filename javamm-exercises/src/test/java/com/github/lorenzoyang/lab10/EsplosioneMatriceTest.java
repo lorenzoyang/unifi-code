@@ -18,7 +18,7 @@ public class EsplosioneMatriceTest {
                 {1, 0, 0, 0, 0},
                 {0, 0, 0, 0, 1},
                 {1, 0, 0, 0, 1}};
-        assertArrayEquals(esplosioneMatrice.esplodiMatrice(input, r, c), output);
+        assertArrayEquals(output, esplosioneMatrice.esplodiMatrice(input, r, c));
     }
 
     @Test
@@ -32,7 +32,7 @@ public class EsplosioneMatriceTest {
                 {1, 1, 1, 0, 0},
                 {0, 0, 0, 0, 1},
                 {1, 0, 0, 0, 1}};
-        assertArrayEquals(esplosioneMatrice.esplodiMatrice(input, r, c), output);
+        assertArrayEquals(output, esplosioneMatrice.esplodiMatrice(input, r, c));
     }
 
     @Test
@@ -42,7 +42,7 @@ public class EsplosioneMatriceTest {
                 {1, 1}};
         int[][] output = new int[][]{{0, 0},
                 {0, 0}};
-        assertArrayEquals(esplosioneMatrice.esplodiMatrice(input, r, c), output);
+        assertArrayEquals(output, esplosioneMatrice.esplodiMatrice(input, r, c));
     }
 
     @Test
@@ -52,7 +52,7 @@ public class EsplosioneMatriceTest {
                 {1, 1}};
         int[][] output = new int[][]{{0, 0},
                 {0, 0}};
-        assertArrayEquals(esplosioneMatrice.esplodiMatrice(input, r, c), output);
+        assertArrayEquals(output, esplosioneMatrice.esplodiMatrice(input, r, c));
     }
 
     @Test
@@ -62,7 +62,7 @@ public class EsplosioneMatriceTest {
                 {1, 1}};
         int[][] output = new int[][]{{1, 0},
                 {1, 1}};
-        assertArrayEquals(esplosioneMatrice.esplodiMatrice(input, r, c), output);
+        assertArrayEquals(output, esplosioneMatrice.esplodiMatrice(input, r, c));
     }
 
     @Test
@@ -74,7 +74,7 @@ public class EsplosioneMatriceTest {
         int[][] output = new int[][]{{0, 0, 0},
                 {0, 0, 0},
                 {0, 0, 0}};
-        assertArrayEquals(esplosioneMatrice.esplodiMatrice(input, r, c), output);
+        assertArrayEquals(output, esplosioneMatrice.esplodiMatrice(input, r, c));
     }
 
     @Test
@@ -86,7 +86,7 @@ public class EsplosioneMatriceTest {
         int[][] output = new int[][]{{0, 0, 0},
                 {0, 0, 0},
                 {0, 0, 0}};
-        assertArrayEquals(esplosioneMatrice.esplodiMatrice(input, r, c), output);
+        assertArrayEquals(output, esplosioneMatrice.esplodiMatrice(input, r, c));
     }
 
     @Test
@@ -98,7 +98,7 @@ public class EsplosioneMatriceTest {
         int[][] output = new int[][]{{1, 0, 0},
                 {1, 0, 0},
                 {0, 0, 0}};
-        assertArrayEquals(esplosioneMatrice.esplodiMatrice(input, r, c), output);
+        assertArrayEquals(output, esplosioneMatrice.esplodiMatrice(input, r, c));
     }
 
     @Test
@@ -110,7 +110,7 @@ public class EsplosioneMatriceTest {
         int[][] output = new int[][]{{1, 0, 0},
                 {1, 1, 0},
                 {0, 0, 1}};
-        assertArrayEquals(esplosioneMatrice.esplodiMatrice(input, r, c), output);
+        assertArrayEquals(output, esplosioneMatrice.esplodiMatrice(input, r, c));
     }
 
     @Test
@@ -124,7 +124,7 @@ public class EsplosioneMatriceTest {
                 {0, 0, 0, 0},
                 {0, 0, 0, 0},
                 {0, 0, 0, 0}};
-        assertArrayEquals(esplosioneMatrice.esplodiMatrice(input, r, c), output);
+        assertArrayEquals(output, esplosioneMatrice.esplodiMatrice(input, r, c));
     }
 
     @Test
@@ -138,7 +138,7 @@ public class EsplosioneMatriceTest {
                 {0, 0, 0, 0},
                 {0, 0, 0, 0},
                 {0, 0, 0, 0}};
-        assertArrayEquals(esplosioneMatrice.esplodiMatrice(input, r, c), output);
+        assertArrayEquals(output, esplosioneMatrice.esplodiMatrice(input, r, c));
     }
 
     @Test
@@ -152,7 +152,7 @@ public class EsplosioneMatriceTest {
                 {0, 0, 0, 0},
                 {0, 0, 0, 0},
                 {0, 0, 0, 0}};
-        assertArrayEquals(esplosioneMatrice.esplodiMatrice(input, r, c), output);
+        assertArrayEquals(output, esplosioneMatrice.esplodiMatrice(input, r, c));
     }
 
     @Test
@@ -166,7 +166,7 @@ public class EsplosioneMatriceTest {
                 {1, 1, 0, 0},
                 {1, 1, 0, 0},
                 {0, 0, 0, 0}};
-        assertArrayEquals(esplosioneMatrice.esplodiMatrice(input, r, c), output);
+        assertArrayEquals(output, esplosioneMatrice.esplodiMatrice(input, r, c));
     }
 
     @Test
@@ -180,7 +180,7 @@ public class EsplosioneMatriceTest {
                 {1, 0, 0, 0},
                 {1, 0, 0, 0},
                 {1, 1, 0, 0}};
-        assertArrayEquals(esplosioneMatrice.esplodiMatrice(input, r, c), output);
+        assertArrayEquals(output, esplosioneMatrice.esplodiMatrice(input, r, c));
     }
 
     @Test
@@ -194,7 +194,7 @@ public class EsplosioneMatriceTest {
                 {1, 1, 0, 0},
                 {1, 1, 0, 0},
                 {1, 1, 0, 0}};
-        assertArrayEquals(esplosioneMatrice.esplodiMatrice(input, r, c), output);
+        assertArrayEquals(output, esplosioneMatrice.esplodiMatrice(input, r, c));
     }
 
     @Test
@@ -208,7 +208,7 @@ public class EsplosioneMatriceTest {
                 {0, 0, 0, 0},
                 {0, 0, 0, 0},
                 {0, 0, 0, 0}};
-        assertArrayEquals(esplosioneMatrice.esplodiMatrice(input, r, c), output);
+        assertArrayEquals(output, esplosioneMatrice.esplodiMatrice(input, r, c));
     }
 
     @Test
@@ -224,7 +224,7 @@ public class EsplosioneMatriceTest {
                 {0, 0, 0, 0, 0},
                 {0, 0, 0, 0, 0},
                 {0, 0, 0, 0, 0}};
-        assertArrayEquals(esplosioneMatrice.esplodiMatrice(input, r, c), output);
+        assertArrayEquals(output, esplosioneMatrice.esplodiMatrice(input, r, c));
     }
 
     @Test
@@ -240,7 +240,7 @@ public class EsplosioneMatriceTest {
                 {0, 0, 0, 0, 0},
                 {0, 0, 0, 0, 0},
                 {0, 0, 0, 0, 0}};
-        assertArrayEquals(esplosioneMatrice.esplodiMatrice(input, r, c), output);
+        assertArrayEquals(output, esplosioneMatrice.esplodiMatrice(input, r, c));
     }
 
     @Test
@@ -256,7 +256,7 @@ public class EsplosioneMatriceTest {
                 {0, 0, 0, 0, 0},
                 {0, 0, 0, 0, 0},
                 {0, 0, 0, 0, 0}};
-        assertArrayEquals(esplosioneMatrice.esplodiMatrice(input, r, c), output);
+        assertArrayEquals(output, esplosioneMatrice.esplodiMatrice(input, r, c));
     }
 
     @Test
@@ -272,7 +272,6 @@ public class EsplosioneMatriceTest {
                 {0, 0, 0, 0, 0},
                 {0, 0, 0, 0, 0},
                 {0, 0, 0, 0, 0}};
-        assertArrayEquals(esplosioneMatrice.esplodiMatrice(input, r, c), output);
+        assertArrayEquals(output, esplosioneMatrice.esplodiMatrice(input, r, c));
     }
-
 }
