@@ -1,0 +1,20 @@
+package com.github.lorenzoyang.lab09;
+
+class Accoppiata {
+    // #inizio: javamm
+
+    boolean accoppiata(char[] array) {
+        if (array.length % 2 != 0) return false;
+        return accoppiata(array, 0, array.length / 2);
+    }
+
+    // metodo privato usato da accoppiata(char[])
+    boolean accoppiata(char[] array, int i, int j) {
+        // oppure if j == array.length
+        if (i == array.length / 2) return true;
+        if (array[i] != array[j]) return false;
+        return accoppiata(array, i + 1, j + 1);
+    }
+
+    // #fine: javamm
+}
