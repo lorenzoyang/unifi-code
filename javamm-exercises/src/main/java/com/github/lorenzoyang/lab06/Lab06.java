@@ -34,7 +34,6 @@ class Lab06 {
         return -1;
     }
 
-    // da completare
     int harmonicSum(int x) {
         double result = 0;
         int i = 1;
@@ -56,7 +55,6 @@ class Lab06 {
         return result;
     }
 
-    // da completare
     long duplicateDigit(int n) {
         long risultato = 0;
 
@@ -66,14 +64,11 @@ class Lab06 {
         while (n > 0) {
             int cifra = n % 10;
 
-            // Duplica la cifra e aggiungi al risultato
-            risultato += fattore * cifra + fattore * cifra * 10;
-
+            risultato += (long) fattore * cifra + (long) fattore * cifra * 10;
             fattore *= 100;
 
             n /= 10;
         }
-
         return risultato;
     }
 

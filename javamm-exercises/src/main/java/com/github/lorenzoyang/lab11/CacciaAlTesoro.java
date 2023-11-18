@@ -9,9 +9,8 @@ class CacciaAlTesoro {
 
     // metodo privato usato da cacciaAlTesoro(char[][] m)
     boolean cacciaAlTesoro(char[][] m, int r, int c) {
-        if (m[r][c] == 'T') return false;
+        if (m[r][c] == 'T' || m[r][c] == '0') return false;
         if (m[r][c] == 'X') return true;
-        if (m[r][c] == '0') return false;
 
         char cella = m[r][c];
         m[r][c] = '0';
