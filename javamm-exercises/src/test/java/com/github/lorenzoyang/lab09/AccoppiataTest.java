@@ -1,24 +1,25 @@
 package com.github.lorenzoyang.lab09;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Assert;
+import org.junit.Test;
 
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class AccoppiataTest {
-    private final Accoppiata accoppiata = new Accoppiata();
+    private final Accoppiata test = new Accoppiata();
 
     @Test
     public void test1() {
+
         char[] A = new char[]{'m', 'a', 't', 'r', 'i', 'x', 'm', 'a', 't', 'r', 'i', 'x'};
-        assertTrue(accoppiata.accoppiata(A));
+        Assert.assertEquals(test.accoppiata(A), true);
+
     }
 
     @Test
     public void test2() {
 
         char[] A = new char[]{'m', 'a', 't', 'r', 'i', 'x'};
-        assertFalse(accoppiata.accoppiata(A));
+        Assert.assertEquals(test.accoppiata(A), false);
 
     }
 
@@ -26,7 +27,7 @@ public class AccoppiataTest {
     public void test3() {
 
         char[] A = new char[]{'m', 'm'};
-        assertTrue(accoppiata.accoppiata(A));
+        Assert.assertEquals(test.accoppiata(A), true);
 
     }
 
@@ -34,7 +35,7 @@ public class AccoppiataTest {
     public void test4() {
 
         char[] A = new char[]{'a'};
-        assertFalse(accoppiata.accoppiata(A));
+        Assert.assertEquals(test.accoppiata(A), false);
 
     }
 
@@ -42,7 +43,8 @@ public class AccoppiataTest {
     public void test5() {
 
         char[] A = new char[]{'m', 'm', 'm', 'x'};
-        assertFalse(accoppiata.accoppiata(A));
+        Assert.assertEquals(test.accoppiata(A), false);
 
     }
+
 }

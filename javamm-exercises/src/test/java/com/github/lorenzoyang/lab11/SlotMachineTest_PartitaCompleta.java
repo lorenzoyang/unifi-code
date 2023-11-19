@@ -1,15 +1,14 @@
 package com.github.lorenzoyang.lab11;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Assert;
+import org.junit.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
-public class PartitaCompletaTest {
+@SuppressWarnings("unused")
+public class SlotMachineTest_PartitaCompleta {
     private final SlotMachine test = new SlotMachine();
 
     @Test
     public void test1() {
-
         int[][] slot = new int[][]{{0, 0, 0, 1},
                 {0, 1, 1, 0},
                 {1, 1, 0, 1}};
@@ -19,7 +18,7 @@ public class PartitaCompletaTest {
                 {0, 0, 0, 0}};
         boolean ris = true;
 
-        assertEquals(test.partitaCompleta(slot, rotazioni, 3), ris);
+        Assert.assertEquals(test.partitaCompleta(slot, rotazioni, 3), ris);
     }
 
     @Test
@@ -33,7 +32,7 @@ public class PartitaCompletaTest {
                 {1, 1, 1, 1},
                 {0, 0, 0, 0}};
         boolean ris = true;
-        assertEquals(test.partitaCompleta(slot, rotazioni, 3), ris);
+        Assert.assertEquals(test.partitaCompleta(slot, rotazioni, 3), ris);
     }
 
     @Test
@@ -47,7 +46,7 @@ public class PartitaCompletaTest {
                 {1, 1, 1, 1},
                 {0, 0, 0, 1}};
         boolean ris = false;
-        assertEquals(test.partitaCompleta(slot, rotazioni, 3), ris);
+        Assert.assertEquals(test.partitaCompleta(slot, rotazioni, 3), ris);
     }
 
     @Test
@@ -69,7 +68,7 @@ public class PartitaCompletaTest {
                 {0, 1},
                 {1, 0}};
         boolean ris = true;
-        assertEquals(test.partitaCompleta(slot, rotazioni, 3), ris);
+        Assert.assertEquals(test.partitaCompleta(slot, rotazioni, 3), ris);
     }
 
     @Test
@@ -91,7 +90,7 @@ public class PartitaCompletaTest {
                 {0, 1},
                 {1, 0}};
         boolean ris = false;
-        assertEquals(test.partitaCompleta(slot, rotazioni, 3), ris);
+        Assert.assertEquals(test.partitaCompleta(slot, rotazioni, 3), ris);
     }
 
     @Test
@@ -113,7 +112,7 @@ public class PartitaCompletaTest {
                 {0},
                 {1}};
         boolean ris = true;
-        assertEquals(test.partitaCompleta(slot, rotazioni, 3), ris);
+        Assert.assertEquals(test.partitaCompleta(slot, rotazioni, 3), ris);
     }
 
     @Test
@@ -131,7 +130,7 @@ public class PartitaCompletaTest {
                 {0, 1, 0, 1, 0, 1},
                 {0, 0, 0, 0, 0, 0}};
         boolean ris = true;
-        assertEquals(test.partitaCompleta(slot, rotazioni, 3), ris);
+        Assert.assertEquals(test.partitaCompleta(slot, rotazioni, 3), ris);
     }
 
     @Test
@@ -149,7 +148,7 @@ public class PartitaCompletaTest {
                 {0, 1, 0, 1, 0, 1},
                 {0, 0, 0, 1, 0, 0}};
         boolean ris = false;
-        assertEquals(test.partitaCompleta(slot, rotazioni, 3), ris);
+        Assert.assertEquals(test.partitaCompleta(slot, rotazioni, 3), ris);
     }
 
     @Test
@@ -167,7 +166,7 @@ public class PartitaCompletaTest {
                 {0, 0, 0, 0, 0, 1},
                 {0, 0, 0, 1, 0, 1}};
         boolean ris = true;
-        assertEquals(test.partitaCompleta(slot, rotazioni, 3), ris);
+        Assert.assertEquals(test.partitaCompleta(slot, rotazioni, 3), ris);
     }
 
     @Test
@@ -185,7 +184,7 @@ public class PartitaCompletaTest {
                 {0, 0, 0, 0, 0, 1},
                 {0, 0, 0, 1, 0, 1}};
         boolean ris = true;
-        assertEquals(test.partitaCompleta(slot, rotazioni, 2), ris);
+        Assert.assertEquals(test.partitaCompleta(slot, rotazioni, 2), ris);
     }
 
     @Test
@@ -203,7 +202,7 @@ public class PartitaCompletaTest {
                 {0, 0, 0, 0, 0, 1},
                 {0, 0, 0, 1, 0, 1}};
         boolean ris = false;
-        assertEquals(test.partitaCompleta(slot, rotazioni, 1), ris);
+        Assert.assertEquals(test.partitaCompleta(slot, rotazioni, 1), ris);
     }
 
     @Test
@@ -221,7 +220,7 @@ public class PartitaCompletaTest {
                 {0, 0, 0, 0, 0, 0},
                 {0, 1, 0, 0, 0, 0}};
         boolean ris = true;
-        assertEquals(test.partitaCompleta(slot, rotazioni, 3), ris);
+        Assert.assertEquals(test.partitaCompleta(slot, rotazioni, 3), ris);
     }
 
     @Test
@@ -239,7 +238,7 @@ public class PartitaCompletaTest {
                 {0, 0, 0, 0, 0, 0},
                 {0, 1, 0, 0, 0, 0}};
         boolean ris = false;
-        assertEquals(test.partitaCompleta(slot, rotazioni, 2), ris);
+        Assert.assertEquals(test.partitaCompleta(slot, rotazioni, 2), ris);
     }
 
     @Test
@@ -257,6 +256,6 @@ public class PartitaCompletaTest {
                 {0, 0, 0, 0, 0, 0},
                 {0, 1, 0, 0, 0, 0}};
         boolean ris = false;
-        assertEquals(test.partitaCompleta(slot, rotazioni, 3), ris);
+        Assert.assertEquals(test.partitaCompleta(slot, rotazioni, 3), ris);
     }
 }

@@ -1,8 +1,7 @@
 package com.github.lorenzoyang.lab09;
 
-import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.assertArrayEquals;
+import org.junit.Assert;
+import org.junit.Test;
 
 public class AzzeraAdiacentiTest {
     private final AzzeraAdiacenti test = new AzzeraAdiacenti();
@@ -16,7 +15,7 @@ public class AzzeraAdiacentiTest {
         int[][] output = new int[][]{{0, 0, 0, 4},
                 {0, 6, 0, 8},
                 {0, 0, 0, 12}};
-        assertArrayEquals(test.azzeraAdiacenti(input, r, c), output);
+        Assert.assertArrayEquals(test.azzeraAdiacenti(input, r, c), output);
     }
 
     @Test
@@ -28,7 +27,7 @@ public class AzzeraAdiacentiTest {
         int[][] output = new int[][]{{0, 2, 0, 4},
                 {0, 0, 0, 8},
                 {0, 0, 0, 12}};
-        assertArrayEquals(test.azzeraAdiacenti(input, r, c), output);
+        Assert.assertArrayEquals(test.azzeraAdiacenti(input, r, c), output);
     }
 
     @Test
@@ -40,7 +39,7 @@ public class AzzeraAdiacentiTest {
         int[][] output = new int[][]{{0, 0, 3, 0},
                 {5, 0, 7, 0},
                 {0, 0, 11, 0}};
-        assertArrayEquals(test.azzeraAdiacenti(input, r, c), output);
+        Assert.assertArrayEquals(test.azzeraAdiacenti(input, r, c), output);
     }
 
     @Test
@@ -52,7 +51,7 @@ public class AzzeraAdiacentiTest {
         int[][] output = new int[][]{{1, 0, 3, 0},
                 {0, 0, 7, 0},
                 {0, 0, 11, 0}};
-        assertArrayEquals(test.azzeraAdiacenti(input, r, c), output);
+        Assert.assertArrayEquals(test.azzeraAdiacenti(input, r, c), output);
     }
 
     @Test
@@ -66,7 +65,7 @@ public class AzzeraAdiacentiTest {
                 {5, 0, 0, 0},
                 {9, 0, 11, 0},
                 {13, 0, 0, 0}};
-        assertArrayEquals(test.azzeraAdiacenti(input, r, c), output);
+        Assert.assertArrayEquals(test.azzeraAdiacenti(input, r, c), output);
     }
 
     @Test
@@ -80,7 +79,7 @@ public class AzzeraAdiacentiTest {
                 {5, 6, 7, 8},
                 {0, 10, 0, 0},
                 {0, 14, 0, 16}};
-        assertArrayEquals(test.azzeraAdiacenti(input, r, c), output);
+        Assert.assertArrayEquals(test.azzeraAdiacenti(input, r, c), output);
     }
 
     @Test
@@ -94,7 +93,7 @@ public class AzzeraAdiacentiTest {
                 {5, 0, 7, 0},
                 {0, 0, 11, 0},
                 {13, 14, 15, 16}};
-        assertArrayEquals(test.azzeraAdiacenti(input, r, c), output);
+        Assert.assertArrayEquals(test.azzeraAdiacenti(input, r, c), output);
     }
 
     @Test
@@ -108,7 +107,7 @@ public class AzzeraAdiacentiTest {
                 {0, 0, 0, 8},
                 {9, 10, 11, 12},
                 {0, 0, 0, 16}};
-        assertArrayEquals(test.azzeraAdiacenti(input, r, c), output);
+        Assert.assertArrayEquals(test.azzeraAdiacenti(input, r, c), output);
 
     }
 
@@ -123,7 +122,7 @@ public class AzzeraAdiacentiTest {
                 {5, 6, 7, 8},
                 {0, 0, 0, 12},
                 {0, 14, 0, 16}};
-        assertArrayEquals(test.azzeraAdiacenti(input, r, c), output);
+        Assert.assertArrayEquals(test.azzeraAdiacenti(input, r, c), output);
     }
 
     @Test
@@ -135,7 +134,7 @@ public class AzzeraAdiacentiTest {
         int[][] output = new int[][]{{1, 0, 0},
                 {0, 0, 0},
                 {0, 0, 0}};
-        assertArrayEquals(test.azzeraAdiacenti(input, r, c), output);
+        Assert.assertArrayEquals(test.azzeraAdiacenti(input, r, c), output);
     }
 
     @Test
@@ -147,7 +146,7 @@ public class AzzeraAdiacentiTest {
         int[][] output = new int[][]{{0, 0, 0},
                 {0, 5, 0},
                 {0, 0, 0}};
-        assertArrayEquals(test.azzeraAdiacenti(input, r, c), output);
+        Assert.assertArrayEquals(test.azzeraAdiacenti(input, r, c), output);
     }
 
     @Test
@@ -159,7 +158,7 @@ public class AzzeraAdiacentiTest {
         int[][] output = new int[][]{{0, 0, 0},
                 {0, 0, 0},
                 {0, 0, 9}};
-        assertArrayEquals(test.azzeraAdiacenti(input, r, c), output);
+        Assert.assertArrayEquals(test.azzeraAdiacenti(input, r, c), output);
     }
 
     @Test
@@ -171,7 +170,7 @@ public class AzzeraAdiacentiTest {
         int[][] output = new int[][]{{0, 0, 0},
                 {0, 0, 0},
                 {0, 8, 0}};
-        assertArrayEquals(test.azzeraAdiacenti(input, r, c), output);
+        Assert.assertArrayEquals(test.azzeraAdiacenti(input, r, c), output);
     }
 
     @Test
@@ -187,7 +186,7 @@ public class AzzeraAdiacentiTest {
                 {7, 8, 9},
                 {10, 11, 12},
                 {0, 0, 0}};
-        assertArrayEquals(test.azzeraAdiacenti(input, r, c), output);
+        Assert.assertArrayEquals(test.azzeraAdiacenti(input, r, c), output);
     }
 
     @Test
@@ -203,7 +202,7 @@ public class AzzeraAdiacentiTest {
                 {0, 0, 0},
                 {0, 0, 12},
                 {0, 0, 0}};
-        assertArrayEquals(test.azzeraAdiacenti(input, r, c), output);
+        Assert.assertArrayEquals(test.azzeraAdiacenti(input, r, c), output);
     }
 
     @Test
@@ -219,7 +218,7 @@ public class AzzeraAdiacentiTest {
                 {11, 12, 0, 0, 0},
                 {16, 17, 0, 19, 0},
                 {21, 22, 0, 0, 0}};
-        assertArrayEquals(test.azzeraAdiacenti(input, r, c), output);
+        Assert.assertArrayEquals(test.azzeraAdiacenti(input, r, c), output);
     }
 
     @Test
@@ -235,7 +234,7 @@ public class AzzeraAdiacentiTest {
                 {11, 12, 13, 14, 15},
                 {16, 17, 18, 19, 20},
                 {0, 22, 23, 0, 0}};
-        assertArrayEquals(test.azzeraAdiacenti(input, r, c), output);
+        Assert.assertArrayEquals(test.azzeraAdiacenti(input, r, c), output);
     }
 
     @Test
@@ -251,7 +250,7 @@ public class AzzeraAdiacentiTest {
                 {11, 12, 13, 14, 15},
                 {0, 0, 0, 19, 20},
                 {0, 22, 0, 24, 25}};
-        assertArrayEquals(test.azzeraAdiacenti(input, r, c), output);
+        Assert.assertArrayEquals(test.azzeraAdiacenti(input, r, c), output);
     }
 
     @Test
@@ -267,7 +266,7 @@ public class AzzeraAdiacentiTest {
                 {11, 12, 13, 14, 15},
                 {16, 17, 18, 19, 20},
                 {0, 0, 23, 24, 0}};
-        assertArrayEquals(test.azzeraAdiacenti(input, r, c), output);
+        Assert.assertArrayEquals(test.azzeraAdiacenti(input, r, c), output);
     }
 
     @Test
@@ -283,6 +282,6 @@ public class AzzeraAdiacentiTest {
                 {11, 12, 0, 0, 0},
                 {16, 17, 18, 19, 20},
                 {21, 22, 23, 24, 25}};
-        assertArrayEquals(test.azzeraAdiacenti(input, r, c), output);
+        Assert.assertArrayEquals(test.azzeraAdiacenti(input, r, c), output);
     }
 }

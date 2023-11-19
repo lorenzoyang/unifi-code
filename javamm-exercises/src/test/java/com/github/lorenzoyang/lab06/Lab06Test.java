@@ -1,9 +1,9 @@
 package com.github.lorenzoyang.lab06;
 
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.Assert.assertEquals;
 
 public class Lab06Test {
     private final Lab06 lab06 = new Lab06();

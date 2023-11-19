@@ -1,8 +1,8 @@
 package com.github.lorenzoyang.lab11;
 
-import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.Assert;
+import org.junit.Test;
 
 public class CacciaAlTesoroStandardTest {
     private final CacciaAlTesoro test = new CacciaAlTesoro();
@@ -14,7 +14,7 @@ public class CacciaAlTesoroStandardTest {
                 {'B', 'A', 'B', 'B'},
                 {'D', '?', 'A', 'X'}};
         boolean ris = true;
-        assertEquals(ris, test.cacciaAlTesoro(M));
+        Assert.assertEquals(test.cacciaAlTesoro(M), ris);
     }
 
     @Test
@@ -24,7 +24,7 @@ public class CacciaAlTesoroStandardTest {
                 {'B', 'A', 'B', 'B'},
                 {'D', 'S', 'A', 'X'}};
         boolean ris = false;
-        assertEquals(ris, test.cacciaAlTesoro(M));
+        Assert.assertEquals(test.cacciaAlTesoro(M), ris);
     }
 
     @Test
@@ -34,7 +34,7 @@ public class CacciaAlTesoroStandardTest {
                 {'B', 'A', 'B', 'B'},
                 {'D', '?', 'A', 'X'}};
         boolean ris = false;
-        assertEquals(ris, test.cacciaAlTesoro(M));
+        Assert.assertEquals(test.cacciaAlTesoro(M), ris);
     }
 
     @Test
@@ -44,7 +44,7 @@ public class CacciaAlTesoroStandardTest {
                 {'S', 'A', 'B', 'A'},
                 {'A', '?', 'A', 'X'}};
         boolean ris = true;
-        assertEquals(ris, test.cacciaAlTesoro(M));
+        Assert.assertEquals(test.cacciaAlTesoro(M), ris);
     }
 
     @Test
@@ -54,7 +54,7 @@ public class CacciaAlTesoroStandardTest {
                 {'T', '?', 'T', 'A'},
                 {'T', '?', 'T', 'X'}};
         boolean ris = false;
-        assertEquals(ris, test.cacciaAlTesoro(M));
+        Assert.assertEquals(test.cacciaAlTesoro(M), ris);
     }
 
     @Test
@@ -64,7 +64,7 @@ public class CacciaAlTesoroStandardTest {
                 {'T', '?', 'T', 'A'},
                 {'S', '?', 'T', 'X'}};
         boolean ris = true;
-        assertEquals(ris, test.cacciaAlTesoro(M));
+        Assert.assertEquals(test.cacciaAlTesoro(M), ris);
     }
 
     @Test
@@ -74,7 +74,7 @@ public class CacciaAlTesoroStandardTest {
                 {'T', '?', 'T', 'A'},
                 {'S', '?', 'T', 'X'}};
         boolean ris = true;
-        assertEquals(ris, test.cacciaAlTesoro(M));
+        Assert.assertEquals(test.cacciaAlTesoro(M), ris);
     }
 
     @Test
@@ -84,7 +84,7 @@ public class CacciaAlTesoroStandardTest {
                 {'B', 'D', 'B', 'B'},
                 {'D', 'B', 'B', 'X'}};
         boolean ris = true;
-        assertEquals(ris, test.cacciaAlTesoro(M));
+        Assert.assertEquals(test.cacciaAlTesoro(M), ris);
     }
 
     @Test
@@ -94,7 +94,7 @@ public class CacciaAlTesoroStandardTest {
                 {'?', '?', '?', '?'},
                 {'D', 'B', 'B', 'X'}};
         boolean ris = true;
-        assertEquals(ris, test.cacciaAlTesoro(M));
+        Assert.assertEquals(test.cacciaAlTesoro(M), ris);
     }
 
     @Test
@@ -104,7 +104,7 @@ public class CacciaAlTesoroStandardTest {
                 {'?', '?', '?', 'T'},
                 {'D', 'B', 'B', 'X'}};
         boolean ris = false;
-        assertEquals(ris, test.cacciaAlTesoro(M));
+        Assert.assertEquals(test.cacciaAlTesoro(M), ris);
     }
 
     @Test
@@ -115,7 +115,7 @@ public class CacciaAlTesoroStandardTest {
                 {'S', 'D', 'B', 'B'},
                 {'S', 'A', 'D', 'X'}};
         boolean ris = true;
-        assertEquals(ris, test.cacciaAlTesoro(M));
+        Assert.assertEquals(test.cacciaAlTesoro(M), ris);
     }
 
     @Test
@@ -126,17 +126,18 @@ public class CacciaAlTesoroStandardTest {
                 {'S', 'B', 'T', 'S'},
                 {'S', 'S', 'T', 'X'}};
         boolean ris = false;
-        assertEquals(ris, test.cacciaAlTesoro(M));
+        Assert.assertEquals(test.cacciaAlTesoro(M), ris);
     }
 
     @Test
     public void test13() {
+
         char[][] M = new char[][]{{'B', 'T', 'D', 'T'},
                 {'?', 'D', 'A', 'T'},
                 {'S', 'B', '?', 'S'},
                 {'S', 'S', 'T', 'X'}};
         boolean ris = true;
-        assertEquals(ris, test.cacciaAlTesoro(M));
+        Assert.assertEquals(test.cacciaAlTesoro(M), ris);
     }
 
     @Test
@@ -147,7 +148,7 @@ public class CacciaAlTesoroStandardTest {
                 {'S', 'B', 'T', 'A'},
                 {'S', 'D', 'D', 'X'}};
         boolean ris = true;
-        assertEquals(ris, test.cacciaAlTesoro(M));
+        Assert.assertEquals(test.cacciaAlTesoro(M), ris);
     }
 
     @Test
@@ -158,7 +159,7 @@ public class CacciaAlTesoroStandardTest {
                 {'S', 'B', 'T', 'A'},
                 {'S', 'D', 'D', 'X'}};
         boolean ris = false;
-        assertEquals(ris, test.cacciaAlTesoro(M));
+        Assert.assertEquals(test.cacciaAlTesoro(M), ris);
     }
 
     @Test
@@ -169,7 +170,7 @@ public class CacciaAlTesoroStandardTest {
                 {'S', 'B', 'T', 'A'},
                 {'S', 'D', 'T', 'X'}};
         boolean ris = false;
-        assertEquals(test.cacciaAlTesoro(M), ris);
+        Assert.assertEquals(test.cacciaAlTesoro(M), ris);
     }
 
     @Test
@@ -178,7 +179,7 @@ public class CacciaAlTesoroStandardTest {
         char[][] M = new char[][]{{'B', 'T'},
                 {'S', 'X'}};
         boolean ris = true;
-        assertEquals(test.cacciaAlTesoro(M), ris);
+        Assert.assertEquals(test.cacciaAlTesoro(M), ris);
     }
 
     @Test
@@ -191,7 +192,7 @@ public class CacciaAlTesoroStandardTest {
                 {'B', 'D'},
                 {'D', 'X'},};
         boolean ris = true;
-        assertEquals(test.cacciaAlTesoro(M), ris);
+        Assert.assertEquals(test.cacciaAlTesoro(M), ris);
     }
 
     @Test
@@ -204,7 +205,7 @@ public class CacciaAlTesoroStandardTest {
                 {'B', 'D'},
                 {'D', 'X'},};
         boolean ris = false;
-        assertEquals(test.cacciaAlTesoro(M), ris);
+        Assert.assertEquals(test.cacciaAlTesoro(M), ris);
     }
 
     @Test
@@ -212,7 +213,7 @@ public class CacciaAlTesoroStandardTest {
 
         char[][] M = new char[][]{{'D', 'D', 'D', 'X'}};
         boolean ris = true;
-        assertEquals(test.cacciaAlTesoro(M), ris);
+        Assert.assertEquals(test.cacciaAlTesoro(M), ris);
     }
 
     @Test
@@ -220,7 +221,7 @@ public class CacciaAlTesoroStandardTest {
 
         char[][] M = new char[][]{{'D', '?', 'B', 'X'}};
         boolean ris = false;
-        assertEquals(test.cacciaAlTesoro(M), ris);
+        Assert.assertEquals(test.cacciaAlTesoro(M), ris);
     }
 
     @Test
@@ -228,6 +229,7 @@ public class CacciaAlTesoroStandardTest {
 
         char[][] M = new char[][]{{'X'}};
         boolean ris = true;
-        assertEquals(test.cacciaAlTesoro(M), ris);
+        Assert.assertEquals(test.cacciaAlTesoro(M), ris);
     }
+
 }

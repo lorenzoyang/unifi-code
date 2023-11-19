@@ -1,8 +1,8 @@
 package com.github.lorenzoyang.lab05;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.Assert.*;
 
 public class Lab05Test {
     private final Lab05 lab05 = new Lab05();

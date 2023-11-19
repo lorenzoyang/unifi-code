@@ -1,21 +1,19 @@
 package com.github.lorenzoyang.lab11;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Assert;
+import org.junit.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
-public class ControllaVincitaTest {
+public class SlotMachineTest_ControllaVincita {
     private final SlotMachine test = new SlotMachine();
 
     @Test
     public void test1() {
 
-        int[][] slot = new int[][]{
-                {0, 0, 0, 1},
+        int[][] slot = new int[][]{{0, 0, 0, 1},
                 {0, 1, 1, 0},
                 {1, 1, 0, 1}};
         boolean ris = false;
-        assertEquals(ris, test.controllaVincita(slot));
+        Assert.assertEquals(test.controllaVincita(slot), ris);
     }
 
     @Test
@@ -25,7 +23,7 @@ public class ControllaVincitaTest {
                 {1, 1, 1, 1},
                 {1, 1, 0, 1}};
         boolean ris = true;
-        assertEquals(ris, test.controllaVincita(slot));
+        Assert.assertEquals(test.controllaVincita(slot), ris);
     }
 
 
@@ -40,7 +38,7 @@ public class ControllaVincitaTest {
                 {1, 0},
                 {1, 1}};
         boolean ris = true;
-        assertEquals(ris, test.controllaVincita(slot));
+        Assert.assertEquals(test.controllaVincita(slot), ris);
     }
 
     @Test
@@ -54,7 +52,7 @@ public class ControllaVincitaTest {
                 {1, 0},
                 {1, 1}};
         boolean ris = false;
-        assertEquals(ris, test.controllaVincita(slot));
+        Assert.assertEquals(test.controllaVincita(slot), ris);
     }
 
     @Test
@@ -68,7 +66,7 @@ public class ControllaVincitaTest {
                 {1},
                 {1}};
         boolean ris = false;
-        assertEquals(ris, test.controllaVincita(slot));
+        Assert.assertEquals(test.controllaVincita(slot), ris);
     }
 
     @Test
@@ -82,7 +80,7 @@ public class ControllaVincitaTest {
                 {1},
                 {1}};
         boolean ris = true;
-        assertEquals(ris, test.controllaVincita(slot));
+        Assert.assertEquals(test.controllaVincita(slot), ris);
     }
 
 
@@ -95,7 +93,7 @@ public class ControllaVincitaTest {
                 {0, 0, 0, 1, 0, 0},
                 {0, 0, 0, 0, 1, 0}};
         boolean ris = true;
-        assertEquals(ris, test.controllaVincita(slot));
+        Assert.assertEquals(test.controllaVincita(slot), ris);
     }
 
     @Test
@@ -107,6 +105,7 @@ public class ControllaVincitaTest {
                 {0, 0, 0, 1, 0, 0},
                 {0, 0, 0, 0, 1, 0}};
         boolean ris = false;
-        assertEquals(ris, test.controllaVincita(slot));
+        Assert.assertEquals(test.controllaVincita(slot), ris);
     }
+
 }
