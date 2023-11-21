@@ -9,9 +9,9 @@ class AzzeraAdiacenti {
 
         int[][] directions = {{-1, -1}, {1, 1}, {1, -1}, {-1, 1}, {0, -1}, {0, 1}, {-1, 0}, {1, 0}};
 
-        for (int[] direction : directions) {
-            int newR = (r + direction[0] + m.length) % m.length;
-            int newC = (c + direction[1] + m[0].length) % m[0].length;
+        for (int i = 0; i < directions.length; i++) {
+            int newR = (r + directions[i][0] + m.length) % m.length;
+            int newC = (c + directions[i][1] + m[0].length) % m[0].length;
             m[newR][newC] = 0;
         }
 
