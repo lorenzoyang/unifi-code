@@ -9,6 +9,7 @@ class TestBilanciamento {
         return testBilanciamento(r, 1, r.length - 2);
     }
 
+    // funzione privata ricorsiva usata da testBilanciamento(int[])
     boolean testBilanciamento(int[] r, int i, int j) {
         if (i >= j) return true;
         if (r[i] + r[j] != r[0] + r[r.length - 1]) return false;

@@ -44,7 +44,7 @@ class Lab06 {
         return i - 1;
     }
 
-    // metodo privato usato da harmonicSum
+    // funzione privata usata da harmonicSum
     double harmonicFunction(int k) {
         double result = 0;
         int i = 1;

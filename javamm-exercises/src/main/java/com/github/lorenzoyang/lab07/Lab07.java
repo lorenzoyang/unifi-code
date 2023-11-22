@@ -25,7 +25,6 @@ class Lab07 {
         return new int[0];
     }
 
-    // binary to decimal
     long decimal(int[] a) {
         long result = 0;
         for (int i = a.length - 1; i >= 0; i--) {
@@ -58,6 +57,6 @@ class Lab07 {
         }
         return true;
     }
-    
+
     // #fine: javamm
 }

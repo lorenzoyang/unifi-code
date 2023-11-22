@@ -8,7 +8,7 @@ class Accoppiata {
         return accoppiata(array, 0, array.length / 2);
     }
 
-    // metodo privato usato da accoppiata(char[])
+    // funzione privata usata da accoppiata
     boolean accoppiata(char[] array, int i, int j) {
         // oppure if j == array.length
         if (i == array.length / 2) return true;

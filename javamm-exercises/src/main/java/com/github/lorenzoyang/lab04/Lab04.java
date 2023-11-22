@@ -2,7 +2,7 @@ package com.github.lorenzoyang.lab04;
 
 class Lab04 {
     // #inizio: javamm
-    
+
     boolean isSum(int a, int b, int c) {
         return (a == b + c) || (b == a + c) || (c == a + b);
     }

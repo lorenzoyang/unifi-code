@@ -7,6 +7,7 @@ class LunghezzaMaxSeq {
         return lunghezzaMaxSeq(a, c, 0, 0, 0);
     }
 
+    // funzione privata ricorsiva usata da lunghezzaMaxSeq
     int lunghezzaMaxSeq(char[] a, char c, int index, int count, int max) {
         if (index == a.length) return max;
 
