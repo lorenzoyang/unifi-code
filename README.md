@@ -1,12 +1,10 @@
 # Unifi code
 
-Il progetto personale per tenere traccia del mio codice Java sviluppato durante gli anni di studi universitari, con un
-focus su tre parti principali.
+Questo è il mio progetto personale sviluppato per tenere traccia del codice Java che ho creato durante gli anni di studi universitari. Il focus del progetto è incentrato su tre parti principali.
 
 ## esercizi di Javamm
 
-Gli esercizi di [Javamm](https://github.com/LorenzoBettini/javamm) (Java procedurale). Ogni esercizio risolto è elencato
-nella lista seguente:
+Ho risolto una serie di esercizi in [Javamm](https://github.com/LorenzoBettini/javamm) (Java procedurale). e ognuno di essi è elencato di seguito:
 
 - [x] [laboratorio 04](https://github.com/lorenzoyang/unifi-code/blob/master/javamm-exercises/src/main/java/com/github/lorenzoyang/lab04)
 - [x] [laboratorio 05](https://github.com/lorenzoyang/unifi-code/blob/master/javamm-exercises/src/main/java/com/github/lorenzoyang/lab05)
@@ -21,8 +19,7 @@ nella lista seguente:
 
 ## algoritmi e struttura dati
 
-Una raccolta di implementazioni semplici in Java degli algoritmi e delle strutture dati che ho appreso durante il mio
-percorso universitario e personale.
+Questa sezione contiene implementazioni in Java di algoritmi e strutture dati che ho appreso durante il mio percorso universitario e personale. Attualmente, sto lavorando su:
 
 - [ ] Dynamic array
 - [ ] Linked list
@@ -34,4 +31,4 @@ percorso universitario e personale.
 
 ## esercizi di Java
 
-TODO
+In corso. 
