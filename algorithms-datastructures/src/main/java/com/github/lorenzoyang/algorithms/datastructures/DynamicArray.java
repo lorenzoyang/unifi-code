@@ -1,4 +1,4 @@
-package com.github.lorenzoyang.datastructures;
+package com.github.lorenzoyang.algorithms.datastructures;
 
 import java.util.Iterator;
 
