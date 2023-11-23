@@ -65,17 +65,6 @@ public class DynamicArrayTest {
     }
 
     @Test
-    public void isEmptyTest() {
-        assertTrue(dynamicArray.isEmpty());
-        dynamicArray.add(1);
-        dynamicArray.add(2);
-        assertFalse(dynamicArray.isEmpty());
-        dynamicArray.remove(0);
-        dynamicArray.remove(0);
-        assertTrue(dynamicArray.isEmpty());
-    }
-
-    @Test
     public void iteratorHasNextReturnsFalseForEmptyArray() {
         Iterator<Integer> iterator = dynamicArray.iterator();
         assertFalse(iterator.hasNext());

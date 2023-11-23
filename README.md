@@ -1,10 +1,12 @@
 # Unifi code
 
-Questo è il mio progetto personale sviluppato per tenere traccia del codice Java che ho creato durante gli anni di studi universitari. Il focus del progetto è incentrato su tre parti principali.
+Questo è il mio progetto personale sviluppato per tenere traccia del codice Java che ho creato durante gli anni di studi
+universitari. Il focus del progetto è incentrato su tre parti principali.
 
 ## esercizi di Javamm
 
-Ho risolto una serie di esercizi in [Javamm](https://github.com/LorenzoBettini/javamm) (Java procedurale). e ognuno di essi è elencato di seguito:
+Ho risolto una serie di esercizi in [Javamm](https://github.com/LorenzoBettini/javamm) (Java procedurale). e ognuno di
+essi è elencato di seguito:
 
 - [x] [laboratorio 04](https://github.com/lorenzoyang/unifi-code/blob/master/javamm-exercises/src/main/java/com/github/lorenzoyang/lab04)
 - [x] [laboratorio 05](https://github.com/lorenzoyang/unifi-code/blob/master/javamm-exercises/src/main/java/com/github/lorenzoyang/lab05)
@@ -19,10 +21,11 @@ Ho risolto una serie di esercizi in [Javamm](https://github.com/LorenzoBettini/j
 
 ## algoritmi e struttura dati
 
-Questa sezione contiene implementazioni in Java di algoritmi e strutture dati che ho appreso durante il mio percorso universitario e personale. Attualmente, sto lavorando su:
+Questa sezione contiene implementazioni in Java di algoritmi e strutture dati che ho appreso durante il mio percorso
+universitario e personale. Attualmente, sto lavorando su:
 
-- [ ] Dynamic array
-- [ ] Linked list
+- [ x ] [Dynamic array](./algorithms-datastructures/src/main/java/com/github/lorenzoyang/algorithms/datastructures/DynamicArray.java)
+- [ x ] Linked list
 - [ ] Linked stack
 - [ ] Linked queue
 - [ ] Array based queue
