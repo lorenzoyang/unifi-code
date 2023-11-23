@@ -7,12 +7,12 @@ class InteroNascosto {
         double nascosto = 0;
         int count = 0;
         while (a > 0) {
-            if (a % 10 == b % 10 || a % 10 == c % 10) {
-                nascosto += Math.pow(10, count) * (a % 10);
+            int cifraA = a % 10, cifraB = b % 10, cifraC = c % 10;
+            if (cifraA == cifraB || cifraA == cifraC) {
+                nascosto += Math.pow(10, count) * (cifraA);
                 count++;
-            } else if (b % 10 == c % 10) {
-                nascosto += Math.pow(10, count) * (b % 10);
-                count++;
+            } else if (cifraB == cifraC) {
+                nascosto += Math.pow(10, count++) * (cifraB);
             }
             a /= 10;
             b /= 10;

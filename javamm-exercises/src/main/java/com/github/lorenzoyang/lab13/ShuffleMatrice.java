@@ -5,26 +5,19 @@ class ShuffleMatrice {
 
     int[][] shuffleMatrice(int[][] t, int[][] s) {
         // t = matrice m x m
+        return shuffleMatrice(shuffleMatrice(t, s, true), s, false);
+    }
 
-        // shuffle verticale
+    int[][] shuffleMatrice(int[][] t, int[][] s, boolean verticale) {
         for (int i = 0; i < s.length; i++) {
             int[][] risultatoVerticale = new int[t.length][t.length];
             for (int j = 0; j < s[0].length; j++) {
                 for (int k = 0; k < t.length; k++) {
-                    risultatoVerticale[k][s[i][j]] = t[k][j];
+                    if (verticale) risultatoVerticale[k][s[i][j]] = t[k][j];
+                    else risultatoVerticale[s[i][j]][k] = t[j][k];
                 }
             }
             t = risultatoVerticale;
-        }
-        // shuffle orizzontale
-        for (int i = 0; i < s.length; i++) {
-            int[][] risultatoOrizzontale = new int[t.length][t.length];
-            for (int j = 0; j < s[0].length; j++) {
-                for (int k = 0; k < t.length; k++) {
-                    risultatoOrizzontale[s[i][j]][k] = t[j][k];
-                }
-            }
-            t = risultatoOrizzontale;
         }
         return t;
     }
