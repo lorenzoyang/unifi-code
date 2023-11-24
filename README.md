@@ -18,7 +18,7 @@ essi è elencato di seguito:
 - [x] [laboratorio 11](./javamm-exercises/src/main/java/com/github/lorenzoyang/lab11)
 - [x] [laboratorio 12](./javamm-exercises/src/main/java/com/github/lorenzoyang/lab12)
 - [x] [laboratorio 13](./javamm-exercises/src/main/java/com/github/lorenzoyang/lab13)
-- [ ] [laboratorio 14](./javamm-exercises/src/main/java/com/github/lorenzoyang/lab14)
+- [x] [laboratorio 14](./javamm-exercises/src/main/java/com/github/lorenzoyang/lab14)
 - [ ] [laboratorio 15](./javamm-exercises/src/main/java/com/github/lorenzoyang/lab15)
 
 ## algoritmi e struttura dati
