@@ -1,8 +1,6 @@
 package com.github.lorenzoyang.algorithms.datastructures;
 
-import java.util.Iterator;
-
-public class LinkedList<T> implements Iterable<T> {
+public class LinkedList<T> {
     private Node head;
     private Node tail;
     private int size;
@@ -70,28 +68,6 @@ public class LinkedList<T> implements Iterable<T> {
 
     public int size() {
         return size;
-    }
-
-    @Override
-    public Iterator<T> iterator() {
-        return new LinkedListIterator();
-    }
-
-    private class LinkedListIterator implements Iterator<T> {
-        private Node current = head;
-
-        @Override
-        public boolean hasNext() {
-            return current != null;
-        }
-
-        @Override
-        public T next() {
-            if (!hasNext()) throw new IllegalStateException();
-            var value = current.value;
-            current = current.next;
-            return value;
-        }
     }
 
     private class Node {

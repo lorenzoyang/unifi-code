@@ -1,8 +1,6 @@
 package com.github.lorenzoyang.algorithms.datastructures;
 
-import java.util.Iterator;
-
-public class DynamicArray<T> implements Iterable<T> {
+public class DynamicArray<T> {
     private T[] array;
     private int size;
 
@@ -62,27 +60,4 @@ public class DynamicArray<T> implements Iterable<T> {
     public int size() {
         return size;
     }
-
-    @Override
-    public Iterator<T> iterator() {
-        return new DynamicArrayIterator();
-    }
-
-    private class DynamicArrayIterator implements Iterator<T> {
-        private int index = 0;
-
-        @Override
-        public boolean hasNext() {
-            return index < size;
-        }
-
-        @Override
-        public T next() {
-            if (!hasNext()) {
-                throw new java.util.NoSuchElementException();
-            }
-            return array[index++];
-        }
-    }
-
 }

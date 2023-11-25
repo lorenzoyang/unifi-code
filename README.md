@@ -1,6 +1,8 @@
 # Unifi code
 
-Questo è il mio progetto personale sviluppato per tenere traccia del codice Java che ho creato durante gli anni di studi
+Questo è il mio progetto personale per tenere traccia del codice
+Java ([JDK 11](https://adoptium.net/temurin/releases/?variant=openjdk11)) che ho scritto durante gli anni di
+studi
 universitari. Il focus del progetto è incentrato su tre parti principali.
 
 ## esercizi di Javamm
@@ -19,20 +21,24 @@ essi è elencato di seguito:
 - [x] [laboratorio 12](./javamm-exercises/src/main/java/com/github/lorenzoyang/lab12)
 - [x] [laboratorio 13](./javamm-exercises/src/main/java/com/github/lorenzoyang/lab13)
 - [x] [laboratorio 14](./javamm-exercises/src/main/java/com/github/lorenzoyang/lab14)
-- [ ] [laboratorio 15](./javamm-exercises/src/main/java/com/github/lorenzoyang/lab15)
+- [x] [laboratorio 15](./javamm-exercises/src/main/java/com/github/lorenzoyang/lab15)
 
 ## algoritmi e struttura dati
 
 Questa sezione contiene implementazioni in Java di algoritmi e strutture dati che ho appreso durante il mio percorso
 universitario e personale. Attualmente, sto lavorando su:
 
-- [x] [Dynamic array](./algorithms-datastructures/src/main/java/com/github/lorenzoyang/algorithms/datastructures/DynamicArray.java)
-- [x] [Linked list](./algorithms-datastructures/src/main/java/com/github/lorenzoyang/algorithms/datastructures/LinkedList.java)
-- [ ] Linked stack
-- [ ] Linked queue
-- [ ] Array based queue
-- [ ] Priority queue
-- [ ] Binary search tree
+- Data structures
+    - [x] [Dynamic array](./algorithms-datastructures/src/main/java/com/github/lorenzoyang/algorithms/datastructures/DynamicArray.java)
+    - [x] [Linked list](./algorithms-datastructures/src/main/java/com/github/lorenzoyang/algorithms/datastructures/LinkedList.java)
+    - [ ] Linked stack
+    - [ ] Linked queue
+    - [ ] Array based queue
+    - [ ] Priority queue
+    - [ ] Binary search tree
+- Search algorithms
+    - [x] Sequential search
+    - [ ] Binary search
 
 ## esercizi di Java
 
