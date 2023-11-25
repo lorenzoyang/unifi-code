@@ -2,14 +2,52 @@ package com.github.lorenzoyang.lab15;
 
 class SpiralPath {
     int spiralPath(int n, int i) {
-        int valoreCentrale = (n / 2) * n + (n / 2) + 1;
-        while (i > 0) {
-            valoreCentrale -= n;
-            i--;
-            if (i == 0) break;
-
-            
+        int[][] matrice = new int[n][n];
+        int contatore = 1;
+        // costruisco la matrice
+        for (int j = 0; j < n; j++) {
+            for (int k = 0; k < n; k++) {
+                matrice[j][k] = contatore++;
+            }
         }
-        return valoreCentrale;
+
+        int riga = n / 2, colonna = n / 2;
+        int giro = 0;
+        int iTh = 1;
+        while (giro < n) {
+            // verso alto
+            for (int j = 0; j <= giro; j++) {
+                if (iTh == i) return matrice[riga][colonna];
+                riga--;
+                iTh++;
+            }
+            // verso sinistra
+            for (int u = 0; u <= giro; u++) {
+                if (iTh == i) return matrice[riga][colonna];
+                colonna--;
+                iTh++;
+            }
+            giro++;
+            // verso basso
+            for (int j = 0; j <= giro; j++) {
+                if (iTh == i) return matrice[riga][colonna];
+                riga++;
+                iTh++;
+            }
+            // verso destra
+            for (int j = 0; j <= giro; j++) {
+                if (iTh == i) return matrice[riga][colonna];
+                colonna++;
+                iTh++;
+            }
+            giro++;
+        }
+
+        for (int j = 0; j <= n; j++) {
+            if (iTh == i) return matrice[riga][colonna];
+            riga--;
+            iTh++;
+        }
+        return 0;
     }
 }
