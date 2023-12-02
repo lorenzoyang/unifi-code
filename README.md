@@ -22,6 +22,8 @@ essi è elencato di seguito:
 - [x] [laboratorio 13](./javamm-exercises/src/main/java/com/github/lorenzoyang/lab13)
 - [x] [laboratorio 14](./javamm-exercises/src/main/java/com/github/lorenzoyang/lab14)
 - [x] [laboratorio 15](./javamm-exercises/src/main/java/com/github/lorenzoyang/lab15)
+- [x] [laboratorio 16](./javamm-exercises/src/main/java/com/github/lorenzoyang/lab16)
+- [x] [laboratorio 17](./javamm-exercises/src/main/java/com/github/lorenzoyang/lab17)
 
 ## algoritmi e struttura dati
 
@@ -37,7 +39,7 @@ universitario e personale. Attualmente, sto lavorando su:
     - [ ] Priority queue
     - [ ] Binary search tree
 - Search algorithms
-    - [x] Sequential search
+    - [ ] Sequential search
     - [ ] Binary search
 
 ## esercizi di Java
