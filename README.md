@@ -27,8 +27,7 @@ essi è elencato di seguito:
 
 ## algoritmi e struttura dati
 
-Questa sezione contiene implementazioni in Java di algoritmi e strutture dati che ho appreso durante il mio percorso
-universitario e personale. Attualmente, sto lavorando su:
+Le mie implementazioni in Java di algoritmi e strutture dati. L'obiettivo principale qui è la semplicità. Ho cercato di rendere chiare e accessibili queste implementazioni, in modo che possano essere comprese facilmente anche da chi è alle prime armi con la programmazione.
 
 - Data structures
     - [x] [Dynamic array](./algorithms-datastructures/src/main/java/com/github/lorenzoyang/algorithms/datastructures/DynamicArray.java)
