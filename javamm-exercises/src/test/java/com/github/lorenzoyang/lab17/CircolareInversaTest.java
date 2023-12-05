@@ -5,7 +5,7 @@ import org.junit.Test;
 import static org.junit.Assert.assertTrue;
 
 public class CircolareInversaTest {
-    private final CircolareInversa test = new CircolareInversa();
+    private final Circolare test = new Circolare();
 
     @Test
     public void test1() {

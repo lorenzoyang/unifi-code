@@ -4,27 +4,18 @@ class InteroBilanciato {
     // #inizio: javamm
 
     boolean bilanciato(int n) {
-        int nCifre = contaCifre(n);
-        int left = n / (int) Math.pow(10, nCifre / 2);
-        int right = n % (int) Math.pow(10, nCifre / 2);
-        int lk = nCifre / 2 - 1;
+        int numCifre = contaCifre(n);
+        int a = (int) ((n / Math.pow(10, numCifre - 1))); // la prima cifra
+        int b = (int) ((n % Math.pow(10, 1))); // l'ultima cifra
+        if (numCifre == 2) return a == b;
 
-        int lv = left / (int) Math.pow(10, lk);
-        int rv = right % 10;
-        if (nCifre == 2) return lv == rv;
-        int somma = lv + rv;
-
-        left %= (int) Math.pow(10, lk--);
-        right /= 10;
-
-        boolean maiEntrato = true;
-        while (left > 0) {
-            maiEntrato = false;
-            if (somma != (left / (int) Math.pow(10, lk)) + (right % 10)) return false;
-            left %= (int) Math.pow(10, lk--);
-            right /= 10;
+        int somma = a + b;
+        for (int i = 1; i < numCifre / 2; i++) { // i = 1 perchè la prima cifra è già stata controllata
+            a = (int) ((n / Math.pow(10, (numCifre - i) - 1)) % 10);
+            b = (int) ((n / Math.pow(10, numCifre - (numCifre - i))) % 10);
+            if (a + b != somma) return false;
         }
-        return !maiEntrato || somma == (left + right);
+        return true;
     }
 
     // funzione privata

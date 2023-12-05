@@ -4,10 +4,16 @@ class Circolare {
     // #inizio: javamm
 
     boolean circolare(char[][] m) {
-        return circolare(m, 0, 0, 0);
+        return circolare(m, 0, 0, 0, false);
     }
 
-    boolean circolare(char[][] m, int r, int c, int n) {
+    // FACOLTATIVA
+    boolean circolareInversa(char[][] m) {
+        return circolare(m, 0, 0, 0, true);
+    }
+
+    // funzione privata ausiliaria per la ricorsione
+    boolean circolare(char[][] m, int r, int c, int n, boolean inversa) {
         char cella = m[r][c];
 
         if (r == 0 && c == 0 && n == m.length * m[0].length) return true;
@@ -16,18 +22,24 @@ class Circolare {
         m[r][c] = '0';
         n++; // il numero di celle visitate
 
+        int prossimaRiga = r, prossimaColonna = c;
         switch (cella) {
             case 'A':
-                return circolare(m, (r - 1 + m.length) % m.length, c, n);
+                prossimaRiga = inversa ? (r + 1) % m.length : (r - 1 + m.length) % m.length;
+                break;
             case 'B':
-                return circolare(m, (r + 1) % m.length, c, n);
+                prossimaRiga = inversa ? (r - 1 + m.length) % m.length : (r + 1) % m.length;
+                break;
             case 'S':
-                return circolare(m, r, (c - 1 + m[r].length) % m[r].length, n);
+                prossimaColonna = inversa ? (c + 1) % m[r].length : (c - 1 + m[r].length) % m[r].length;
+                break;
             case 'D':
-                return circolare(m, r, (c + 1) % m[r].length, n);
+                prossimaColonna = inversa ? (c - 1 + m[r].length) % m[r].length : (c + 1) % m[r].length;
+                break;
             default:
                 return false;
         }
+        return circolare(m, prossimaRiga, prossimaColonna, n, inversa);
     }
 
     // #fine: javamm
