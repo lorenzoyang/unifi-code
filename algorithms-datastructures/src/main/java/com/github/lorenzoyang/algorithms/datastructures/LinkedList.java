@@ -1,8 +1,20 @@
 package com.github.lorenzoyang.algorithms.datastructures;
 
 public class LinkedList<T> {
-    private Node head;
-    private Node tail;
+    // class Nodo che rappresenta un elemento della lista
+    private class Node {
+        private T value; // valore dell'elemento
+        private Node next; // puntatore all'elemento successivo
+
+        public Node(T value, Node next) {
+            this.value = value;
+            this.next = next;
+        }
+    }
+
+    // quando si ha un solo elemento, head e tail puntano allo stesso elemento
+    private Node head; // punta sempre al primo elemento della lista
+    private Node tail; // punta sempre all'ultimo elemento della lista
     private int size;
 
     public LinkedList() {
@@ -12,9 +24,11 @@ public class LinkedList<T> {
     }
 
     public T get(int index) {
-        if (index < 0 || index >= size) {
+        if (index < 0 || index >= size) { // se l'indicie è fuori dal range della lista, lancio un'eccezione
             throw new IndexOutOfBoundsException();
         }
+        // per evitare di modificare la vera testa della lista, creo un nuovo puntatore
+        // che punta alla testa
         var current = head;
         for (int i = 0; i < index; i++) {
             current = current.next;
@@ -34,7 +48,7 @@ public class LinkedList<T> {
     }
 
     public void add(T value) {
-        var node = new Node(value, null);
+        var node = new Node(value, null); // il nuovo nodo contenenete il valore
         if (head == null) {
             head = tail = node;
         } else {
@@ -48,17 +62,20 @@ public class LinkedList<T> {
         if (index < 0 || index >= size) {
             throw new IndexOutOfBoundsException();
         }
-        if (index == 0) {
+        if (index == 0) { // indicie 0 vuol dire rimuovere la testa
             head = head.next;
             if (head == null) {
                 tail = null;
             }
         } else {
             var current = head;
+            // altrimenti devo trovare l'elemento precedente a quello da rimuovere
             for (int i = 0; i < index - 1; i++) {
                 current = current.next;
             }
+            // il nodo successivo a quello da rimuovere diventa il successivo del nodo
             current.next = current.next.next;
+            // se il nodo da rimuovere è l'ultimo, aggiorno la coda
             if (current.next == null) {
                 tail = current;
             }
@@ -70,13 +87,4 @@ public class LinkedList<T> {
         return size;
     }
 
-    private class Node {
-        private T value;
-        private Node next;
-
-        public Node(T value, Node next) {
-            this.value = value;
-            this.next = next;
-        }
-    }
 }
