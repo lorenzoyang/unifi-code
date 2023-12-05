@@ -1,6 +1,7 @@
 package com.github.lorenzoyang.lab12;
 
 class LunghezzaMaxSeq {
+    // #stato: completato
     // #inizio: javamm
 
     int lunghezzaMaxSeq(char[] a, char c) {

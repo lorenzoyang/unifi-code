@@ -1,6 +1,7 @@
 package com.github.lorenzoyang.lab09;
 
 class Accoppiata {
+    // #stato: completato
     // #inizio: javamm
 
     boolean accoppiata(char[] array) {

@@ -1,6 +1,7 @@
 package com.github.lorenzoyang.lab14;
 
 class EspandiArray {
+    // #stato: completato
     // #inizio: javamm
 
     int[][] espandiArray(int[] v) {

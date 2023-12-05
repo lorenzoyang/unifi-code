@@ -1,6 +1,7 @@
 package com.github.lorenzoyang.lab07;
 
 class Lab07 {
+    // #stato: completato
     // #inizio: javamm
 
     int scalarProduct(int[] a, int[] b) {

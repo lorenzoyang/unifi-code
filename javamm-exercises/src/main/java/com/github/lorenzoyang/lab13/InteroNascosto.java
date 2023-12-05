@@ -1,6 +1,7 @@
 package com.github.lorenzoyang.lab13;
 
 class InteroNascosto {
+    // #stato: completato
     // #inizio: javamm
 
     int interoNascosto(int a, int b, int c) {

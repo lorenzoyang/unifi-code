@@ -1,8 +1,10 @@
 package com.github.lorenzoyang.lab15;
 
 class SpiralPath {
+    // #stato: completato
+    // #inizio: javamm
+
     int spiralPath(int n, int i) {
-        // #inizio: javamm
 
         int valoreMatrice = (n / 2) * n + (n / 2) + 1;
         int giro = 0;

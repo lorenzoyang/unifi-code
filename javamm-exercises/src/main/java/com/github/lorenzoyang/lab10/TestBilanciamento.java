@@ -1,6 +1,7 @@
 package com.github.lorenzoyang.lab10;
 
 class TestBilanciamento {
+    // #stato: completato
     // #inizio: javamm
 
     boolean testBilanciamento(int[] r) {

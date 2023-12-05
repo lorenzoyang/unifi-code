@@ -1,6 +1,7 @@
 package com.github.lorenzoyang.lab11;
 
 class SlotMachine {
+    // #stato: completato
     // #inizio: javamm
     
     int[][] ruota(int[][] s, int[] r) {

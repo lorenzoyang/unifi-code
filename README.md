@@ -10,20 +10,20 @@ universitari. Il focus del progetto è incentrato su tre parti principali.
 Ho risolto una serie di esercizi in [Javamm](https://github.com/LorenzoBettini/javamm) (Java procedurale). e ognuno di
 essi è elencato di seguito:
 
-- [x] [laboratorio 04](./javamm-exercises/src/main/java/com/github/lorenzoyang/lab04)
-- [x] [laboratorio 05](./javamm-exercises/src/main/java/com/github/lorenzoyang/lab05)
-- [x] [laboratorio 06](./javamm-exercises/src/main/java/com/github/lorenzoyang/lab06)
-- [x] [laboratorio 07](./javamm-exercises/src/main/java/com/github/lorenzoyang/lab07)
-- [x] [laboratorio 08](./javamm-exercises/src/main/java/com/github/lorenzoyang/lab08)
-- [x] [laboratorio 09](./javamm-exercises/src/main/java/com/github/lorenzoyang/lab09)
-- [x] [laboratorio 10](./javamm-exercises/src/main/java/com/github/lorenzoyang/lab10)
-- [x] [laboratorio 11](./javamm-exercises/src/main/java/com/github/lorenzoyang/lab11)
-- [x] [laboratorio 12](./javamm-exercises/src/main/java/com/github/lorenzoyang/lab12)
-- [x] [laboratorio 13](./javamm-exercises/src/main/java/com/github/lorenzoyang/lab13)
-- [x] [laboratorio 14](./javamm-exercises/src/main/java/com/github/lorenzoyang/lab14)
-- [x] [laboratorio 15](./javamm-exercises/src/main/java/com/github/lorenzoyang/lab15)
-- [x] [laboratorio 16](./javamm-exercises/src/main/java/com/github/lorenzoyang/lab16)
-- [x] [laboratorio 17](./javamm-exercises/src/main/java/com/github/lorenzoyang/lab17)
+- [laboratorio 04](./javamm-exercises/src/main/java/com/github/lorenzoyang/lab04)
+- [laboratorio 05](./javamm-exercises/src/main/java/com/github/lorenzoyang/lab05)
+- [laboratorio 06](./javamm-exercises/src/main/java/com/github/lorenzoyang/lab06)
+- [laboratorio 07](./javamm-exercises/src/main/java/com/github/lorenzoyang/lab07)
+- [laboratorio 08](./javamm-exercises/src/main/java/com/github/lorenzoyang/lab08)
+- [laboratorio 09](./javamm-exercises/src/main/java/com/github/lorenzoyang/lab09)
+- [laboratorio 10](./javamm-exercises/src/main/java/com/github/lorenzoyang/lab10)
+- [laboratorio 11](./javamm-exercises/src/main/java/com/github/lorenzoyang/lab11)
+- [laboratorio 12](./javamm-exercises/src/main/java/com/github/lorenzoyang/lab12)
+- [laboratorio 13](./javamm-exercises/src/main/java/com/github/lorenzoyang/lab13)
+- [laboratorio 14](./javamm-exercises/src/main/java/com/github/lorenzoyang/lab14)
+- [laboratorio 15](./javamm-exercises/src/main/java/com/github/lorenzoyang/lab15)
+- [laboratorio 16](./javamm-exercises/src/main/java/com/github/lorenzoyang/lab16)
+- [laboratorio 17](./javamm-exercises/src/main/java/com/github/lorenzoyang/lab17)
 
 ## algoritmi e struttura dati
 

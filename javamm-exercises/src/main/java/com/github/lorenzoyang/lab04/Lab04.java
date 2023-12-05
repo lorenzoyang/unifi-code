@@ -1,6 +1,7 @@
 package com.github.lorenzoyang.lab04;
 
 class Lab04 {
+    // #stato: completato
     // #inizio: javamm
 
     boolean isSum(int a, int b, int c) {

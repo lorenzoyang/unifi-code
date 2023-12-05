@@ -1,6 +1,7 @@
 package com.github.lorenzoyang.lab14;
 
 class VisitaSerpentina {
+    // #stato: completato
     // #inizio: javamm
 
     // il numero di righe e' pari
