@@ -1,6 +1,7 @@
 package com.github.lorenzoyang.lab18;
 
 class ScorrimentoRighe {
+    // #stato: completato
     // #inizio: javamm
 
     // consegna obbligatoria
