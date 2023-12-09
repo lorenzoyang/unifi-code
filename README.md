@@ -75,3 +75,7 @@ prime armi con la programmazione.
 ## esercizi di Java
 
 In corso. 
+
+## Licenza
+
+Questo progetto è distribuito con la licenza MIT. Consulta il file [LICENSE](./LICENSE) per ulteriori dettagli.
