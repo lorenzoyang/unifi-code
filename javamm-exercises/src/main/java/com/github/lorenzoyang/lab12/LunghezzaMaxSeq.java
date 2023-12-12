@@ -17,9 +17,11 @@ class LunghezzaMaxSeq {
         return max > count ? max : count;
     }
 
-    // soluzione alternativa
-    // funzione privata ricorsiva usata da lunghezzaMaxSeq
-    int _lunghezzaMaxSeq(char[] a, char c, int index, int count, int max) {
+    /*************************************************************************
+     * Soluzione alternativa (del prof)
+     * funzione privata ricorsiva usata da lunghezzaMaxSeq
+     *************************************************************************/
+    int alternativa_lunghezzaMaxSeq(char[] a, char c, int index, int count, int max) {
         if (index == a.length) return max;
 
         if (a[index] == c) {
@@ -30,7 +32,7 @@ class LunghezzaMaxSeq {
         if (count > max) {
             max = count;
         }
-        return _lunghezzaMaxSeq(a, c, index + 1, count, max);
+        return alternativa_lunghezzaMaxSeq(a, c, index + 1, count, max);
     }
 
     // #fine: javamm

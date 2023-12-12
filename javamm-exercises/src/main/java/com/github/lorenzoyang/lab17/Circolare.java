@@ -4,16 +4,17 @@ class Circolare {
     // #stato: completato
     // #inizio: javamm
 
+    // consegna obbligatoria
     boolean circolare(char[][] m) {
         return circolare(m, 0, 0, 0, false);
     }
 
-    // FACOLTATIVA
+    // consegna facoltativa
     boolean circolareInversa(char[][] m) {
         return circolare(m, 0, 0, 0, true);
     }
 
-    // funzione privata ausiliaria per la ricorsione
+    // funzione privata ausiliaria: implementazione ricorsiva della "consegna obbligatoria" circolare
     boolean circolare(char[][] m, int r, int c, int n, boolean inversa) {
         char cella = m[r][c];
 

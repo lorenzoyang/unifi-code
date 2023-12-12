@@ -19,7 +19,7 @@ class InteroBilanciato {
         return true;
     }
 
-    // funzione privata
+    // funzione privata ausiliaria
     int contaCifre(int n) {
         int nCifre = 0;
         while (n > 0) {

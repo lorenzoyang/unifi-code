@@ -4,8 +4,8 @@ class VisitaSerpentina {
     // #stato: completato
     // #inizio: javamm
 
-    // il numero di righe e' pari
     int[] visitaSerpentina(int[][] m, int riga, int colonna) {
+        // il numero di righe e' pari
         int lunghezzaArray = m.length * m[0].length;
         int[] cammino = new int[lunghezzaArray];
 
