@@ -56,7 +56,7 @@ essi è elencato di seguito:
 - [laboratorio 20](./javamm-exercises/src/main/java/com/github/lorenzoyang/lab20)
     - [x] [TrovaParolaDiagonale](./javamm-exercises/src/main/java/com/github/lorenzoyang/lab20/TrovaParolaDiagonale.java)
     - [x] [GeneraMatriceDaArray](./javamm-exercises/src/main/java/com/github/lorenzoyang/lab20/GeneraMatriceDaArray.java)
-    - [x] [GeneraMatriceDaArrayRicorsivo]()
+    - [x] [GeneraMatriceDaArrayRicorsivo](https://github.com/lorenzoyang/unifi-code/blob/75a582968aa89df38700032af5443227c78f5420/javamm-exercises/src/main/java/com/github/lorenzoyang/lab20/GeneraMatriceDaArray.java#L26-L58)
 
 ## algoritmi e struttura dati
 
