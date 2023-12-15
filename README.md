@@ -10,8 +10,6 @@ universitari. Il focus del progetto è incentrato su tre parti principali.
 Ho risolto una serie di esercizi in [Javamm](https://github.com/LorenzoBettini/javamm) (Java procedurale). e ognuno di
 essi è elencato di seguito:
 
-[//]: # (JAVAMM-SECTION-BEGIN)
-
 - [laboratorio 04](./javamm-exercises/src/main/java/com/github/lorenzoyang/lab04)
     - [x] [Lab04](./javamm-exercises/src/main/java/com/github/lorenzoyang/lab04/Lab04.java)
 - [laboratorio 05](./javamm-exercises/src/main/java/com/github/lorenzoyang/lab05)
@@ -55,16 +53,16 @@ essi è elencato di seguito:
 - [laboratorio 19](./javamm-exercises/src/main/java/com/github/lorenzoyang/lab19)
     - [x] [AnelloBilanciato](./javamm-exercises/src/main/java/com/github/lorenzoyang/lab19/AnelloBilanciato.java)
     - [x] [AzzeraNonUnici](./javamm-exercises/src/main/java/com/github/lorenzoyang/lab19/AzzeraNonUnici.java)
-
-[//]: # (JAVAMM-SECTION-END)
+- [laboratorio 20](./javamm-exercises/src/main/java/com/github/lorenzoyang/lab20)
+    - [x] [TrovaParolaDiagonale](./javamm-exercises/src/main/java/com/github/lorenzoyang/lab20/TrovaParolaDiagonale.java)
+    - [x] [GeneraMatriceDaArray](./javamm-exercises/src/main/java/com/github/lorenzoyang/lab20/GeneraMatriceDaArray.java)
+    - [x] [GeneraMatriceDaArrayRicorsivo]()
 
 ## algoritmi e struttura dati
 
 Le mie implementazioni in Java di algoritmi e strutture dati. L'obiettivo principale qui è la semplicità. Ho cercato di
 rendere chiare e accessibili queste implementazioni, in modo che possano essere comprese facilmente anche da chi è alle
 prime armi con la programmazione.
-
-[//]: # (ALGORITHMS-SECTION-BEGIN)
 
 - Data structures
     - [x] [Dynamic array](./algorithms-datastructures/src/main/java/com/github/lorenzoyang/algorithms/datastructures/DynamicArray.java)
@@ -78,11 +76,9 @@ prime armi con la programmazione.
     - [ ] Sequential search
     - [ ] Binary search
 
-[//]: # (ALGORITHMS-SECTION-END)
-
 ## esercizi di Java
 
-In corso. 
+In corso.
 
 ## Licenza
 
