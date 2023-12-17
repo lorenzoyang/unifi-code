@@ -67,7 +67,8 @@ prime armi con la programmazione.
 - Data structures
     - [x] [Dynamic array](./algorithms-datastructures/src/main/java/com/github/lorenzoyang/algorithms/datastructures/DynamicArray.java)
     - [x] [Linked list](./algorithms-datastructures/src/main/java/com/github/lorenzoyang/algorithms/datastructures/LinkedList.java)
-    - [ ] Linked stack
+    - [x] Linked stack(
+      ./algorithms-datastructures/src/main/java/com/github/lorenzoyang/algorithms/datastructures/LinkedStack.java)
     - [ ] Linked queue
     - [ ] Array based queue
     - [ ] Priority queue
