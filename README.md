@@ -16,7 +16,7 @@ essi è elencato di seguito:
     - [x] [Lab05](./javamm-exercises/src/main/java/com/github/lorenzoyang/lab05/Lab05.java)
 - laboratorio 06 ([PDF](./javamm-exercises/src/main/java/com/github/lorenzoyang/lab06/Lab06.pdf))
     - [x] [Lab06](./javamm-exercises/src/main/java/com/github/lorenzoyang/lab06/Lab06.java)
-- laboratorio 07 ([PDF](./javamm-exercises/src/main/java/com/github/lorenzoyang/lab07/Lab07.pdf]))
+- laboratorio 07 ([PDF](./javamm-exercises/src/main/java/com/github/lorenzoyang/lab07/Lab07.pdf))
     - [x] [Lab07](./javamm-exercises/src/main/java/com/github/lorenzoyang/lab07/Lab07.java)
 - laboratorio 08 ([PDF](./javamm-exercises/src/main/java/com/github/lorenzoyang/lab08/2020-02-05%20(prima%20PI%20-%20es%201).pdf))
     - [x] [DecomprimiRLE](./javamm-exercises/src/main/java/com/github/lorenzoyang/lab08/DecomprimiRLE.java)
