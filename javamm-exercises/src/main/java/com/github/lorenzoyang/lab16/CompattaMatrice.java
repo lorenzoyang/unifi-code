@@ -1,7 +1,6 @@
 package com.github.lorenzoyang.lab16;
 
 class CompattaMatrice {
-    // #stato: completato
     // #inizio: javamm
 
     int[][] compattaMatrice(int[][] t) {

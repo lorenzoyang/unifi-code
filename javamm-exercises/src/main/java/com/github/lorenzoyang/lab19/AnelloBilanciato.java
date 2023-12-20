@@ -1,7 +1,6 @@
 package com.github.lorenzoyang.lab19;
 
 class AnelloBilanciato {
-    // #stato: completato
     // #inizio: javamm
 
     boolean anelloBilanciato(int[][] t, int k) {

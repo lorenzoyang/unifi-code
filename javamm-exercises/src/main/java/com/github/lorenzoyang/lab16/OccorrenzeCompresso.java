@@ -2,7 +2,6 @@ package com.github.lorenzoyang.lab16;
 
 
 public class OccorrenzeCompresso {
-    // #stato: completato
     // #inizio: javamm
 
     int[] occorrenzeCompresso(int[] a) {

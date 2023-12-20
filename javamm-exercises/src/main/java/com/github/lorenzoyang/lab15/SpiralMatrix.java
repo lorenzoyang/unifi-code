@@ -1,7 +1,6 @@
 package com.github.lorenzoyang.lab15;
 
 class SpiralMatrix {
-    // #stato: completato
     // #inizio: javamm
 
     int[] spiralMatrix(int n, int x) {

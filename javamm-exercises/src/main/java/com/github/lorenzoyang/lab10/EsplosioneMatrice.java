@@ -1,7 +1,6 @@
 package com.github.lorenzoyang.lab10;
 
 class EsplosioneMatrice {
-    // #stato: completato
     // #inizio: javamm
 
     int[][] esplodiMatrice(int[][] t, int r, int c) {

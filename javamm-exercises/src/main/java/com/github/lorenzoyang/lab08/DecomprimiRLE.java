@@ -1,7 +1,6 @@
 package com.github.lorenzoyang.lab08;
 
 class DecomprimiRLE {
-    // #stato: completato
     // #inizio: javamm
 
     int[] decomprimiRLE(int[] a) {

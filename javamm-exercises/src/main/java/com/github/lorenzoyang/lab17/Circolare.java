@@ -1,7 +1,6 @@
 package com.github.lorenzoyang.lab17;
 
 class Circolare {
-    // #stato: completato
     // #inizio: javamm
 
     // consegna obbligatoria

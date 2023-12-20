@@ -1,7 +1,6 @@
 package com.github.lorenzoyang.lab13;
 
 class ShuffleMatrice {
-    // #stato: completato
     // #inizio: javamm
 
     int[][] shuffleMatrice(int[][] t, int[][] s) {

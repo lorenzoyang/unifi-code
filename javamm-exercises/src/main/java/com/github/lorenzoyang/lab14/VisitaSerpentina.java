@@ -1,7 +1,6 @@
 package com.github.lorenzoyang.lab14;
 
 class VisitaSerpentina {
-    // #stato: completato
     // #inizio: javamm
 
     int[] visitaSerpentina(int[][] m, int riga, int colonna) {

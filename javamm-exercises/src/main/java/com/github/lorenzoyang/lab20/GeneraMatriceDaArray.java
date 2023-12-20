@@ -1,7 +1,6 @@
 package com.github.lorenzoyang.lab20;
 
 class GeneraMatriceDaArray {
-    // #stato:
     // #inizio: javamm
 
     // consegna obbligatoria

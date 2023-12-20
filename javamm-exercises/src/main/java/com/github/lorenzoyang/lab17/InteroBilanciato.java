@@ -1,7 +1,6 @@
 package com.github.lorenzoyang.lab17;
 
 class InteroBilanciato {
-    // #stato: completato
     // #inizio: javamm
 
     boolean bilanciato(int n) {

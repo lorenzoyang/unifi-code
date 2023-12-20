@@ -1,7 +1,6 @@
 package com.github.lorenzoyang.lab15;
 
 class SpiralPath {
-    // #stato: completato
     // #inizio: javamm
 
     int spiralPath(int n, int i) {

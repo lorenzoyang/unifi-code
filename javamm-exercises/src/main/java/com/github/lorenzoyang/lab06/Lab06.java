@@ -1,7 +1,6 @@
 package com.github.lorenzoyang.lab06;
 
 class Lab06 {
-    // #stato: completato
     // #inizio: javamm
 
     int integerSquareRoot(int n) {

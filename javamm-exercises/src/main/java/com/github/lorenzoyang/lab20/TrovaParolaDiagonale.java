@@ -1,7 +1,6 @@
 package com.github.lorenzoyang.lab20;
 
 class TrovaParolaDiagonale {
-    // #stato:
     // #inizio: javamm
 
     boolean trovaParolaDiagonale(char[][] g, char[] p) {

@@ -1,7 +1,6 @@
 package com.github.lorenzoyang.lab11;
 
 class CacciaAlTesoro {
-    // #stato: completato
     // #inizio: javamm
 
     boolean cacciaAlTesoro(char[][] m) {

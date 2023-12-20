@@ -1,7 +1,6 @@
 package com.github.lorenzoyang.lab19;
 
 class AzzeraNonUnici {
-    // #stato: completato
     // #inizio: javamm
 
     // consegna obbligatoria

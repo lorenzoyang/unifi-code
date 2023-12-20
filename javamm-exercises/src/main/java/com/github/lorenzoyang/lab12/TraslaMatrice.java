@@ -1,7 +1,6 @@
 package com.github.lorenzoyang.lab12;
 
 class TraslaMatrice {
-    // #stato: completato
     // #inizio: javamm
 
     int[][] traslaMatrice(int[][] t, int y) {

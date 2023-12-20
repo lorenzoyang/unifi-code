@@ -1,7 +1,6 @@
 package com.github.lorenzoyang.lab09;
 
 class AzzeraAdiacenti {
-    // #stato: completato
     // #inizio: javamm
 
     int[][] azzeraAdiacenti(int[][] m, int r, int c) {
