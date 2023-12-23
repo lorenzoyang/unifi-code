@@ -1,4 +1,4 @@
-package com.github.lorenzoyang.simulazioni.prova20230130;
+package com.github.lorenzoyang.simulazioni.prova2023_01_30;
 
 class RuotaAnelloMatrice {
     // #inizio: javamm

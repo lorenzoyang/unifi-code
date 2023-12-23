@@ -10,6 +10,13 @@ universitari. Il focus del progetto è incentrato su tre parti principali.
 Ho risolto una serie di esercizi in [Javamm](https://github.com/LorenzoBettini/javamm) (Java procedurale). e ognuno di
 essi è elencato di seguito:
 
+- **Simulazioni**
+    - **2023-01-24** ([PDF](./javamm-exercises/src/main/java/com/github/lorenzoyang/simulazioni/prova2023_01_24/20230124%20-%20Terza%20Simulazione%20PI%20-%20finale.pdf))
+      - [x] [RimuoviFibonacci](./javamm-exercises/src/main/java/com/github/lorenzoyang/simulazioni/prova2023_01_24/RimuoviFibonacci.java)
+      - [x] [CercaParolaNascosta](./javamm-exercises/src/main/java/com/github/lorenzoyang/simulazioni/prova2023_01_24/CercaParolaNascosta.java)
+    - **2023-01-30** ([PDF](./javamm-exercises/src/main/java/com/github/lorenzoyang/simulazioni/prova20230130/2023-01-30%20(PI%20Java--)%20-%20finale.pdf))
+      - [x] [RimuoviCifre](./javamm-exercises/src/main/java/com/github/lorenzoyang/simulazioni/prova20230130/RimuoviCifre.java)
+      - [x] [RuotaAnelloMatrice](./javamm-exercises/src/main/java/com/github/lorenzoyang/simulazioni/prova20230130/RuotaAnelloMatrice.java)
 - **Laboratorio 04** ([PDF](./javamm-exercises/src/main/java/com/github/lorenzoyang/lab04/Lab04.pdf))
     - [x] [Lab04](./javamm-exercises/src/main/java/com/github/lorenzoyang/lab04/Lab04.java)
 - **Laboratorio 05** ([PDF](./javamm-exercises/src/main/java/com/github/lorenzoyang/lab05/Lab05.pdf))
@@ -57,10 +64,6 @@ essi è elencato di seguito:
     - [x] [TrovaParolaDiagonale](./javamm-exercises/src/main/java/com/github/lorenzoyang/lab20/TrovaParolaDiagonale.java)
     - [x] [GeneraMatriceDaArray](./javamm-exercises/src/main/java/com/github/lorenzoyang/lab20/GeneraMatriceDaArray.java)
     - [x] [GeneraMatriceDaArrayRicorsivo](https://github.com/lorenzoyang/unifi-code/blob/75a582968aa89df38700032af5443227c78f5420/javamm-exercises/src/main/java/com/github/lorenzoyang/lab20/GeneraMatriceDaArray.java#L26-L58)
-- **Simulazioni**
-    - **2023-01-12** ([PDF](./javamm-exercises/src/main/java/com/github/lorenzoyang/simulazioni/prova20230130/2023-01-30%20(PI%20Java--)%20-%20finale.pdf))
-        - [x] [RimuoviCifre](./javamm-exercises/src/main/java/com/github/lorenzoyang/simulazioni/prova20230130/RimuoviCifre.java)
-        - [x] [RuotaAnelloMatrice](./javamm-exercises/src/main/java/com/github/lorenzoyang/simulazioni/prova20230130/RuotaAnelloMatrice.java)
 
 ## algoritmi e struttura dati
 
