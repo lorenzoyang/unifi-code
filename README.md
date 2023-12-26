@@ -74,8 +74,7 @@ prime armi con la programmazione.
 - **Data structures**
     - [x] [Dynamic array](./algorithms-datastructures/src/main/java/com/github/lorenzoyang/algorithms/datastructures/DynamicArray.java)
     - [x] [Linked list](./algorithms-datastructures/src/main/java/com/github/lorenzoyang/algorithms/datastructures/LinkedList.java)
-    - [x] Linked stack(
-      ./algorithms-datastructures/src/main/java/com/github/lorenzoyang/algorithms/datastructures/LinkedStack.java)
+    - [x] [Linked stack](./algorithms-datastructures/src/main/java/com/github/lorenzoyang/algorithms/datastructures/LinkedStack.java)
     - [ ] Linked queue
     - [ ] Array based queue
     - [ ] Priority queue
@@ -83,6 +82,8 @@ prime armi con la programmazione.
 - **Search algorithms**
     - [ ] Sequential search
     - [ ] Binary search
+- **Applications**
+    - [x] [Calculator (Linked stack)](./algorithms-datastructures/src/main/java/com/github/lorenzoyang/algorithms/applications/Calculator.java)
 
 ## esercizi di Java
 
