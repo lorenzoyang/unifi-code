@@ -1,8 +1,12 @@
 package com.github.lorenzoyang.algorithms.datastructures;
 
-// Pila implementata con una lista concatenata
+/**
+ * Pila implementata con una lista concatenata
+ */
 public class LinkedStack<T> {
-    // class Nodo che rappresenta un elemento dello stack
+    /**
+     * class Nodo che rappresenta un elemento dello stack
+     */
     private class Node {
         private final T value;
         private final Node next;
@@ -35,7 +39,9 @@ public class LinkedStack<T> {
         size++;
     }
 
-    // rimuove il primo elemento dello stack e restituisce il suo valore
+    /**
+     * rimuove il primo elemento dello stack e restituisce il suo valore
+     */
     public T pop() {
         if (head == null) {
             throw new IllegalStateException();
@@ -46,7 +52,6 @@ public class LinkedStack<T> {
         return value;
     }
 
-    // restituisce il numero di elementi dello stack
     public int size() {
         return size;
     }

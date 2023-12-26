@@ -1,7 +1,12 @@
 package com.github.lorenzoyang.algorithms.datastructures;
 
+/**
+ * Lista concatenata
+ */
 public class LinkedList<T> {
-    // class Nodo che rappresenta un elemento della lista
+    /**
+     * class Nodo che rappresenta un elemento della lista
+     */
     private class Node {
         private T value; // valore dell'elemento
         private Node next; // puntatore all'elemento successivo

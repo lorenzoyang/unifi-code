@@ -1,6 +1,8 @@
 package com.github.lorenzoyang.algorithms.datastructures;
 
-// Vettore dinamico che si ridimensiona automaticamente quando necessario
+/**
+ * Vettore dinamico che si ridimensiona automaticamente quando necessario
+ */
 public class DynamicArray<T> {
     private T[] array; // array di elementi
     private int size;
@@ -31,6 +33,27 @@ public class DynamicArray<T> {
         array[index] = value;
     }
 
+    /**
+     * Inserisce un elemento in una posizione specifica
+     * range di indici validi: [0, size]
+     */
+    public void insert(int index, T value) {
+        resize(); // controllo prima di aggiungere un elemento se l'array è pieno
+        // se l'indice è fuori dai limiti dell'array, lancio un'eccezione
+        if (index < 0 || index > size) {
+            throw new IndexOutOfBoundsException();
+        }
+        // sposto tutti gli elementi successivi di una posizione a destra
+        for (int i = size; i > index; i--) {
+            array[i] = array[i - 1];
+        }
+        array[index] = value;
+        size++;
+    }
+
+    /**
+     * Raddoppia o dimezza la capacità dell'array se necessario
+     */
     private void resize() {
         int newCapacity;
         if (size >= array.length * 3 / 4) { // se l'array è pieno al 75%, lo raddoppio
@@ -66,5 +89,9 @@ public class DynamicArray<T> {
 
     public int size() {
         return size;
+    }
+
+    public boolean isEmpty() {
+        return size == 0;
     }
 }
