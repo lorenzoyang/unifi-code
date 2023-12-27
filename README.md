@@ -77,11 +77,19 @@ prime armi con la programmazione.
     - [x] [Linked stack](./algorithms-datastructures/src/main/java/com/github/lorenzoyang/algorithms/datastructures/LinkedStack.java)
     - [ ] Linked queue
     - [ ] Array based queue
-    - [ ] Priority queue
+    - [x] Priority queue
     - [ ] Binary search tree
-- **Search algorithms**
-    - [ ] Sequential search
-    - [ ] Binary search
+- **Algorithms**
+    - **Search**
+        - [ ] Sequential search
+        - [ ] Binary search
+    - **Sort**
+        - [ ] Selection sort
+        - [ ] Insertion sort
+        - [ ] Bubble sort
+        - [ ] Merge sort
+        - [ ] Quick sort
+        - [ ] Heap sort
 - **Applications**
     - [x] [Calculator (Linked stack)](./algorithms-datastructures/src/main/java/com/github/lorenzoyang/algorithms/applications/Calculator.java)
 

@@ -58,6 +58,14 @@ class DynamicArrayTest {
     }
 
     @Test
+    void removeShiftsElements() {
+        dynamicArray.add(1);
+        dynamicArray.add(2);
+        dynamicArray.remove(0);
+        assertEquals(Integer.valueOf(2), dynamicArray.get(0));
+    }
+
+    @Test
     void removeThrowsExceptionForInvalidIndex() {
         assertThrows(IndexOutOfBoundsException.class, () -> dynamicArray.remove(0));
     }

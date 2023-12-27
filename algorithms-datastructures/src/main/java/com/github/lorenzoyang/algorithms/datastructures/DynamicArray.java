@@ -81,7 +81,7 @@ public class DynamicArray<T> {
             throw new IndexOutOfBoundsException();
         }
         // rimuovere un elemento consiste nel spostare tutti gli elementi successivi di una posizione a sinistra
-        for (int i = index; i < size - 1; i++) {
+        for (int i = index; i <= size - 1; i++) {
             array[i] = array[i + 1];
         }
         size--;
