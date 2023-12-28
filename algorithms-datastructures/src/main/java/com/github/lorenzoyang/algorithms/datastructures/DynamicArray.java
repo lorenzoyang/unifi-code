@@ -1,9 +1,12 @@
 package com.github.lorenzoyang.algorithms.datastructures;
 
+import java.util.Iterator;
+import java.util.NoSuchElementException;
+
 /**
  * Vettore dinamico che si ridimensiona automaticamente quando necessario
  */
-public class DynamicArray<T> {
+public class DynamicArray<T> implements Iterable<T> {
     private T[] array; // array di elementi
     private int size;
     private static final int DEFAULT_CAPACITY = 10;
@@ -90,6 +93,15 @@ public class DynamicArray<T> {
         size--;
     }
 
+    public int indexOf(T value) {
+        for (int i = 0; i < size; i++) {
+            if (array[i].equals(value)) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
     public int size() {
         return size;
     }
@@ -101,4 +113,27 @@ public class DynamicArray<T> {
     public boolean isEmpty() {
         return size == 0;
     }
+
+    @Override
+    public Iterator<T> iterator() {
+        return new DynamicArrayIterator();
+    }
+
+    private class DynamicArrayIterator implements Iterator<T> {
+        private int index = 0;
+
+        @Override
+        public boolean hasNext() {
+            return index < size;
+        }
+
+        @Override
+        public T next() {
+            if (!hasNext()) {
+                throw new NoSuchElementException();
+            }
+            return array[index++];
+        }
+    }
+
 }

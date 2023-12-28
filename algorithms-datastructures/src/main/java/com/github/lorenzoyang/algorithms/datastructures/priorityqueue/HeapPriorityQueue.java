@@ -11,12 +11,12 @@ import com.github.lorenzoyang.algorithms.datastructures.DynamicArray;
  * e che "pq.size()" sia il numero di dati attualmente memorizzati a costituire lo heap.
  */
 public class HeapPriorityQueue<Key extends Comparable<Key>> implements PriorityQueue<Key> {
-    private final DynamicArray<Key> pq; // array di elementi
+    private final DynamicArray<Key> heap; // array di elementi
 
     public HeapPriorityQueue() {
         // creo un array di dimensione 1, e il primo elemento [0] sarà null (non lo uso)
-        this.pq = new DynamicArray<>(1);
-        this.pq.insert(0, null);
+        this.heap = new DynamicArray<>(1);
+        this.heap.insert(0, null);
     }
 
 
@@ -26,8 +26,8 @@ public class HeapPriorityQueue<Key extends Comparable<Key>> implements PriorityQ
     @Override
     public void insert(Key key) {
         // inserisce la chiave in fondo all'array, saltando l'elemento [0]
-        pq.insert(pq.size(), key); // pq.size aumenta di 1
-        upHeap(pq.size() - 1); // pq.size - 1 è l'indice dell'ultimo elemento inserito
+        heap.insert(heap.size(), key); // pq.size aumenta di 1
+        upHeap(heap.size() - 1); // pq.size - 1 è l'indice dell'ultimo elemento inserito
     }
 
     /**
@@ -38,9 +38,9 @@ public class HeapPriorityQueue<Key extends Comparable<Key>> implements PriorityQ
         if (this.isEmpty()) {
             throw new IllegalStateException();
         }
-        Key max = pq.get(1); // il primo elemento è il massimo
-        swap(1, pq.size() - 1); // scambio il primo elemento con l'ultimo
-        pq.remove(pq.size() - 1); // rimuovo l'ultimo elemento
+        Key max = heap.get(1); // il primo elemento è il massimo
+        swap(1, heap.size() - 1); // scambio il primo elemento con l'ultimo
+        heap.remove(heap.size() - 1); // rimuovo l'ultimo elemento
         downHeap(1); // riordino l'array (heap)
         return max;
     }
@@ -50,12 +50,12 @@ public class HeapPriorityQueue<Key extends Comparable<Key>> implements PriorityQ
         if (this.isEmpty()) {
             throw new IllegalStateException();
         }
-        return pq.get(1);
+        return heap.get(1);
     }
 
     @Override
     public int size() {
-        return pq.size() - 1; // il primo elemento non fa parte della coda di priorità
+        return heap.size() - 1; // il primo elemento non fa parte della coda di priorità
     }
 
     @Override
@@ -86,9 +86,9 @@ public class HeapPriorityQueue<Key extends Comparable<Key>> implements PriorityQ
      * il fondo dello heap.
      */
     private void downHeap(int k) {
-        while (2 * k < pq.size()) {
+        while (2 * k < heap.size()) {
             int j = 2 * k; // uno dei suoi due figli
-            if (j < pq.size() - 1 && less(j, j + 1)) { // se il secondo figlio e' maggiore del primo
+            if (j < heap.size() - 1 && less(j, j + 1)) { // se il secondo figlio e' maggiore del primo
                 j++;
             }
             if (!less(k, j)) { // se il nodo k e' maggiore del suo figlio j (figlio maggiore)
@@ -104,15 +104,15 @@ public class HeapPriorityQueue<Key extends Comparable<Key>> implements PriorityQ
      * Scambia due elementi dell'array
      */
     private void swap(int i, int j) {
-        Key temp = pq.get(i);
-        pq.set(i, pq.get(j));
-        pq.set(j, temp);
+        Key temp = heap.get(i);
+        heap.set(i, heap.get(j));
+        heap.set(j, temp);
     }
 
     /**
      * Restituisce il numero di elementi nella coda di priorità
      */
     private boolean less(int i, int j) {
-        return pq.get(i).compareTo(pq.get(j)) < 0;
+        return heap.get(i).compareTo(heap.get(j)) < 0;
     }
 }
