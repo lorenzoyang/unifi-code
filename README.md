@@ -1,11 +1,17 @@
 # Unifi code
 
 Questo è il mio progetto personale per tenere traccia del codice
-Java ([JDK 11](https://adoptium.net/temurin/releases/?variant=openjdk11)) che ho scritto durante gli anni di
-studi
-universitari. Il focus del progetto è incentrato su tre parti principali.
+Java ([JDK 11](https://adoptium.net/temurin/releases/?variant=openjdk11)) che ho scritto durante gli anni di studi universitari. Il progetto è composto dalle seguenti parti:
 
-## esercizi di Javamm
+- [Unifi code](#unifi-code)
+  - [Esercizi di Javamm torna su](#esercizi-di-javamm-torna-su)
+  - [Algoritmi e struttura dati torna su](#algoritmi-e-struttura-dati-torna-su)
+  - [Esercizi di Java torna su](#esercizi-di-java-torna-su)
+  - [Licenza torna su](#licenza-torna-su)
+
+
+
+## Esercizi di Javamm [<sub>torna su</sub>](#unifi-code)
 
 Ho risolto una serie di esercizi in [Javamm](https://github.com/LorenzoBettini/javamm) (Java procedurale). e ognuno di
 essi è elencato di seguito:
@@ -65,7 +71,7 @@ essi è elencato di seguito:
     - [x] [GeneraMatriceDaArray](./javamm-exercises/src/main/java/com/github/lorenzoyang/lab20/GeneraMatriceDaArray.java)
     - [x] [GeneraMatriceDaArrayRicorsivo](https://github.com/lorenzoyang/unifi-code/blob/75a582968aa89df38700032af5443227c78f5420/javamm-exercises/src/main/java/com/github/lorenzoyang/lab20/GeneraMatriceDaArray.java#L26-L58)
 
-## algoritmi e struttura dati
+## Algoritmi e struttura dati [<sub>torna su</sub>](#unifi-code)
 
 Le mie implementazioni in Java di algoritmi e strutture dati. L'obiettivo principale qui è la semplicità. Ho cercato di
 rendere chiare e accessibili queste implementazioni, in modo che possano essere comprese facilmente anche da chi è alle
@@ -96,10 +102,10 @@ prime armi con la programmazione.
 - **Applications**
     - [x] [Calculator (Linked stack)](./algorithms-datastructures/src/main/java/com/github/lorenzoyang/algorithms/applications/Calculator.java)
 
-## esercizi di Java
+## Esercizi di Java [<sub>torna su</sub>](#unifi-code)
 
 In corso.
 
-## Licenza
+## Licenza [<sub>torna su</sub>](#unifi-code)
 
 Questo progetto è distribuito con la licenza MIT. Consulta il file [LICENSE](./LICENSE) per ulteriori dettagli.

@@ -23,6 +23,9 @@ public class UnorderedArrayPriorityQueue<Key extends Comparable<Key>> implements
 
     @Override
     public Key remove() {
+        if (this.isEmpty()) {
+            throw new IllegalStateException();
+        }
         // trovare l'elemento con la chiave piu' grande
         int maxIndex = 0;
         for (int i = 1; i < array.size(); i++) {
@@ -30,9 +33,9 @@ public class UnorderedArrayPriorityQueue<Key extends Comparable<Key>> implements
                 maxIndex = i;
             }
         }
+
         Key maxKey = array.get(maxIndex);
-        // scambiare l'elemento con la chiave piu' grande con l'ultimo elemento
-        swap(maxIndex, array.size() - 1);
+        array.set(maxIndex, array.get(array.size() - 1));
         array.remove(array.size() - 1);
 
         return maxKey;
@@ -40,6 +43,9 @@ public class UnorderedArrayPriorityQueue<Key extends Comparable<Key>> implements
 
     @Override
     public Key max() {
+        if (this.isEmpty()) {
+            throw new IllegalStateException();
+        }
         // trovare l'elemento con la chiave piu' grande
         int maxIndex = 0;
         for (int i = 1; i < array.size(); i++) {
@@ -52,7 +58,7 @@ public class UnorderedArrayPriorityQueue<Key extends Comparable<Key>> implements
 
     @Override
     public int size() {
-        return array.size() - 1;
+        return array.size();
     }
 
     @Override
