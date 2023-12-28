@@ -77,7 +77,10 @@ prime armi con la programmazione.
     - [x] [Linked stack](./algorithms-datastructures/src/main/java/com/github/lorenzoyang/algorithms/datastructures/LinkedStack.java)
     - [ ] Linked queue
     - [ ] Array based queue
-    - [x] Priority queue
+    - **Priority queue**
+        - [x] [Heap based priority queue](./algorithms-datastructures/src/main/java/com/github/lorenzoyang/algorithms/datastructures/HeapPriorityQueue.java)
+        - [ ] Unordered array based priority queue
+        - [ ] Ordered array based priority queue
     - [ ] Binary search tree
 - **Algorithms**
     - **Search**

@@ -1,67 +1,75 @@
-package com.github.lorenzoyang.algorithms.datastructures;
+package com.github.lorenzoyang.algorithms.datastructures.priorityqueue;
+
+import com.github.lorenzoyang.algorithms.datastructures.DynamicArray;
 
 /**
  * La coda di priorità basata sulla struttura dati heap.
  * <p>
- * Per semplicità, ogni elemento della coda di priorità e' composto da solo una chiave di tipo Key.
+ * Per semplicita supponiamo che i record siano costituiti solo da una chiave intera
+ * (che rappresenta il valore di priorita')
+ * e siano memorizzati in un vettore "pq" di una data dimensione massima "pq.length",
+ * e che "pq.size()" sia il numero di dati attualmente memorizzati a costituire lo heap.
  */
-public class PriorityQueue<Key extends Comparable<Key>> {
-
+public class HeapPriorityQueue<Key extends Comparable<Key>> implements PriorityQueue<Key> {
     private final DynamicArray<Key> pq; // array di elementi
 
-    public PriorityQueue() {
+    public HeapPriorityQueue() {
         // creo un array di dimensione 1, e il primo elemento [0] sarà null (non lo uso)
-        pq = new DynamicArray<>(1);
-        pq.insert(0, null);
+        this.pq = new DynamicArray<>(1);
+        this.pq.insert(0, null);
     }
+
 
     /**
      * Inserisce una nuova chiave nella coda di priorità
      */
+    @Override
     public void insert(Key key) {
-        pq.insert(pq.size(), key); // aggiungo la chiave in fondo all'array, saltando l'elemento [0]
-        upHeap(pq.size() - 1);
+        // inserisce la chiave in fondo all'array, saltando l'elemento [0]
+        pq.insert(pq.size(), key); // pq.size aumenta di 1
+        upHeap(pq.size() - 1); // pq.size - 1 è l'indice dell'ultimo elemento inserito
     }
 
     /**
      * Restituisce la chiave con la priorità massima e la rimuove dalla coda di priorità
      */
-    public Key delMax() {
-        if (isEmpty()) {
+    @Override
+    public Key remove() {
+        if (this.isEmpty()) {
             throw new IllegalStateException();
         }
-        Key max = pq.get(1);
-        swap(1, pq.size() - 1);
-        pq.remove(pq.size() - 1);
-        downHeap(1);
+        Key max = pq.get(1); // il primo elemento è il massimo
+        swap(1, pq.size() - 1); // scambio il primo elemento con l'ultimo
+        pq.remove(pq.size() - 1); // rimuovo l'ultimo elemento
+        downHeap(1); // riordino l'array (heap)
         return max;
     }
 
-    /**
-     * Restituisce la chiave con la priorità massima senza rimuoverla dalla coda di priorità
-     */
+    @Override
     public Key max() {
-        if (isEmpty()) {
+        if (this.isEmpty()) {
             throw new IllegalStateException();
         }
         return pq.get(1);
     }
 
+    @Override
     public int size() {
-        return pq.size() - 1;
+        return pq.size() - 1; // il primo elemento non fa parte della coda di priorità
     }
 
+    @Override
     public boolean isEmpty() {
-        return size() == 0;
+        return this.size() == 0;
     }
 
+    // --------------------------------------------------------------------------------
+    // metodi privati di supporto
     // --------------------------------------------------------------------------------
 
     /**
      * fa risalire la nuova chiave lungo un cammino dalle foglie verso la radice
      * finche' non risulta ripristinata la proprieta' di heap.
-     * <p>
-     * metodo privato di supporto
      */
     private void upHeap(int k) {
         // finche' k non e' la radice(k=1) e la chiave del genitore(k/2) e' minore della chiave
@@ -80,16 +88,17 @@ public class PriorityQueue<Key extends Comparable<Key>> {
     private void downHeap(int k) {
         while (2 * k < pq.size()) {
             int j = 2 * k; // uno dei suoi due figli
-            if (j < pq.size() && less(j, j + 1)) { // se il secondo figlio e' maggiore del primo
+            if (j < pq.size() - 1 && less(j, j + 1)) { // se il secondo figlio e' maggiore del primo
                 j++;
             }
-            if (!less(k, j)) { // se il nodo k e' maggiore del figlio j (figlio maggiore)
+            if (!less(k, j)) { // se il nodo k e' maggiore del suo figlio j (figlio maggiore)
                 break; // interrompo il ciclo
             }
             swap(k, j);
             k = j;
         }
     }
+
 
     /**
      * Scambia due elementi dell'array
@@ -105,12 +114,5 @@ public class PriorityQueue<Key extends Comparable<Key>> {
      */
     private boolean less(int i, int j) {
         return pq.get(i).compareTo(pq.get(j)) < 0;
-    }
-
-    public static void main(String[] args) {
-        DynamicArray<Integer> array = new DynamicArray<>();
-        array.insert(0, null);
-        array.insert(1, 1);
-        System.out.println(array.size());
     }
 }

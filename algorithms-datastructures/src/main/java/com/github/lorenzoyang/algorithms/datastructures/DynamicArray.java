@@ -71,6 +71,9 @@ public class DynamicArray<T> {
         array = newArray;
     }
 
+    /**
+     * Aggiunge un elemento subito dopo l'ultimo elemento
+     */
     public void add(T value) {
         resize(); // controllo prima di aggiungere un elemento se l'array è pieno
         array[size++] = value;
@@ -89,6 +92,10 @@ public class DynamicArray<T> {
 
     public int size() {
         return size;
+    }
+
+    public int capacity() {
+        return array.length;
     }
 
     public boolean isEmpty() {
