@@ -4,6 +4,8 @@ import com.github.lorenzoyang.algorithms.datastructures.DynamicArray;
 
 /**
  * Coda di priorita' implementata con un array non ordinato.
+ * Utilizzando un vettore disordinato i dati sono posti nel vettore a[0...N −1] cosi' come vengono
+ * senza preoccuparsi del valore delle chiavi
  */
 public class UnorderedArrayPriorityQueue<Key extends Comparable<Key>> implements PriorityQueue<Key> {
     private final DynamicArray<Key> array; // array non ordinato
@@ -64,22 +66,5 @@ public class UnorderedArrayPriorityQueue<Key extends Comparable<Key>> implements
     @Override
     public boolean isEmpty() {
         return this.size() == 0;
-    }
-
-
-    /**
-     * Scambia due elementi dell'array
-     */
-    private void swap(int i, int j) {
-        Key temp = array.get(i);
-        array.set(i, array.get(j));
-        array.set(j, temp);
-    }
-
-    /**
-     * Restituisce il numero di elementi nella coda di priorità
-     */
-    private boolean less(int i, int j) {
-        return array.get(i).compareTo(array.get(j)) < 0;
     }
 }
