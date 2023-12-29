@@ -10,7 +10,6 @@ Java ([JDK 11](https://adoptium.net/temurin/releases/?variant=openjdk11)) che ho
   - [Licenza torna su](#licenza-torna-su)
 
 
-
 ## Esercizi di Javamm [<sub>torna su</sub>](#unifi-code)
 
 Ho risolto una serie di esercizi in [Javamm](https://github.com/LorenzoBettini/javamm) (Java procedurale). e ognuno di
@@ -18,11 +17,11 @@ essi è elencato di seguito:
 
 - **Simulazioni**
     - **2023-01-24** ([PDF](./javamm-exercises/src/main/java/com/github/lorenzoyang/simulazioni/prova2023_01_24/20230124%20-%20Terza%20Simulazione%20PI%20-%20finale.pdf))
-      - [x] [RimuoviFibonacci](./javamm-exercises/src/main/java/com/github/lorenzoyang/simulazioni/prova2023_01_24/RimuoviFibonacci.java)
-      - [x] [CercaParolaNascosta](./javamm-exercises/src/main/java/com/github/lorenzoyang/simulazioni/prova2023_01_24/CercaParolaNascosta.java)
+        - [x] [RimuoviFibonacci](./javamm-exercises/src/main/java/com/github/lorenzoyang/simulazioni/prova2023_01_24/RimuoviFibonacci.java)
+        - [x] [CercaParolaNascosta](./javamm-exercises/src/main/java/com/github/lorenzoyang/simulazioni/prova2023_01_24/CercaParolaNascosta.java)
     - **2023-01-30** ([PDF](./javamm-exercises/src/main/java/com/github/lorenzoyang/simulazioni/prova2023_01_30/2023-01-30%20(PI%20Java--)%20-%20finale.pdf))
-      - [x] [RimuoviCifre](./javamm-exercises/src/main/java/com/github/lorenzoyang/simulazioni/prova20230130/RimuoviCifre.java)
-      - [x] [RuotaAnelloMatrice](./javamm-exercises/src/main/java/com/github/lorenzoyang/simulazioni/prova20230130/RuotaAnelloMatrice.java)
+        - [x] [RimuoviCifre](./javamm-exercises/src/main/java/com/github/lorenzoyang/simulazioni/prova20230130/RimuoviCifre.java)
+        - [x] [RuotaAnelloMatrice](./javamm-exercises/src/main/java/com/github/lorenzoyang/simulazioni/prova20230130/RuotaAnelloMatrice.java)
 - **Laboratorio 04** ([PDF](./javamm-exercises/src/main/java/com/github/lorenzoyang/lab04/Lab04.pdf))
     - [x] [Lab04](./javamm-exercises/src/main/java/com/github/lorenzoyang/lab04/Lab04.java)
 - **Laboratorio 05** ([PDF](./javamm-exercises/src/main/java/com/github/lorenzoyang/lab05/Lab05.pdf))
@@ -71,40 +70,41 @@ essi è elencato di seguito:
     - [x] [GeneraMatriceDaArray](./javamm-exercises/src/main/java/com/github/lorenzoyang/lab20/GeneraMatriceDaArray.java)
     - [x] [GeneraMatriceDaArrayRicorsivo](https://github.com/lorenzoyang/unifi-code/blob/75a582968aa89df38700032af5443227c78f5420/javamm-exercises/src/main/java/com/github/lorenzoyang/lab20/GeneraMatriceDaArray.java#L26-L58)
 
+
 ## Algoritmi e struttura dati [<sub>torna su</sub>](#unifi-code)
 
 Le mie implementazioni in Java di algoritmi e strutture dati. L'obiettivo principale qui è la semplicità. Ho cercato di
 rendere chiare e accessibili queste implementazioni, in modo che possano essere comprese facilmente anche da chi è alle
 prime armi con la programmazione.
 
-- **Data structures**
-    - [x] [Dynamic array](./algorithms-datastructures/src/main/java/com/github/lorenzoyang/algorithms/datastructures/DynamicArray.java)
-    - [x] [Linked list](./algorithms-datastructures/src/main/java/com/github/lorenzoyang/algorithms/datastructures/LinkedList.java)
-    - [x] [Linked stack](./algorithms-datastructures/src/main/java/com/github/lorenzoyang/algorithms/datastructures/LinkedStack.java)
-    - [ ] Linked queue
-    - [ ] Array based queue
-    - **Priority queue**
-        - [x] [Heap based priority queue](./algorithms-datastructures/src/main/java/com/github/lorenzoyang/algorithms/datastructures/HeapPriorityQueue.java)
-        - [ ] Unordered array based priority queue
-        - [ ] Ordered array based priority queue
+- [x] [Dynamic array](./algorithms-datastructures/src/main/java/com/github/lorenzoyang/algorithms/datastructures/DynamicArray.java)
+- [x] [Linked list](./algorithms-datastructures/src/main/java/com/github/lorenzoyang/algorithms/datastructures/LinkedList.java)
+- [x] [Linked stack](./algorithms-datastructures/src/main/java/com/github/lorenzoyang/algorithms/datastructures/LinkedStack.java)
+- [ ] Linked queue
+- [ ] Array based queue
+- Priority queue
+    - [x] [Heap based priority queue](./algorithms-datastructures/src/main/java/com/github/lorenzoyang/algorithms/datastructures/priorityqueue/HeapPriorityQueue.java)
+    - [x] [Unordered array based priority queue](./algorithms-datastructures/src/main/java/com/github/lorenzoyang/algorithms/datastructures/priorityqueue/UnorderedArrayPriorityQueue.java)
+    - [x] [Ordered array based priority queue](./algorithms-datastructures/src/main/java/com/github/lorenzoyang/algorithms/datastructures/priorityqueue/OrderedArrayPriorityQueue.java)
+- Search
+    - [x] [Sequential search](./algorithms-datastructures/src/main/java/com/github/lorenzoyang/algorithms/search/SequentialSearch.java)
+    - [ ] Binary search
     - [ ] Binary search tree
-- **Algorithms**
-    - **Search**
-        - [ ] Sequential search
-        - [ ] Binary search
-    - **Sort**
-        - [ ] Selection sort
-        - [ ] Insertion sort
-        - [ ] Bubble sort
-        - [ ] Merge sort
-        - [ ] Quick sort
-        - [ ] Heap sort
-- **Applications**
+- Sort
+    - [ ] Selection sort
+    - [ ] Insertion sort
+    - [ ] Bubble sort
+    - [ ] Merge sort
+    - [ ] Quick sort
+    - [ ] Heap sort
+- Applications
     - [x] [Calculator (Linked stack)](./algorithms-datastructures/src/main/java/com/github/lorenzoyang/algorithms/applications/Calculator.java)
+
 
 ## Esercizi di Java [<sub>torna su</sub>](#unifi-code)
 
 In corso.
+
 
 ## Licenza [<sub>torna su</sub>](#unifi-code)
 
