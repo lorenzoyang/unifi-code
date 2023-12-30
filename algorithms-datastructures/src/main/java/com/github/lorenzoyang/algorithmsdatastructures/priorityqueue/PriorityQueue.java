@@ -1,4 +1,4 @@
-package com.github.lorenzoyang.algorithms.datastructures.priorityqueue;
+package com.github.lorenzoyang.algorithmsdatastructures.priorityqueue;
 
 public interface PriorityQueue<Key extends Comparable<Key>> {
 

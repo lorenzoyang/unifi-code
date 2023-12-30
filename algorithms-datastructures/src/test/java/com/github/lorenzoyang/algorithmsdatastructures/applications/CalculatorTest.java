@@ -1,4 +1,4 @@
-package com.github.lorenzoyang.algorithms.applications;
+package com.github.lorenzoyang.algorithmsdatastructures.applications;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

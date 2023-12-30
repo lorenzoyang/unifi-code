@@ -1,6 +1,6 @@
-package com.github.lorenzoyang.algorithms.applications;
+package com.github.lorenzoyang.algorithmsdatastructures.applications;
 
-import com.github.lorenzoyang.algorithms.datastructures.LinkedStack;
+import com.github.lorenzoyang.algorithmsdatastructures.LinkedStack;
 
 /**
  * L'uso della pila per la valutazione di espressioni aritmetiche

@@ -1,4 +1,4 @@
-package com.github.lorenzoyang.algorithms.datastructures;
+package com.github.lorenzoyang.algorithmsdatastructures;
 
 import java.util.Iterator;
 import java.util.NoSuchElementException;

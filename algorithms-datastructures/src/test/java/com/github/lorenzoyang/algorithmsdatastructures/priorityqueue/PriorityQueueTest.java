@@ -1,4 +1,4 @@
-package com.github.lorenzoyang.algorithms.datastructures.priorityqueue;
+package com.github.lorenzoyang.algorithmsdatastructures.priorityqueue;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

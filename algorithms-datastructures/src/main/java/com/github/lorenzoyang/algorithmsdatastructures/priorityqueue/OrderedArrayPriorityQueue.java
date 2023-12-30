@@ -1,6 +1,6 @@
-package com.github.lorenzoyang.algorithms.datastructures.priorityqueue;
+package com.github.lorenzoyang.algorithmsdatastructures.priorityqueue;
 
-import com.github.lorenzoyang.algorithms.datastructures.DynamicArray;
+import com.github.lorenzoyang.algorithmsdatastructures.DynamicArray;
 
 /**
  * Coda di priorità implementata con un array ordinato.

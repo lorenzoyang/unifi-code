@@ -1,6 +1,6 @@
-package com.github.lorenzoyang.algorithms.search;
+package com.github.lorenzoyang.algorithmsdatastructures.search;
 
-import com.github.lorenzoyang.algorithms.datastructures.DynamicArray;
+import com.github.lorenzoyang.algorithmsdatastructures.DynamicArray;
 
 /**
  * Ricerca sequenziale
