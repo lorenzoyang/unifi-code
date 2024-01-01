@@ -87,7 +87,7 @@ prime armi con la programmazione.
     - [x] [Ordered array based priority queue](./algorithms-datastructures/src/main/java/com/github/lorenzoyang/algorithmsdatastructures/datastructures/priorityqueue/OrderedArrayPriorityQueue.java)
 - Search
     - [x] [Sequential search](./algorithms-datastructures/src/main/java/com/github/lorenzoyang/algorithmsdatastructures/search/SequentialSearch.java)
-    - [ ] Binary search
+    - [x] [Binary search](./algorithms-datastructures/src/main/java/com/github/lorenzoyang/algorithmsdatastructures/search/BinarySearch.java)
     - [x] [Binary search tree](./algorithms-datastructures/src/main/java/com/github/lorenzoyang/algorithmsdatastructures/search/BinarySearchTree.java)
     - [x] [Tree traversal](./algorithms-datastructures/src/main/java/com/github/lorenzoyang/algorithmsdatastructures/search/TreeTraversal.java)
 - Sort
