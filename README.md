@@ -70,7 +70,7 @@ essi è elencato di seguito:
     - [x] [GeneraMatriceDaArray](./javamm-exercises/src/main/java/com/github/lorenzoyang/lab20/GeneraMatriceDaArray.java)
     - [x] [GeneraMatriceDaArrayRicorsivo](https://github.com/lorenzoyang/unifi-code/blob/75a582968aa89df38700032af5443227c78f5420/javamm-exercises/src/main/java/com/github/lorenzoyang/lab20/GeneraMatriceDaArray.java#L26-L58)
 
-[<sub>torna su</sub>](#unifi-code)
+[torna su](#unifi-code)
 
 ## Algoritmi e struttura datij
 
@@ -104,16 +104,16 @@ prime armi con la programmazione.
 - **Applications**
     - [x] [Calculator (Linked stack)](./algorithms-datastructures/src/main/java/com/github/lorenzoyang/algorithms/applications/Calculator.java)
 
-[<sub>torna su</sub>](#unifi-code)
+[torna su](#unifi-code)
 
 ## Esercizi di Java 
 
 In corso.
 
-[<sub>torna su</sub>](#unifi-code)
+[torna su>](#unifi-code)
 
 ## Licenza 
 
 Questo progetto è distribuito con la licenza MIT. Consulta il file [LICENSE](./LICENSE) per ulteriori dettagli.
 
-[<sub>torna su</sub>](#unifi-code)
+[torna su](#unifi-code)
