@@ -1,7 +1,8 @@
-module com.github.lorenzoyang.algorithmsdatastructures {
-    exports com.github.lorenzoyang.algorithmsdatastructures;
+module com.github.lorenzoyang.algorithms {
+    exports com.github.lorenzoyang.algorithms;
+    exports com.github.lorenzoyang.algorithms.search;
 
-    exports com.github.lorenzoyang.algorithmsdatastructures.priorityqueue;
+    exports com.github.lorenzoyang.algorithms.datastructures;
+    exports com.github.lorenzoyang.algorithms.datastructures.priorityqueue;
 
-    exports com.github.lorenzoyang.algorithmsdatastructures.search;
 }

@@ -76,29 +76,31 @@ Le mie implementazioni in Java di algoritmi e strutture dati. L'obiettivo princi
 rendere chiare e accessibili queste implementazioni, in modo che possano essere comprese facilmente anche da chi è alle
 prime armi con la programmazione.
 
-- [x] [Dynamic array](./algorithms-datastructures/src/main/java/com/github/lorenzoyang/algorithmsdatastructures/datastructures/DynamicArray.java)
-- [x] [Linked list](./algorithms-datastructures/src/main/java/com/github/lorenzoyang/algorithmsdatastructures/datastructures/LinkedList.java)
-- [x] [Linked stack](./algorithms-datastructures/src/main/java/com/github/lorenzoyang/algorithmsdatastructures/datastructures/LinkedStack.java)
-- [ ] Linked queue
-- [ ] Array based queue
-- Priority queue
-    - [x] [Heap based priority queue](./algorithms-datastructures/src/main/java/com/github/lorenzoyang/algorithmsdatastructures/datastructures/priorityqueue/HeapPriorityQueue.java)
-    - [x] [Unordered array based priority queue](./algorithms-datastructures/src/main/java/com/github/lorenzoyang/algorithmsdatastructures/datastructures/priorityqueue/UnorderedArrayPriorityQueue.java)
-    - [x] [Ordered array based priority queue](./algorithms-datastructures/src/main/java/com/github/lorenzoyang/algorithmsdatastructures/datastructures/priorityqueue/OrderedArrayPriorityQueue.java)
-- Search
-    - [x] [Sequential search](./algorithms-datastructures/src/main/java/com/github/lorenzoyang/algorithmsdatastructures/search/SequentialSearch.java)
-    - [x] [Binary search](./algorithms-datastructures/src/main/java/com/github/lorenzoyang/algorithmsdatastructures/search/BinarySearch.java)
-    - [x] [Binary search tree](./algorithms-datastructures/src/main/java/com/github/lorenzoyang/algorithmsdatastructures/search/BinarySearchTree.java)
-    - [x] [Tree traversal](./algorithms-datastructures/src/main/java/com/github/lorenzoyang/algorithmsdatastructures/search/TreeTraversal.java)
-- Sort
-    - [ ] Selection sort
-    - [ ] Insertion sort
-    - [ ] Bubble sort
-    - [ ] Merge sort
-    - [ ] Quick sort
-    - [ ] Heap sort
-- Applications
-    - [x] [Calculator (Linked stack)](./algorithms-datastructures/src/main/java/com/github/lorenzoyang/algorithmsdatastructures/applications/Calculator.java)
+- **Data Structures**
+    - [x] [Dynamic array](./algorithms-datastructures/src/main/java/com/github/lorenzoyang/algorithms/datastructures/DynamicArray.java)
+    - [x] [Linked list](./algorithms-datastructures/src/main/java/com/github/lorenzoyang/algorithms/datastructures/LinkedList.java)
+    - [x] [Linked stack](./algorithms-datastructures/src/main/java/com/github/lorenzoyang/algorithms/datastructures/LinkedStack.java)
+    - [ ] Linked queue
+    - [x] [Array based queue](./algorithms-datastructures/src/main/java/com/github/lorenzoyang/algorithms/datastructures/ArrayQueue.java)
+    - Priority queue
+        - [x] [Heap based priority queue](./algorithms-datastructures/src/main/java/com/github/lorenzoyang/algorithms/datastructures/priorityqueue/HeapPriorityQueue.java)
+        - [x] [Unordered array based priority queue](./algorithms-datastructures/src/main/java/com/github/lorenzoyang/algorithms/datastructures/priorityqueue/UnorderedArrayPriorityQueue.java)
+        - [x] [Ordered array based priority queue](./algorithms-datastructures/src/main/java/com/github/lorenzoyang/algorithms/datastructures/priorityqueue/OrderedArrayPriorityQueue.java)
+    - [x] [Binary search tree](./algorithms-datastructures/src/main/java/com/github/lorenzoyang/algorithms/datastructures/BinarySearchTree.java)
+- **Algorithms**
+    - [x] [Tree traversal](./algorithms-datastructures/src/main/java/com/github/lorenzoyang/algorithms/TreeTraversal.java)
+    - Search
+        - [x] [Sequential search](./algorithms-datastructures/src/main/java/com/github/lorenzoyang/algorithms/search/SequentialSearch.java)
+        - [x] [Binary search](./algorithms-datastructures/src/main/java/com/github/lorenzoyang/algorithms/search/BinarySearch.java)
+    - Sort
+        - [ ] Selection sort
+        - [ ] Insertion sort
+        - [ ] Bubble sort
+        - [ ] Merge sort
+        - [ ] Quick sort
+        - [ ] Heap sort
+- **Applications**
+    - [x] [Calculator (Linked stack)](./algorithms-datastructures/src/main/java/com/github/lorenzoyang/algorithms/applications/Calculator.java)
 
 ## Esercizi di Java [<sub>torna su</sub>](#unifi-code)
 
