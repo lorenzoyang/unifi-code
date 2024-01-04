@@ -82,13 +82,15 @@ prime armi con la programmazione.
     - [x] [Dynamic array](./algorithms-datastructures/src/main/java/com/github/lorenzoyang/algorithms/datastructures/DynamicArray.java)
     - [x] [Linked list](./algorithms-datastructures/src/main/java/com/github/lorenzoyang/algorithms/datastructures/LinkedList.java)
     - [x] [Linked stack](./algorithms-datastructures/src/main/java/com/github/lorenzoyang/algorithms/datastructures/LinkedStack.java)
-    - [ ] Linked queue
+    - [x] [Linked queue](./algorithms-datastructures/src/main/java/com/github/lorenzoyang/algorithms/datastructures/LinkedQueue.java)
     - [x] [Array based queue](./algorithms-datastructures/src/main/java/com/github/lorenzoyang/algorithms/datastructures/ArrayQueue.java)
     - Priority queue
         - [x] [Heap based priority queue](./algorithms-datastructures/src/main/java/com/github/lorenzoyang/algorithms/datastructures/priorityqueue/HeapPriorityQueue.java)
         - [x] [Unordered array based priority queue](./algorithms-datastructures/src/main/java/com/github/lorenzoyang/algorithms/datastructures/priorityqueue/UnorderedArrayPriorityQueue.java)
         - [x] [Ordered array based priority queue](./algorithms-datastructures/src/main/java/com/github/lorenzoyang/algorithms/datastructures/priorityqueue/OrderedArrayPriorityQueue.java)
     - [x] [Binary search tree](./algorithms-datastructures/src/main/java/com/github/lorenzoyang/algorithms/datastructures/BinarySearchTree.java)
+    - [ ] 2-3 tree
+    - [ ] Avl tree
 - **Algorithms**
     - [x] [Tree traversal](./algorithms-datastructures/src/main/java/com/github/lorenzoyang/algorithms/TreeTraversal.java)
     - Search

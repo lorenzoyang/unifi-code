@@ -27,6 +27,7 @@ public class ArrayQueue<T> {
 
     /**
      * aggiunge un elemento alla coda secondo la politica FIFO
+     * aggiunge quindi l'elemento in fondo alla coda
      */
     public void enqueue(T element) {
         if (size == array.length) resize(array.length * 2);
@@ -37,6 +38,8 @@ public class ArrayQueue<T> {
 
     /**
      * rimuove un elemento dalla coda secondo la politica FIFO
+     * rimuove quindi l'elemento in testa alla coda
+     * restituisce l'elemento rimosso
      */
     public T dequeue() {
         if (isEmpty()) throw new IllegalStateException("Queue is empty");
