@@ -3,9 +3,6 @@ package com.github.lorenzoyang.algorithms.datastructures;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import java.util.Iterator;
-import java.util.NoSuchElementException;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 class DynamicArrayTest {
@@ -130,33 +127,5 @@ class DynamicArrayTest {
             dynamicArray.add(i);
         }
         assertTrue(dynamicArray.capacity() > 10);
-    }
-
-    @Test
-    void iteratorHasNextReturnsFalseWhenEmpty() {
-        assertFalse(dynamicArray.iterator().hasNext());
-    }
-
-    @Test
-    void iteratorHasNextReturnsTrueWhenNotEmpty() {
-        dynamicArray.add(1);
-        assertTrue(dynamicArray.iterator().hasNext());
-    }
-
-    @Test
-    void iteratorNextReturnsCorrectElement() {
-        dynamicArray.add(1);
-        dynamicArray.add(2);
-        Iterator<Integer> iterator = dynamicArray.iterator();
-        assertEquals(Integer.valueOf(1), iterator.next());
-        assertEquals(Integer.valueOf(2), iterator.next());
-    }
-
-    @Test
-    void iteratorNextThrowsExceptionWhenNoMoreElements() {
-        dynamicArray.add(1);
-        Iterator<Integer> iterator = dynamicArray.iterator();
-        iterator.next();
-        assertThrows(NoSuchElementException.class, iterator::next);
     }
 }

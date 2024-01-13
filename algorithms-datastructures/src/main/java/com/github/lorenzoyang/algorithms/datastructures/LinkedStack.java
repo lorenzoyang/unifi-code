@@ -4,19 +4,6 @@ package com.github.lorenzoyang.algorithms.datastructures;
  * Pila implementata con una lista concatenata
  */
 public class LinkedStack<T> {
-    /**
-     * class Nodo che rappresenta un elemento dello stack
-     */
-    private static class Node<T> {
-        private final T value;
-        private final Node<T> next;
-
-        public Node(T value, Node<T> next) {
-            this.value = value;
-            this.next = next;
-        }
-    }
-
     private Node<T> head; // punta sempre al primo elemento dello stack
     private int size;
 
@@ -30,7 +17,7 @@ public class LinkedStack<T> {
         if (head == null) {
             throw new IllegalStateException();
         }
-        return head.value;
+        return head.value();
     }
 
     // inserisce un nuovo elemento in cima allo stack
@@ -46,8 +33,8 @@ public class LinkedStack<T> {
         if (head == null) {
             throw new IllegalStateException();
         }
-        var value = head.value;
-        head = head.next;
+        var value = head.value();
+        head = head.next();
         size--;
         return value;
     }

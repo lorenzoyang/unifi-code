@@ -4,19 +4,6 @@ package com.github.lorenzoyang.algorithms.datastructures;
  * Lista concatenata
  */
 public class LinkedList<T> {
-    /**
-     * class Nodo che rappresenta un elemento della lista
-     */
-    private static class Node<T> {
-        private T value; // valore dell'elemento
-        private Node<T> next; // puntatore all'elemento successivo
-
-        public Node(T value, Node<T> next) {
-            this.value = value;
-            this.next = next;
-        }
-    }
-
     // quando si ha un solo elemento, head e tail puntano allo stesso elemento
     private Node<T> head; // punta sempre al primo elemento della lista
     private Node<T> tail; // punta sempre all'ultimo elemento della lista
@@ -36,9 +23,9 @@ public class LinkedList<T> {
         // che punta alla testa
         var current = head;
         for (int i = 0; i < index; i++) {
-            current = current.next;
+            current = current.next();
         }
-        return current.value;
+        return current.value();
     }
 
     public void set(int index, T value) {
@@ -47,9 +34,9 @@ public class LinkedList<T> {
         }
         var current = head;
         for (int i = 0; i < index; i++) {
-            current = current.next;
+            current = current.next();
         }
-        current.value = value;
+        current.value(value);
     }
 
     public void add(T value) {
@@ -57,8 +44,8 @@ public class LinkedList<T> {
         if (head == null) {
             head = tail = node;
         } else {
-            tail.next = node;
-            tail = tail.next;
+            tail.next(node);
+            tail = tail.next();
         }
         size++;
     }
@@ -68,7 +55,7 @@ public class LinkedList<T> {
             throw new IndexOutOfBoundsException();
         }
         if (index == 0) { // indicie 0 vuol dire rimuovere la testa
-            head = head.next;
+            head = head.next();
             if (head == null) {
                 tail = null;
             }
@@ -76,12 +63,12 @@ public class LinkedList<T> {
             var current = head;
             // altrimenti devo trovare l'elemento precedente a quello da rimuovere
             for (int i = 0; i < index - 1; i++) {
-                current = current.next;
+                current = current.next();
             }
             // il nodo successivo a quello da rimuovere diventa il successivo del nodo
-            current.next = current.next.next;
+            current.next(current.next().next());
             // se il nodo da rimuovere è l'ultimo, aggiorno la coda
-            if (current.next == null) {
+            if (current.next() == null) {
                 tail = current;
             }
         }

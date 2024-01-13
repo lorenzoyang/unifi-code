@@ -1,14 +1,6 @@
 package com.github.lorenzoyang.algorithms.datastructures;
 
 public class LinkedQueue<T> {
-    /**
-     * class Nodo che rappresenta un elemento della coada
-     */
-    private static class Node<T> {
-        private T value;
-        private Node<T> next;
-    }
-
     private Node<T> front; // punta sempre al primo elemento della coda
     private Node<T> rear; // punta sempre all'ultimo elemento della coda
     private int size;
@@ -26,11 +18,11 @@ public class LinkedQueue<T> {
     public void enqueue(T element) {
         var oldRear = rear;
         rear = new Node<>();
-        rear.value = element;
-        rear.next = null;
+        rear.value(element);
+        rear.next(null);
 
         if (isEmpty()) front = rear;
-        else oldRear.next = rear;
+        else oldRear.next(rear);
         size++;
     }
 
@@ -41,8 +33,8 @@ public class LinkedQueue<T> {
      */
     public T dequeue() {
         if (isEmpty()) throw new IllegalStateException("Queue is empty");
-        var element = front.value;
-        front = front.next;
+        var element = front.value();
+        front = front.next();
         size--;
         if (isEmpty()) rear = null;
         return element;
@@ -53,7 +45,7 @@ public class LinkedQueue<T> {
      */
     public T peek() {
         if (isEmpty()) throw new IllegalStateException("Queue is empty");
-        return front.value;
+        return front.value();
     }
 
     public int size() {
