@@ -1,7 +1,7 @@
 package com.github.lorenzoyang.lab11;
 
 class SlotMachine {
-    // #inizio: javamm
+    // #inizio: javammexercises
 
     int[][] ruota(int[][] s, int[] r) {
         if (s.length < 3 || s.length % 2 == 0 || s[0].length != r.length) {
@@ -35,5 +35,5 @@ class SlotMachine {
         return partitaCompleta(dopoRuota, r, k - 1);
     }
 
-    // #fine: javamm
+    // #fine: javammexercises
 }

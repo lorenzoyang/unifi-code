@@ -1,7 +1,7 @@
 package com.github.lorenzoyang.lab13;
 
 class ShuffleMatrice {
-    // #inizio: javamm
+    // #inizio: javammexercises
 
     int[][] shuffleMatrice(int[][] t, int[][] s) {
         // t = matrice m x m
@@ -23,5 +23,5 @@ class ShuffleMatrice {
         return t;
     }
 
-    // #fine: javamm
+    // #fine: javammexercises
 }

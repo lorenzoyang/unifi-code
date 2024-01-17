@@ -1,7 +1,7 @@
 package com.github.lorenzoyang.lab14;
 
 class VisitaSerpentina {
-    // #inizio: javamm
+    // #inizio: javammexercises
 
     int[] visitaSerpentina(int[][] m, int riga, int colonna) {
         // il numero di righe e' pari
@@ -35,5 +35,5 @@ class VisitaSerpentina {
         return cammino;
     }
 
-    // #fine: javamm
+    // #fine: javammexercises
 }

@@ -1,7 +1,7 @@
 package com.github.lorenzoyang.lab19;
 
 class AnelloBilanciato {
-    // #inizio: javamm
+    // #inizio: javammexercises
 
     boolean anelloBilanciato(int[][] t, int k) {
         int centro = t.length / 2;
@@ -12,5 +12,5 @@ class AnelloBilanciato {
         return true;
     }
 
-    // #fine: javamm
+    // #fine: javammexercises
 }

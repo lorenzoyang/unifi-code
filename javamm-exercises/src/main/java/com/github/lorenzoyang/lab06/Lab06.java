@@ -1,7 +1,7 @@
 package com.github.lorenzoyang.lab06;
 
 class Lab06 {
-    // #inizio: javamm
+    // #inizio: javammexercises
 
     int integerSquareRoot(int n) {
         int i = 0;
@@ -72,5 +72,5 @@ class Lab06 {
         return risultato;
     }
 
-    // fine: javamm
+    // fine: javammexercises
 }

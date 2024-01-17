@@ -1,7 +1,7 @@
 package com.github.lorenzoyang.lab09;
 
 class AzzeraAdiacenti {
-    // #inizio: javamm
+    // #inizio: javammexercises
 
     int[][] azzeraAdiacenti(int[][] m, int r, int c) {
         if (m.length < 3 || m[0].length < 3) return m;
@@ -18,5 +18,5 @@ class AzzeraAdiacenti {
         return m;
     }
 
-    // #fine: javamm
+    // #fine: javammexercises
 }

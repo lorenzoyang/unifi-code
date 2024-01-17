@@ -1,7 +1,7 @@
 package com.github.lorenzoyang.lab16;
 
 class CompattaMatrice {
-    // #inizio: javamm
+    // #inizio: javammexercises
 
     int[][] compattaMatrice(int[][] t) {
         int[][] temp = new int[t.length * t[0].length][3];
@@ -31,5 +31,5 @@ class CompattaMatrice {
         return c;
     }
 
-    // #fine: javamm
+    // #fine: javammexercises
 }

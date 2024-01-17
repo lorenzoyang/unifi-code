@@ -1,7 +1,7 @@
 package com.github.lorenzoyang.lab10;
 
 class EsplosioneMatrice {
-    // #inizio: javamm
+    // #inizio: javammexercises
 
     int[][] esplodiMatrice(int[][] t, int r, int c) {
         if (t[r][c] == 0) return t;
@@ -21,5 +21,5 @@ class EsplosioneMatrice {
         return t;
     }
 
-    // #fine: javamm
+    // #fine: javammexercises
 }

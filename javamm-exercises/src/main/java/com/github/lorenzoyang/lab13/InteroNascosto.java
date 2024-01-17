@@ -1,7 +1,7 @@
 package com.github.lorenzoyang.lab13;
 
 class InteroNascosto {
-    // #inizio: javamm
+    // #inizio: javammexercises
 
     int interoNascosto(int a, int b, int c) {
         double nascosto = 0;
@@ -21,5 +21,5 @@ class InteroNascosto {
         return (int) nascosto;
     }
 
-    // #fine: javamm
+    // #fine: javammexercises
 }

@@ -1,7 +1,7 @@
 package com.github.lorenzoyang.lab15;
 
 class SpiralPath {
-    // #inizio: javamm
+    // #inizio: javammexercises
 
     int spiralPath(int n, int i) {
 
@@ -45,5 +45,5 @@ class SpiralPath {
         return 0;
     }
 
-    // #fine: javamm
+    // #fine: javammexercises
 }

@@ -1,7 +1,7 @@
 package com.github.lorenzoyang.lab11;
 
 class CacciaAlTesoro {
-    // #inizio: javamm
+    // #inizio: javammexercises
 
     boolean cacciaAlTesoro(char[][] m) {
         return cacciaAlTesoro(m, 0, 0);
@@ -39,5 +39,5 @@ class CacciaAlTesoro {
         }
     }
 
-    // #fine: javamm
+    // #fine: javammexercises
 }

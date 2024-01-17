@@ -1,7 +1,7 @@
 package com.github.lorenzoyang.lab08;
 
 class DecomprimiRLE {
-    // #inizio: javamm
+    // #inizio: javammexercises
 
     int[] decomprimiRLE(int[] a) {
         int lunghezza = 0;
@@ -20,5 +20,5 @@ class DecomprimiRLE {
         return decompressa;
     }
 
-    // #fine: javamm
+    // #fine: javammexercises
 }

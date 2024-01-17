@@ -1,7 +1,7 @@
 package com.github.lorenzoyang.lab05;
 
 class Lab05 {
-    // #inizio: javamm
+    // #inizio: javammexercises
 
     int loneSum(int a, int b, int c) {
         int sum = 0;
@@ -80,5 +80,5 @@ class Lab05 {
         }
     }
 
-    // #fine: javamm
+    // #fine: javammexercises
 }

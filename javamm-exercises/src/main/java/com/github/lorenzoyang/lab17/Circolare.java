@@ -1,7 +1,7 @@
 package com.github.lorenzoyang.lab17;
 
 class Circolare {
-    // #inizio: javamm
+    // #inizio: javammexercises
 
     // consegna obbligatoria
     boolean circolare(char[][] m) {
@@ -43,5 +43,5 @@ class Circolare {
         return circolare(m, prossimaRiga, prossimaColonna, n, inversa);
     }
 
-    // #fine: javamm
+    // #fine: javammexercises
 }

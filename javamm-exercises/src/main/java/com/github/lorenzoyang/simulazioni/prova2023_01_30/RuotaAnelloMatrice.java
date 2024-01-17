@@ -1,7 +1,7 @@
 package com.github.lorenzoyang.simulazioni.prova2023_01_30;
 
 class RuotaAnelloMatrice {
-    // #inizio: javamm
+    // #inizio: javammexercises
 
     //
     int[][] ruotaAnelloMatrice(int[][] t, int k) {
@@ -43,5 +43,5 @@ class RuotaAnelloMatrice {
         return t;
     }
 
-    // #fine: javamm
+    // #fine: javammexercises
 }

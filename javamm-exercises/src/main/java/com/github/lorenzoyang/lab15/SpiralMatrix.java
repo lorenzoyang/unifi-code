@@ -1,7 +1,7 @@
 package com.github.lorenzoyang.lab15;
 
 class SpiralMatrix {
-    // #inizio: javamm
+    // #inizio: javammexercises
 
     int[] spiralMatrix(int n, int x) {
         int[] indici = new int[]{0, 0};
@@ -33,5 +33,5 @@ class SpiralMatrix {
         return indici;
     }
 
-    // #fine: javamm
+    // #fine: javammexercises
 }

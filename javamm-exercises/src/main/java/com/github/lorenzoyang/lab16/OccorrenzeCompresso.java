@@ -2,7 +2,7 @@ package com.github.lorenzoyang.lab16;
 
 
 public class OccorrenzeCompresso {
-    // #inizio: javamm
+    // #inizio: javammexercises
 
     int[] occorrenzeCompresso(int[] a) {
         int[] occorrenze = new int[max(a) + 1];
@@ -36,5 +36,5 @@ public class OccorrenzeCompresso {
         return max;
     }
 
-    // #fine: javamm
+    // #fine: javammexercises
 }

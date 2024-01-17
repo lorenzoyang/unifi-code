@@ -1,7 +1,7 @@
 package com.github.lorenzoyang.lab20;
 
 class TrovaParolaDiagonale {
-    // #inizio: javamm
+    // #inizio: javammexercises
 
     boolean trovaParolaDiagonale(char[][] g, char[] p) {
         // Scorro solo le diagonali che hanno spazio sufficiente per contenere p
@@ -39,5 +39,5 @@ class TrovaParolaDiagonale {
         return trovabileDaDestra || trovabileDaSinistra;
     }
 
-    // #fine: javamm
+    // #fine: javammexercises
 }

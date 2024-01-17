@@ -1,7 +1,7 @@
 package com.github.lorenzoyang.lab10;
 
 class TestBilanciamento {
-    // #inizio: javamm
+    // #inizio: javammexercises
 
     boolean testBilanciamento(int[] r) {
         if (r.length == 0 || r.length % 2 != 0) return false;
@@ -16,5 +16,5 @@ class TestBilanciamento {
         return testBilanciamento(r, i + 1, j - 1);
     }
 
-    // #fine: javamm
+    // #fine: javammexercises
 }

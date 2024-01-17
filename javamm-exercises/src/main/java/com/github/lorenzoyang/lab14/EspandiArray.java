@@ -1,7 +1,7 @@
 package com.github.lorenzoyang.lab14;
 
 class EspandiArray {
-    // #inizio: javamm
+    // #inizio: javammexercises
 
     int[][] espandiArray(int[] v) {
         return espandiArrayExtraDifficolta(v);
@@ -47,5 +47,5 @@ class EspandiArray {
         return max;
     }
 
-    // #fine: javamm
+    // #fine: javammexercises
 }

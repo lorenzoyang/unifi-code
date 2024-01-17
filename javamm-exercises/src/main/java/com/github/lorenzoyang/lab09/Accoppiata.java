@@ -1,7 +1,7 @@
 package com.github.lorenzoyang.lab09;
 
 class Accoppiata {
-    // #inizio: javamm
+    // #inizio: javammexercises
 
     boolean accoppiata(char[] array) {
         if (array.length % 2 != 0) return false;
@@ -16,5 +16,5 @@ class Accoppiata {
         return accoppiata(array, i + 1, j + 1);
     }
 
-    // #fine: javamm
+    // #fine: javammexercises
 }

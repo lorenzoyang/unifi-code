@@ -1,7 +1,7 @@
 package com.github.lorenzoyang.lab19;
 
 class AzzeraNonUnici {
-    // #inizio: javamm
+    // #inizio: javammexercises
 
     // consegna obbligatoria
     int[][] azzeraNonUnici(int[][] m, int r, int c) {
@@ -30,5 +30,5 @@ class AzzeraNonUnici {
         return m;
     }
 
-    // #fine: javamm
+    // #fine: javammexercises
 }
