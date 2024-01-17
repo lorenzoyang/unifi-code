@@ -22,5 +22,23 @@ public class RimuoviCifre {
         return risultato;
     }
 
+    // soluzione alternativa (Matteo)
+    public long alternativa_rimuoviCifre(long n, short c) {
+        long risultato = 0;
+        int controllo = 0, esponente = 0;
+        for (int i = 0; i < c; i++) {
+            controllo += c * (int) Math.pow(10, i);
+        }
+        while (n > 0) {
+            if ((n % (int) Math.pow(10, c)) == controllo) {
+                n /= (int) Math.pow(10, c);
+            } else {
+                risultato += (n % 10) * (int) Math.pow(10, esponente++);
+                n /= 10;
+            }
+        }
+        return risultato;
+    }
+
     // #fine: javammexercises
 }

@@ -15,5 +15,6 @@ public class RimuoviCifreBenchMark {
     public void benchmark() {
         var rimuoviCifre = new RimuoviCifre();
         rimuoviCifre.rimuoviCifre(22345, (short) 2);
+
     }
 }
