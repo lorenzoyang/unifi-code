@@ -43,5 +43,23 @@ class RuotaAnelloMatrice {
         return t;
     }
 
+    // soluzione alternativa
+    int[][] alternativa_ruotaAnelloMatrice(int[][] t, int k) {
+        int centro = t.length / 2, upLeft = t[centro - k][centro - k], upRight = t[centro - k][centro + k],
+                downLeft = t[centro + k][centro - k], downRight = t[centro + k][centro + k];
+        for (int i = 0; i < 2 * k + 1 - 2; i++) {
+            t[centro - k][centro + k - i] = t[centro - k][centro + k - i - 1]; // riga sopra
+            t[centro - k + i][centro - k] = t[centro - k + i + 1][centro - k]; // riga sinistra
+            t[centro + k][centro - k + i] = t[centro + k][centro - k + i + 1]; // riga sotto
+            t[centro + k - i][centro + k] = t[centro + k - i - 1][centro + k]; // colonna destra
+        }
+        t[centro - k][centro - k + 1] = upLeft;
+        t[centro - k + 1][centro + k] = upRight;
+        t[centro + k][centro + k - 1] = downRight;
+        t[centro + k - 1][centro - k] = downLeft;
+        return t;
+    }
+
+
     // #fine: javammexercises
 }
