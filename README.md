@@ -20,8 +20,8 @@ essi è elencato di seguito:
         - [x] [RimuoviFibonacci](./javamm-exercises/src/main/java/com/github/lorenzoyang/simulazioni/prova2023_01_24/RimuoviFibonacci.java)
         - [x] [CercaParolaNascosta](./javamm-exercises/src/main/java/com/github/lorenzoyang/simulazioni/prova2023_01_24/CercaParolaNascosta.java)
     - **2023-01-30** ([PDF](./javamm-exercises/src/main/java/com/github/lorenzoyang/simulazioni/prova2023_01_30/2023-01-30%20(PI%20Java--)%20-%20finale.pdf))
-        - [x] [RimuoviCifre](./javamm-exercises/src/main/java/com/github/lorenzoyang/simulazioni/prova20230130/RimuoviCifre.java)
-        - [x] [RuotaAnelloMatrice](./javamm-exercises/src/main/java/com/github/lorenzoyang/simulazioni/prova20230130/RuotaAnelloMatrice.java)
+        - [x] [RimuoviCifre](./javamm-exercises/src/main/java/com/github/lorenzoyang/simulazioni/prova2023_01_30/RimuoviCifre.java)
+        - [x] [RuotaAnelloMatrice](./javamm-exercises/src/main/java/com/github/lorenzoyang/simulazioni/prova2023_01_30/RuotaAnelloMatrice.java)
 - **Laboratorio 04** ([PDF](./javamm-exercises/src/main/java/com/github/lorenzoyang/lab04/Lab04.pdf))
     - [x] [Lab04](./javamm-exercises/src/main/java/com/github/lorenzoyang/lab04/Lab04.java)
 - **Laboratorio 05** ([PDF](./javamm-exercises/src/main/java/com/github/lorenzoyang/lab05/Lab05.pdf))
@@ -112,7 +112,7 @@ prime armi con la programmazione.
 
 In corso.
 
-[torna su>](#unifi-code)
+[torna su](#unifi-code)
 
 ## Licenza 
 
