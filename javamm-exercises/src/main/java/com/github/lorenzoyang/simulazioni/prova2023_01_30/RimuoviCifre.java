@@ -1,9 +1,9 @@
 package com.github.lorenzoyang.simulazioni.prova2023_01_30;
 
-public class RimuoviCifre {
+class RimuoviCifre {
     // #inizio: javammexercises
 
-    public long rimuoviCifre(long n, short c) {
+    long rimuoviCifre(long n, short c) {
         long risultato = 0;
         int contatore = 0; // per contare le cifre consecutive
         int esponente = 0; // per calcolare la potenza di 10
@@ -23,7 +23,7 @@ public class RimuoviCifre {
     }
 
     // soluzione alternativa (Matteo)
-    public long alternativa_rimuoviCifre(long n, short c) {
+    long alternativa_rimuoviCifre(long n, short c) {
         long risultato = 0;
         int controllo = 0, esponente = 0;
         for (int i = 0; i < c; i++) {
