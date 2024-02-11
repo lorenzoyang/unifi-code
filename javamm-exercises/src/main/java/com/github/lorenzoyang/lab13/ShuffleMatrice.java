@@ -10,15 +10,17 @@ class ShuffleMatrice {
 
     // funzione privata ausiliaria: shuffleMatrice con parametro verticale
     int[][] shuffleMatrice(int[][] t, int[][] s, boolean verticale) {
+        int[][] risultato = new int[t.length][t.length];
         for (int i = 0; i < s.length; i++) {
-            int[][] risultatoVerticale = new int[t.length][t.length];
             for (int j = 0; j < s[0].length; j++) {
                 for (int k = 0; k < t.length; k++) {
-                    if (verticale) risultatoVerticale[k][s[i][j]] = t[k][j];
-                    else risultatoVerticale[s[i][j]][k] = t[j][k];
+                    if (verticale) risultato[k][s[i][j]] = t[k][j];
+                    else risultato[s[i][j]][k] = t[j][k];
                 }
             }
-            t = risultatoVerticale;
+            int[][] temp = t;
+            t = risultato;
+            risultato = temp;
         }
         return t;
     }
