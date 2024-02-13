@@ -1,8 +1,7 @@
 package com.github.lorenzoyang.lab06;
 
 class Lab06 {
-    // #inizio: javammexercises
-
+    // #solution:begin
     int integerSquareRoot(int n) {
         int i = 0;
         while (i * i <= n) {
@@ -44,7 +43,7 @@ class Lab06 {
         return i - 1;
     }
 
-    // funzione privata usata da harmonicSum
+    // funzione di supporto
     double harmonicFunction(int k) {
         double result = 0;
         int i = 1;
@@ -58,7 +57,6 @@ class Lab06 {
     long duplicateDigit(int n) {
         long risultato = 0;
 
-        // Inizializza il fattore a 1 (10^0)
         int fattore = 1;
 
         while (n > 0) {
@@ -71,6 +69,5 @@ class Lab06 {
         }
         return risultato;
     }
-
-    // fine: javammexercises
+    // #solution:end
 }

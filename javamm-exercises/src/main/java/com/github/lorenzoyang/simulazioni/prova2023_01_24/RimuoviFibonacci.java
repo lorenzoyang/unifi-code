@@ -1,7 +1,7 @@
 package com.github.lorenzoyang.simulazioni.prova2023_01_24;
 
 class RimuoviFibonacci {
-    // #inizio: javammexercises
+    // #solution:begin
 
     int rimuoviFibonacci(int n) {
         if (n / 100 == 0) return n; // se n e' un numero di due cifre o meno, allora n e' il risultato
@@ -38,6 +38,6 @@ class RimuoviFibonacci {
         return risultato;
     }
 
-    // #fine: javammexercises
+    // #solution:end
 }
 

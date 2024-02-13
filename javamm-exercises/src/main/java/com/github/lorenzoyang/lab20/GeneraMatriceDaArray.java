@@ -1,7 +1,7 @@
 package com.github.lorenzoyang.lab20;
 
 class GeneraMatriceDaArray {
-    // #inizio: javammexercises
+    // #solution:begin
 
     // consegna obbligatoria
     int[][] generaMatriceDaArray(int[] arr) {
@@ -66,5 +66,5 @@ class GeneraMatriceDaArray {
         return new int[]{righe, colonne};
     }
 
-    // #fine: javammexercises
+    // #solution:end
 }

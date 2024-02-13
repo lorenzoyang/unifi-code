@@ -1,7 +1,7 @@
 package com.github.lorenzoyang.simulazioni.prova2023_01_30;
 
 class RimuoviCifre {
-    // #inizio: javammexercises
+    // #solution:begin
 
     long rimuoviCifre(long n, short c) {
         long risultato = 0;
@@ -40,5 +40,5 @@ class RimuoviCifre {
         return risultato;
     }
 
-    // #fine: javammexercises
+    // #solution:end
 }

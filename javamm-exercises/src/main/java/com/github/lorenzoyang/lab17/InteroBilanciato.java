@@ -1,7 +1,7 @@
 package com.github.lorenzoyang.lab17;
 
 class InteroBilanciato {
-    // #inizio: javammexercises
+    // #solution:begin
 
     boolean bilanciato(int n) {
         int numCifre = contaCifre(n);
@@ -28,5 +28,5 @@ class InteroBilanciato {
         return nCifre;
     }
 
-    // #fine: javammexercises
+    // #solution:end
 }

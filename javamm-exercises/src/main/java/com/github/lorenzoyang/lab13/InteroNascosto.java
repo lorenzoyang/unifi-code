@@ -1,8 +1,7 @@
 package com.github.lorenzoyang.lab13;
 
 class InteroNascosto {
-    // #inizio: javammexercises
-
+    // #solution:begin
     int interoNascosto(int a, int b, int c) {
         double nascosto = 0;
         int count = 0;
@@ -20,6 +19,5 @@ class InteroNascosto {
         }
         return (int) nascosto;
     }
-
-    // #fine: javammexercises
+    // #solution:end
 }

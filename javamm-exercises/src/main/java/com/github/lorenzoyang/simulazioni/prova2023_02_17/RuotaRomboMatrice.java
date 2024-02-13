@@ -1,7 +1,7 @@
 package com.github.lorenzoyang.simulazioni.prova2023_02_17;
 
 class RuotaRomboMatrice {
-    // #inizio: javammexercises
+    // #solution:begin
 
     int[][] ruotaRomboMatrice(int[][] t, int k) {
         int c = t.length / 2, temp_destra = t[c][c + k];
@@ -27,5 +27,5 @@ class RuotaRomboMatrice {
         return t;
     }
 
-    // #fine: javammexercises
+    // #solution:end
 }

@@ -1,13 +1,11 @@
 package com.github.lorenzoyang.lab11;
 
 class CacciaAlTesoro {
-    // #inizio: javammexercises
-
+    // #solution:begin
     boolean cacciaAlTesoro(char[][] m) {
         return cacciaAlTesoro(m, 0, 0);
     }
 
-    // funzione privata ricorsiva usata da cacciaAlTesoro(char[][])
     boolean cacciaAlTesoro(char[][] m, int r, int c) {
         if (m[r][c] == 'T' || m[r][c] == '0') return false;
         if (m[r][c] == 'X') return true;
@@ -38,6 +36,5 @@ class CacciaAlTesoro {
                 return false;
         }
     }
-
-    // #fine: javammexercises
+    // #solution:end
 }

@@ -1,7 +1,7 @@
 package com.github.lorenzoyang.simulazioni.prova2023_01_24;
 
 class CercaParolaNascosta {
-    // #inizio: javammexercises
+    // #solution:begin
 
     char[] cercaParolaNascosta(char[][] testo) {
         char[] parolaNascosta = new char[testo.length]; // Array delle lettere nascoste
@@ -72,5 +72,5 @@ class CercaParolaNascosta {
         return ((freqMax == 1) ? ' ' : parola[indiceFreqMax]);
     }
 
-    // #fine: javammexercises
+    // #solution:end
 }

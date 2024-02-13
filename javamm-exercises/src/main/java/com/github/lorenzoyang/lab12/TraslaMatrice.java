@@ -1,8 +1,7 @@
 package com.github.lorenzoyang.lab12;
 
 class TraslaMatrice {
-    // #inizio: javammexercises
-
+    // #solution:begin
     int[][] traslaMatrice(int[][] t, int y) {
         if (y == 0) return t;
 
@@ -18,6 +17,5 @@ class TraslaMatrice {
 
         return risultato;
     }
-
-    // #fine: javammexercises
+    // #solution:end
 }

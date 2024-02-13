@@ -1,7 +1,7 @@
 package com.github.lorenzoyang.lab18;
 
 class VisitaSerpentina {
-    // #inizio: javammexercises
+    // #solution:begin
 
     int[] visitaSerpentina(int[][] m) {
         int[] risultato = new int[m[0].length];
@@ -59,5 +59,5 @@ class VisitaSerpentina {
         return serpentina;
     }
 
-    // #fine: javammexercises
+    // #solution:end
 }

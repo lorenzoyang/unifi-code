@@ -1,8 +1,7 @@
 package com.github.lorenzoyang.lab05;
 
 class Lab05 {
-    // #inizio: javammexercises
-
+    // #solution:begin
     int loneSum(int a, int b, int c) {
         int sum = 0;
 
@@ -24,7 +23,7 @@ class Lab05 {
         return fixTeen(a) + fixTeen(b) + fixTeen(c);
     }
 
-    // funzione privata usata da noTeenSum
+    // funzione di supporto
     int fixTeen(int n) {
         return (n >= 13 && n <= 19 && n != 15 && n != 16) ? 0 : n;
     }
@@ -33,7 +32,7 @@ class Lab05 {
         return round(a) + round(b) + round(c);
     }
 
-    // funzione privata usata da roundSum
+    // funzione di supporto
     int round(int n) {
         int resto = n % 10;
         if (resto < 5) {
@@ -47,7 +46,7 @@ class Lab05 {
         return (max(a, b, c) - mid(a, b, c)) == (mid(a, b, c) - min(a, b, c));
     }
 
-    // funzione privata usata da evenlySpaced
+    // funzione di supporto
     int max(int a, int b, int c) {
         if (a > b && a > c) {
             return a;
@@ -58,7 +57,7 @@ class Lab05 {
         }
     }
 
-    // funzione privata usata da evenlySpaced
+    // funzione di supporto
     int min(int a, int b, int c) {
         if (a < b && a < c) {
             return a;
@@ -69,7 +68,7 @@ class Lab05 {
         }
     }
 
-    // funzione privata usata da evenlySpaced
+    // funzione di supporto
     int mid(int a, int b, int c) {
         if ((a > b && a < c) || (a < b && a > c)) {
             return a;
@@ -79,6 +78,5 @@ class Lab05 {
             return c;
         }
     }
-
-    // #fine: javammexercises
+    // #solution:end
 }

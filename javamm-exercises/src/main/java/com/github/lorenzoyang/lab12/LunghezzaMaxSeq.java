@@ -1,8 +1,7 @@
 package com.github.lorenzoyang.lab12;
 
 class LunghezzaMaxSeq {
-    // #inizio: javammexercises
-
+    // #solution:begin
     int lunghezzaMaxSeq(char[] a, char c) {
         return lunghezzaMaxSeq(a, c, 0, 0);
         // return lunghezzaMaxSeq(a, c, 0, 0, 0);
@@ -33,6 +32,5 @@ class LunghezzaMaxSeq {
         }
         return alternativa_lunghezzaMaxSeq(a, c, index + 1, count, max);
     }
-
-    // #fine: javammexercises
+    // #solution:end
 }

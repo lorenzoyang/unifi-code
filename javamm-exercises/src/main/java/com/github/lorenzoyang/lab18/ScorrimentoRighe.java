@@ -1,7 +1,7 @@
 package com.github.lorenzoyang.lab18;
 
 class ScorrimentoRighe {
-    // #inizio: javammexercises
+    // #solution:begin
 
     // consegna obbligatoria
     int[][] scorrimentoRighe(int[][] m) {
@@ -52,5 +52,5 @@ class ScorrimentoRighe {
         return m;
     }
 
-    // #fine: javammexercises
+    // #solution:end
 }

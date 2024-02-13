@@ -1,20 +1,16 @@
 package com.github.lorenzoyang.lab09;
 
 class Accoppiata {
-    // #inizio: javammexercises
+    // #solution:begin
 
-    boolean accoppiata(char[] array) {
-        if (array.length % 2 != 0) return false;
-        return accoppiata(array, 0, array.length / 2);
+    boolean accoppiata(char[] A) {
+        if (A.length % 2 != 0) return false;
+        return accoppiata(A, 0);
     }
 
-    // funzione privata usata da accoppiata
-    boolean accoppiata(char[] array, int i, int j) {
-        // oppure if j == array.length
-        if (i == array.length / 2) return true;
-        if (array[i] != array[j]) return false;
-        return accoppiata(array, i + 1, j + 1);
+    boolean accoppiata(char[] A, int indice) {
+        if (indice == A.length / 2) return true;
+        return A[indice] == A[A.length / 2 + indice] && accoppiata(A, indice + 1);
     }
-
-    // #fine: javammexercises
+    // #solution:end
 }

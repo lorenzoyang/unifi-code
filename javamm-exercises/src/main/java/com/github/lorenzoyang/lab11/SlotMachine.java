@@ -1,39 +1,30 @@
 package com.github.lorenzoyang.lab11;
 
 class SlotMachine {
-    // #inizio: javammexercises
-
-    int[][] ruota(int[][] s, int[] r) {
-        if (s.length < 3 || s.length % 2 == 0 || s[0].length != r.length) {
-            return s;
-        }
-
-        int[][] matrice = new int[s.length][s[0].length];
+    // #solution:begin
+    int[][] ruota(int[][] S, int[] r) {
+        int[][] matrice = new int[S.length][S[0].length];
         for (int i = 0; i < r.length; i++) {
-            int diff = r[i] % s.length;
-            for (int j = 0; j < s.length; j++) {
-                matrice[(j + diff) % s.length][i] = s[j][i];
+            r[i] = r[i] % S.length;
+            for (int j = 0; j < S.length; j++) {
+                matrice[(j + r[i]) % S.length][i] = S[j][i];
             }
         }
         return matrice;
     }
 
-    boolean controllaVincita(int[][] s) {
-        int central = s.length / 2;
-        for (int i = 0; i < s[0].length; i++) {
-            if (s[central][i] != 1) return false;
+    boolean controllaVincita(int[][] S) {
+        int centro = S.length / 2;
+        for (int i = 0; i < S[0].length; i++) {
+            if (S[centro][i] != 1) return false;
         }
         return true;
     }
 
     boolean partitaCompleta(int[][] s, int[] r, int k) {
         if (k == 0) return false;
-
-        int[][] dopoRuota = ruota(s, r);
-
-        if (controllaVincita(dopoRuota)) return true;
-        return partitaCompleta(dopoRuota, r, k - 1);
+        int[][] dopoRotazione = ruota(s, r);
+        return controllaVincita(dopoRotazione) || partitaCompleta(dopoRotazione, r, k - 1);
     }
-
-    // #fine: javammexercises
+    // #solution:end
 }
