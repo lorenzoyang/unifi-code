@@ -1,5 +1,4 @@
 ```java
-
 int[] decomprimiRLE(int[] a) {
     int lunghezza = 0;
     for (int i = 1; i < a.length; i += 2) {

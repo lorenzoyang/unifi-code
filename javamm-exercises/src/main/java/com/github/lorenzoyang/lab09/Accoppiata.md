@@ -1,5 +1,4 @@
 ```java
-
 boolean accoppiata(char[] A) {
     if (A.length % 2 != 0) return false;
     return accoppiata(A, 0);

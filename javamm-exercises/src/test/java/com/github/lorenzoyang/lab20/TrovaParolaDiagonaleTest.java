@@ -464,7 +464,8 @@ public class TrovaParolaDiagonaleTest {
     @Test
     public void test38() {
 
-        char[][] M = {{'a', 'b', 'a', 'f', 'i'},
+        char[][] M = {
+                {'a', 'b', 'a', 'f', 'i'},
                 {'e', 'l', 'r', 'o', 'm'},
                 {'t', 'l', 'f', 'o', 'a'},
                 {'g', 'u', 'o', 'i', 'z'},

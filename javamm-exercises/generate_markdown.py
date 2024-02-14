@@ -1,4 +1,5 @@
 import os
+import re
 
 JAVA_FILES_ROOT = 'javamm-exercises\src\main\java\com\github\lorenzoyang'
 
@@ -45,6 +46,22 @@ def remove_four_spaces_from_beginning_of_one_line(line):
     if line.startswith("    "):
         return line[4:]
     return line
+
+
+def remove_dollarnumberunderscore_from_line(line):
+    """
+    Removes "${number}_" from the line.
+    {number} is a number and "_" is an underscore.
+
+    Args:
+        line (str): The line to remove the spaces from.
+
+    Returns:
+        str: The line with "${number}_" removed.
+    """
+
+    pattern = r'\$\d+_'
+    return re.sub(pattern, '', line)
 
 
 def extract_solution_code(file_path, start_marker, end_marker):
@@ -116,6 +133,7 @@ def extract_alternative_solutions_code(file_path, start_marker, end_marker, comm
                 continue
             elif inside_solution and comment_marker not in line:
                 line = remove_four_spaces_from_beginning_of_one_line(line)
+                line = remove_dollarnumberunderscore_from_line(line)
                 code_lines.append(line.rstrip())
 
     return alternative_solutions
