@@ -31,6 +31,22 @@ def get_java_files(directory):
     return java_files
 
 
+def remove_four_spaces_from_beginning_of_one_line(line):
+    """
+    Removes four spaces from the beginning of a line.
+
+    Args:
+        line (str): The line to remove the spaces from.
+
+    Returns:
+        str: The line with four spaces removed from the beginning.
+    """
+
+    if line.startswith("    "):
+        return line[4:]
+    return line
+
+
 def extract_solution_code(file_path, start_marker, end_marker):
     """
     Extracts the solution code from a file between the start_marker and end_marker.
@@ -56,6 +72,7 @@ def extract_solution_code(file_path, start_marker, end_marker):
                 inside_solution = False
                 break
             elif inside_solution:
+                line = remove_four_spaces_from_beginning_of_one_line(line)
                 code_lines.append(line.rstrip())
 
     return '\n'.join(code_lines)
@@ -98,6 +115,7 @@ def extract_alternative_solutions_code(file_path, start_marker, end_marker, comm
                                                                                   "").lstrip("//").strip()+"**"
                 continue
             elif inside_solution and comment_marker not in line:
+                line = remove_four_spaces_from_beginning_of_one_line(line)
                 code_lines.append(line.rstrip())
 
     return alternative_solutions
