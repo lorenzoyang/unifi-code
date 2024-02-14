@@ -1,5 +1,4 @@
 ```java
-
 long rimuoviCifre(long n, short c) {
     long risultato = 0;
     int contatore = 0; // per contare le cifre consecutive
@@ -18,9 +17,11 @@ long rimuoviCifre(long n, short c) {
     }
     return risultato;
 }
+```
 
-// soluzione alternativa (Matteo)
-long alternativa_rimuoviCifre(long n, short c) {
+**La soluzione alternativa: ... (implementazione alternativa) ...**
+```java
+long rimuoviCifre(long n, short c) {
     long risultato = 0;
     int controllo = 0, esponente = 0;
     for (int i = 0; i < c; i++) {
@@ -36,5 +37,4 @@ long alternativa_rimuoviCifre(long n, short c) {
     }
     return risultato;
 }
-
 ```

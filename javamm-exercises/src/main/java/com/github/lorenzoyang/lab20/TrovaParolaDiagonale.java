@@ -37,7 +37,5 @@ class TrovaParolaDiagonale {
         }
         return trovabileDaDestra || trovabileDaSinistra;
     }
-
-
     // #solution:end
 }

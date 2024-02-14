@@ -3,7 +3,6 @@ package com.github.lorenzoyang.lab16;
 
 public class OccorrenzeCompresso {
     // #solution:begin
-
     int[] occorrenzeCompresso(int[] a) {
         int[] occorrenze = new int[max(a) + 1];
         for (int i = 0; i < a.length; i++) {
@@ -27,7 +26,6 @@ public class OccorrenzeCompresso {
         return occorrenzeCompresso;
     }
 
-    // funzione privata ausiliaria
     int max(int[] a) {
         int max = a[0];
         for (int i = 1; i < a.length; i++) {
@@ -35,6 +33,5 @@ public class OccorrenzeCompresso {
         }
         return max;
     }
-
     // #solution:end
 }

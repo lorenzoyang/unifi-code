@@ -1,5 +1,4 @@
 ```java
-
 // consegna obbligatoria
 int[][] scorrimentoRighe(int[][] m) {
     int temp;
@@ -24,12 +23,10 @@ int[][] scorrimentoRigheNposizioni(int[][] m, short p) {
     for (int i = 0; i < p; i++) scorrimentoRighe(m);
     return m;
 }
+```
 
-
-/**************************************************************************
- * Alternativa alla "consegna obbligatoria"
- **************************************************************************/
-int[][] alternativa_scorrimentoRighe(int[][] m) {
+```java
+int[][] scorrimentoRighe(int[][] m) {
     int temp;
     for (int i = 0; i < m.length; i++) {
         if (i % 2 == 0) {
@@ -48,5 +45,4 @@ int[][] alternativa_scorrimentoRighe(int[][] m) {
     }
     return m;
 }
-
 ```

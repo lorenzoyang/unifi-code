@@ -2,7 +2,6 @@ package com.github.lorenzoyang.simulazioni.prova2023_01_24;
 
 class CercaParolaNascosta {
     // #solution:begin
-
     char[] cercaParolaNascosta(char[][] testo) {
         char[] parolaNascosta = new char[testo.length]; // Array delle lettere nascoste
         int contaCaratteriNonValidi = 0; // Conto quanti caratteri sono uguali a ' ' (non validi)
@@ -71,6 +70,5 @@ class CercaParolaNascosta {
         // non esistente), altrimenti restituisco il carattere della riga con maggior frequenza.
         return ((freqMax == 1) ? ' ' : parola[indiceFreqMax]);
     }
-
     // #solution:end
 }

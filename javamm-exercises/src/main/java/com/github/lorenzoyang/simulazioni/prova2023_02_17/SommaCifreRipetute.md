@@ -1,5 +1,4 @@
 ```java
-
 int sommaCifreRipetute(int numero) {
     short esponente = 0, occorrenze = 1;
     int nuovoNumero = 0;
@@ -30,5 +29,4 @@ int sommaCifreRipetute(int numero) {
     }
     return nuovoNumero;
 }
-
 ```

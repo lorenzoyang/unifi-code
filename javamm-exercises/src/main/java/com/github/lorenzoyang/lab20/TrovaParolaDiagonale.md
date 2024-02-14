@@ -34,6 +34,4 @@ boolean trovaParolaDiagonale(char[][] g, char[] p, int r, int c, boolean decresc
     }
     return trovabileDaDestra || trovabileDaSinistra;
 }
-
-
 ```

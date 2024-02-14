@@ -12,7 +12,7 @@ int[][] azzeraAdiacenti(int[][] T, int r, int c) {
 }
 ```
 
-**Soluzione alternativa: La soluzioen senza usare il ciclo for.**
+**La soluzione alternativa: senza il ciclo for.**
 ```java
 int[][] azzeraAdiacenti_1(int[][] T, int r, int c) {
     int up = (r - 1 + T.length) % T.length;

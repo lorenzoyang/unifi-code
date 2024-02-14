@@ -160,6 +160,8 @@ def generate_markdowns():
     java_files = get_java_files(JAVA_FILES_ROOT)
 
     for file_path in java_files:
+        print(f"Generating Markdown for {file_path}...")
+
         # Extract solution code
         solution_code = extract_solution_code(
             file_path, SOLUTION_MARKERS["begin"], SOLUTION_MARKERS["end"])

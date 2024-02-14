@@ -1,5 +1,4 @@
 ```java
-
 char[] cercaParolaNascosta(char[][] testo) {
     char[] parolaNascosta = new char[testo.length]; // Array delle lettere nascoste
     int contaCaratteriNonValidi = 0; // Conto quanti caratteri sono uguali a ' ' (non validi)
@@ -68,5 +67,4 @@ char cercaLetteraNascosta(char[] parola) {
     // non esistente), altrimenti restituisco il carattere della riga con maggior frequenza.
     return ((freqMax == 1) ? ' ' : parola[indiceFreqMax]);
 }
-
 ```

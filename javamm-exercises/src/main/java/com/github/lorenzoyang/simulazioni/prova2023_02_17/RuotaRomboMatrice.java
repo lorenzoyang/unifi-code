@@ -2,7 +2,6 @@ package com.github.lorenzoyang.simulazioni.prova2023_02_17;
 
 class RuotaRomboMatrice {
     // #solution:begin
-
     int[][] ruotaRomboMatrice(int[][] t, int k) {
         int c = t.length / 2, temp_destra = t[c][c + k];
         for (int i = 0; i < k; i++) {
@@ -26,6 +25,5 @@ class RuotaRomboMatrice {
         for (int i = 0; i < n; i++) ruotaRomboMatrice(t, k);
         return t;
     }
-
     // #solution:end
 }

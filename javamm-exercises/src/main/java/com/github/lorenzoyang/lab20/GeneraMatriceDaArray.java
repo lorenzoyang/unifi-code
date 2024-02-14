@@ -26,7 +26,6 @@ class GeneraMatriceDaArray {
 
     int[][] generaMatriceDaArrayRicorsivo(int[][] matrice, int[] arr, int indiceArr, int contatore, int colonnaPartenza) {
         if (indiceArr == arr.length) return matrice;
-
         for (int i = 0; i < arr[indiceArr]; i++) {
             for (int j = colonnaPartenza; j < colonnaPartenza + arr[indiceArr]; j++) {
                 matrice[i][j] = contatore++;
@@ -36,7 +35,6 @@ class GeneraMatriceDaArray {
                 , colonnaPartenza + arr[indiceArr]));
     }
 
-    // funzione di supporto
     int[] calcolaDimensione(int[] arr) {
         int colonne = 0, righe = 0;
         for (int i = 0; i < arr.length; i++) {

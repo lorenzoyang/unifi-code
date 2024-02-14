@@ -6,7 +6,7 @@ universitari. Il progetto è composto dalle seguenti parti:
 
 - [Unifi code](#unifi-code)
   - [Esercizi di Javamm](#esercizi-di-javamm)
-  - [Algoritmi e struttura datij](#algoritmi-e-struttura-datij)
+  - [Algoritmi e struttura dati](#algoritmi-e-struttura-dati)
   - [Esercizi di Java](#esercizi-di-java)
   - [Licenza](#licenza)
 
@@ -71,11 +71,10 @@ essi è elencato di seguito:
 - **Laboratorio 20** ([PDF](./javamm-exercises/src/main/java/com/github/lorenzoyang/lab20/Lab20%20-%20esercizi.pdf))
     - [x] [TrovaParolaDiagonale](./javamm-exercises/src/main/java/com/github/lorenzoyang/lab20/TrovaParolaDiagonale.md)
     - [x] [GeneraMatriceDaArray](./javamm-exercises/src/main/java/com/github/lorenzoyang/lab20/GeneraMatriceDaArray.md)
-    - [x] [GeneraMatriceDaArrayRicorsivo](https://github.com/lorenzoyang/unifi-code/blob/75a582968aa89df38700032af5443227c78f5420/javamm-exercises/src/main/java/com/github/lorenzoyang/lab20/GeneraMatriceDaArray.java#L26-L58)
 
 [torna su](#unifi-code)
 
-## Algoritmi e struttura datij
+## Algoritmi e struttura dati
 
 Le mie implementazioni in Java di algoritmi e strutture dati. L'obiettivo principale qui è la semplicità. Ho cercato di
 rendere chiare e accessibili queste implementazioni, in modo che possano essere comprese facilmente anche da chi è alle

@@ -7,7 +7,6 @@ class ShuffleMatrice {
         return shuffleMatrice(shuffleMatrice(t, s, true), s, false);
     }
 
-    // funzione privata ausiliaria: shuffleMatrice con parametro verticale
     int[][] shuffleMatrice(int[][] t, int[][] s, boolean verticale) {
         int[][] risultato = new int[t.length][t.length];
         for (int i = 0; i < s.length; i++) {

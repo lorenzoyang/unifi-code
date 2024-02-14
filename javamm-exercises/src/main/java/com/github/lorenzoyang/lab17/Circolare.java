@@ -13,7 +13,6 @@ class Circolare {
         return circolare(m, 0, 0, 0, true);
     }
 
-    // funzione privata ausiliaria: implementazione ricorsiva della "consegna obbligatoria" circolare
     boolean circolare(char[][] m, int r, int c, int n, boolean inversa) {
         char cella = m[r][c];
 

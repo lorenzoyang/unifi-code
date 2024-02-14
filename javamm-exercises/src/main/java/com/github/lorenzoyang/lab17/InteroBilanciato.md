@@ -1,5 +1,4 @@
 ```java
-
 boolean bilanciato(int n) {
     int numCifre = contaCifre(n);
     int a = (int) ((n / Math.pow(10, numCifre - 1))); // la prima cifra
@@ -15,7 +14,6 @@ boolean bilanciato(int n) {
     return true;
 }
 
-// funzione privata ausiliaria
 int contaCifre(int n) {
     int nCifre = 0;
     while (n > 0) {
@@ -24,5 +22,4 @@ int contaCifre(int n) {
     }
     return nCifre;
 }
-
 ```

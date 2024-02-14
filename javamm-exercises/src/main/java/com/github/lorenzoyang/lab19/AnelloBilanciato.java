@@ -2,7 +2,6 @@ package com.github.lorenzoyang.lab19;
 
 class AnelloBilanciato {
     // #solution:begin
-
     boolean anelloBilanciato(int[][] t, int k) {
         int centro = t.length / 2;
         for (int i = centro - k, j = 0; i <= centro + k; i++, j++) {
@@ -11,6 +10,5 @@ class AnelloBilanciato {
         }
         return true;
     }
-
     // #solution:end
 }

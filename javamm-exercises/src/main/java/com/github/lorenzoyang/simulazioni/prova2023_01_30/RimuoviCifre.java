@@ -2,7 +2,6 @@ package com.github.lorenzoyang.simulazioni.prova2023_01_30;
 
 class RimuoviCifre {
     // #solution:begin
-
     long rimuoviCifre(long n, short c) {
         long risultato = 0;
         int contatore = 0; // per contare le cifre consecutive
@@ -21,9 +20,11 @@ class RimuoviCifre {
         }
         return risultato;
     }
+    // #solution:end
 
-    // soluzione alternativa (Matteo)
-    long alternativa_rimuoviCifre(long n, short c) {
+    // #alternativesolution:begin
+    // #comment: ... (implementazione alternativa) ...
+    long $1_rimuoviCifre(long n, short c) {
         long risultato = 0;
         int controllo = 0, esponente = 0;
         for (int i = 0; i < c; i++) {
@@ -39,6 +40,5 @@ class RimuoviCifre {
         }
         return risultato;
     }
-
-    // #solution:end
+    // #alternativesolution:end
 }

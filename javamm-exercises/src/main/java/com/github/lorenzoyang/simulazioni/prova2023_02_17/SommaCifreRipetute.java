@@ -2,7 +2,6 @@ package com.github.lorenzoyang.simulazioni.prova2023_02_17;
 
 class SommaCifreRipetute {
     // #solution:begin
-
     int sommaCifreRipetute(int numero) {
         short esponente = 0, occorrenze = 1;
         int nuovoNumero = 0;
@@ -33,6 +32,5 @@ class SommaCifreRipetute {
         }
         return nuovoNumero;
     }
-
     // #solution:end
 }

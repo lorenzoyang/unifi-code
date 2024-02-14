@@ -1,5 +1,4 @@
 ```java
-
 int[][] ruotaRomboMatrice(int[][] t, int k) {
     int c = t.length / 2, temp_destra = t[c][c + k];
     for (int i = 0; i < k; i++) {
@@ -23,5 +22,4 @@ int[][] ruotaRomboMatriceNposizioni(int[][] t, int k, int n) {
     for (int i = 0; i < n; i++) ruotaRomboMatrice(t, k);
     return t;
 }
-
 ```

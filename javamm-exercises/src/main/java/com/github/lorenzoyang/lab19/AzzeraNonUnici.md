@@ -1,5 +1,4 @@
 ```java
-
 // consegna obbligatoria
 int[][] azzeraNonUnici(int[][] m, int r, int c) {
     int rc = m[r][c];
@@ -26,5 +25,4 @@ int[][] azzeraNonUniciMatrice(int[][] m) {
     }
     return m;
 }
-
 ```

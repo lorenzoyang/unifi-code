@@ -2,7 +2,6 @@ package com.github.lorenzoyang.lab17;
 
 class InteroBilanciato {
     // #solution:begin
-
     boolean bilanciato(int n) {
         int numCifre = contaCifre(n);
         int a = (int) ((n / Math.pow(10, numCifre - 1))); // la prima cifra
@@ -18,7 +17,6 @@ class InteroBilanciato {
         return true;
     }
 
-    // funzione privata ausiliaria
     int contaCifre(int n) {
         int nCifre = 0;
         while (n > 0) {
@@ -27,6 +25,5 @@ class InteroBilanciato {
         }
         return nCifre;
     }
-
     // #solution:end
 }

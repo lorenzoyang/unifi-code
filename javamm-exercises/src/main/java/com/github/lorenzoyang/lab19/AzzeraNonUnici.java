@@ -2,7 +2,6 @@ package com.github.lorenzoyang.lab19;
 
 class AzzeraNonUnici {
     // #solution:begin
-
     // consegna obbligatoria
     int[][] azzeraNonUnici(int[][] m, int r, int c) {
         int rc = m[r][c];
@@ -29,6 +28,5 @@ class AzzeraNonUnici {
         }
         return m;
     }
-
     // #solution:end
 }

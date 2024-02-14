@@ -8,7 +8,7 @@ class AzzeraAdiacenti {
             int nR = (r + direzioni[i][0] + T.length) % T.length;
             int nC = (c + direzioni[i][1] + T[0].length) % T[0].length;
 
-            
+
             T[nR][nC] = 0;
         }
         return T;
@@ -16,7 +16,7 @@ class AzzeraAdiacenti {
     // #solution:end
 
     // #alternativesolution:begin
-    // #comment: La soluzioen senza usare il ciclo for.
+    // #comment: senza il ciclo for.
     int[][] azzeraAdiacenti_1(int[][] T, int r, int c) {
         int up = (r - 1 + T.length) % T.length;
         int down = (r + 1) % T.length;

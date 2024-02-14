@@ -1,5 +1,4 @@
 ```java
-
 boolean anelloBilanciato(int[][] t, int k) {
     int centro = t.length / 2;
     for (int i = centro - k, j = 0; i <= centro + k; i++, j++) {
@@ -8,5 +7,4 @@ boolean anelloBilanciato(int[][] t, int k) {
     }
     return true;
 }
-
 ```

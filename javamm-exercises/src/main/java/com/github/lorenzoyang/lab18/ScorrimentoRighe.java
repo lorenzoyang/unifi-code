@@ -2,7 +2,6 @@ package com.github.lorenzoyang.lab18;
 
 class ScorrimentoRighe {
     // #solution:begin
-
     // consegna obbligatoria
     int[][] scorrimentoRighe(int[][] m) {
         int temp;
@@ -27,12 +26,10 @@ class ScorrimentoRighe {
         for (int i = 0; i < p; i++) scorrimentoRighe(m);
         return m;
     }
+    // #solution:end
 
-
-    /**************************************************************************
-     * Alternativa alla "consegna obbligatoria"
-     **************************************************************************/
-    int[][] alternativa_scorrimentoRighe(int[][] m) {
+    // #alternativesolution:begin
+    int[][] $1_scorrimentoRighe(int[][] m) {
         int temp;
         for (int i = 0; i < m.length; i++) {
             if (i % 2 == 0) {
@@ -51,6 +48,5 @@ class ScorrimentoRighe {
         }
         return m;
     }
-
-    // #solution:end
+    // #alternativesolution:end
 }

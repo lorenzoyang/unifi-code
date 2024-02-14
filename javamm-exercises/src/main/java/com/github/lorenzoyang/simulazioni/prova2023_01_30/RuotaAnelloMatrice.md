@@ -1,5 +1,4 @@
 ```java
-
 int[][] ruotaAnelloMatrice(int[][] t, int k) {
     int centro = t.length / 2;
 
@@ -38,8 +37,10 @@ int[][] ruotaAnelloMatriceNposizioni(int[][] t, int k, int n) {
         t = ruotaAnelloMatrice(t, k);
     return t;
 }
+```
 
-// soluzione alternativa
+**La soluzione alternativa: alternativa alla ruotaAnelloMatrice con un solo ciclo for. (non consigliato)**
+```java
 int[][] alternativa_ruotaAnelloMatrice(int[][] t, int k) {
     int centro = t.length / 2, upLeft = t[centro - k][centro - k], upRight = t[centro - k][centro + k],
             downLeft = t[centro + k][centro - k], downRight = t[centro + k][centro + k];
@@ -55,6 +56,4 @@ int[][] alternativa_ruotaAnelloMatrice(int[][] t, int k) {
     t[centro + k - 1][centro - k] = downLeft;
     return t;
 }
-
-
 ```

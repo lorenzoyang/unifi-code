@@ -2,7 +2,6 @@ package com.github.lorenzoyang.lab16;
 
 class CompattaMatrice {
     // #solution:begin
-
     int[][] compattaMatrice(int[][] t) {
         int[][] temp = new int[t.length * t[0].length][3];
         int count = 0;
@@ -30,6 +29,5 @@ class CompattaMatrice {
 
         return c;
     }
-
     // #solution:end
 }

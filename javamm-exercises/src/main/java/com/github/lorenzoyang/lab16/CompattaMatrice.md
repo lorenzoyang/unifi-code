@@ -1,5 +1,4 @@
 ```java
-
 int[][] compattaMatrice(int[][] t) {
     int[][] temp = new int[t.length * t[0].length][3];
     int count = 0;
@@ -27,5 +26,4 @@ int[][] compattaMatrice(int[][] t) {
 
     return c;
 }
-
 ```
