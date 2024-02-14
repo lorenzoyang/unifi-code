@@ -1,5 +1,11 @@
 import os
 
+JAVA_FILES_ROOT = 'javamm-exercises\src\main\java\com\github\lorenzoyang'
+
+solution_markers = {"begin": "#solution:begin", "end": "#solution:end"}
+alternative_solution_markers = {
+    "begin": "#alternativesolution:begin", "end": "#alternativesolution:end"}
+
 
 def get_java_files(directory):
     """
@@ -11,6 +17,7 @@ def get_java_files(directory):
     Returns:
         list: A list of file paths to Java files found in the directory and its subdirectories.
     """
+
     java_files = []
     # Walk through the directory tree
     for root, dirs, files in os.walk(directory):
@@ -36,6 +43,7 @@ def extract_solution_code(file_path, start_marker, end_marker):
     Returns:
         str: The extracted solution code as a string.
     """
+
     code_lines = []
     inside_solution = False
 
@@ -53,26 +61,76 @@ def extract_solution_code(file_path, start_marker, end_marker):
     return '\n'.join(code_lines)
 
 
-if __name__ == '__main__':
-    # print current . directory
-    print(os.getcwd())
+def extract_alternative_solutions_code(file_path, start_marker, end_marker, comment_marker):
+    """
+    Extracts alternative solutions code from a file.
 
-    solution_begin_marker = '// #solution:begin'
-    solution_end_marker = '// #solution:end'
-    java_files_root = 'javamm-exercises\src\main\java\com\github\lorenzoyang'
+    Args:
+        file_path (str): The path to the file.
+        start_marker (str): The marker indicating the start of a solution.
+        end_marker (str): The marker indicating the end of a solution.
+        comment_marker (str): The marker indicating a comment within a solution.
 
-    # Get the list of Java files
-    java_files = get_java_files(java_files_root)
+    Returns:
+        list: A list of tuples containing the extracted code lines and comments.
+              Each tuple consists of a string representing the code lines and a string representing the comment.
+    """
 
-    # Iterate over the Java files
-    for file in java_files:
-        print(file)
-        # Extract the solution code from the Java file
+    alternative_solutions = []
+    inside_solution = False
+    code_lines = []
+    comment = None
+
+    with open(file_path, 'r') as file:
+        for line in file:
+            if start_marker in line:
+                inside_solution = True
+                code_lines = []
+                continue
+            elif end_marker in line:
+                inside_solution = False
+                alternative_solutions.append((comment, '\n'.join(code_lines)))
+                comment = None
+                code_lines = []
+                continue
+            elif comment_marker in line and inside_solution:
+                comment = "**" + "Soluzione alternativa: " + line.strip().replace("#comment:",
+                                                                                  "").lstrip("//").strip()+"**"
+                continue
+            elif inside_solution and comment_marker not in line:
+                code_lines.append(line.rstrip())
+
+    return alternative_solutions
+
+
+def generate_markdowns():
+    java_files = get_java_files(JAVA_FILES_ROOT)
+
+    for file_path in java_files:
+        # Extract solution code
         solution_code = extract_solution_code(
-            file, solution_begin_marker, solution_end_marker)
+            file_path, solution_markers["begin"], solution_markers["end"])
+        # Extract alternative solutions
+        alternative_solutions = extract_alternative_solutions_code(file_path,
+                                                                   alternative_solution_markers["begin"],
+                                                                   alternative_solution_markers["end"],
+                                                                   comment_marker="#comment:")
 
-        # Print the solution code
-        print(solution_code)
-        print()
-        print('-' * 50)
-        print()
+        # Create Markdown file
+        markdown_file_path = os.path.splitext(file_path)[0] + '.md'
+        with open(markdown_file_path, 'w') as markdown_file:
+            # Write solution code
+            markdown_file.write("```java\n")
+            markdown_file.write(solution_code)
+            markdown_file.write("\n```")
+            # Write alternative solutions
+            for comment, alt_solution in alternative_solutions:
+                markdown_file.write("\n\n")
+                if comment:
+                    markdown_file.write(comment + "\n")
+                markdown_file.write("```java\n")
+                markdown_file.write(alt_solution)
+                markdown_file.write("\n```")
+
+
+generate_markdowns()
