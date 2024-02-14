@@ -1,11 +1,27 @@
 import os
+from pathlib import Path
 import re
 
+# The root directory of the Java files
 JAVA_FILES_ROOT = 'javamm-exercises\src\main\java\com\github\lorenzoyang'
 
-solution_markers = {"begin": "#solution:begin", "end": "#solution:end"}
-alternative_solution_markers = {
-    "begin": "#alternativesolution:begin", "end": "#alternativesolution:end"}
+# Markers for the solution code
+# The main solution code is between the begin and end markers
+SOLUTION_MARKERS = {"begin": "#solution:begin", "end": "#solution:end"}
+
+# Markers for the alternative solutions
+# Each alternative solution is followed by a comment
+# Each alternative solution is between the begin and end markers
+ALTERNATIVE_SOLUTION_MARKERS = {
+    "begin": "#alternativesolution:begin", "end": "#alternativesolution:end", "comment": "#comment:"}
+
+# The number of spaces to remove from the beginning of a line
+FOUR_SPACES = "    "
+
+# Providing an alternative solution requires the creation of a new function with the same name.
+# To avoid the same name, I chose to add a "${number}_" prefix to distinguish the function name,
+# and removed this prefix during code extraction.
+ALTERNATIVE_FUNCTION_NAME_PATTERN = re.compile(r'\$\d+_')
 
 
 def get_java_files(directory):
@@ -16,52 +32,41 @@ def get_java_files(directory):
         directory (str): The directory to search for Java files.
 
     Returns:
-        list: A list of file paths to Java files found in the directory and its subdirectories.
+        list: A list of full paths to Java files found in the directory and its subdirectories.
     """
 
     java_files = []
-    # Walk through the directory tree
-    for root, dirs, files in os.walk(directory):
-        for file in files:
-            # Check if the file has a .java extension
-            if file.endswith('.java'):
-                # Construct the full path of the Java file
-                java_file_path = os.path.join(root, file)
-                # Add the path to the list of Java files
-                java_files.append(java_file_path)
+    for path in Path(directory).rglob('*.java'):
+        java_files.append(str(path))
     return java_files
 
 
-def remove_four_spaces_from_beginning_of_one_line(line):
+def remove_four_spaces(line):
     """
-    Removes four spaces from the beginning of a line.
+    Removes four leading spaces from the given line, if present.
 
     Args:
-        line (str): The line to remove the spaces from.
+        line (str): The input line.
 
     Returns:
-        str: The line with four spaces removed from the beginning.
+        str: The line with four leading spaces removed, if present.
     """
 
-    if line.startswith("    "):
-        return line[4:]
-    return line
+    return line[len(FOUR_SPACES):] if line.startswith(FOUR_SPACES) else line
 
 
 def remove_dollarnumberunderscore_from_line(line):
     """
-    Removes "${number}_" from the line.
-    {number} is a number and "_" is an underscore.
+    Removes "${number}_" from the line. {number} is a number and "_" is an underscore.
 
     Args:
-        line (str): The line to remove the spaces from.
+        line (str): The input line.
 
     Returns:
         str: The line with "${number}_" removed.
     """
 
-    pattern = r'\$\d+_'
-    return re.sub(pattern, '', line)
+    return ALTERNATIVE_FUNCTION_NAME_PATTERN.sub("", line)
 
 
 def extract_solution_code(file_path, start_marker, end_marker):
@@ -89,7 +94,7 @@ def extract_solution_code(file_path, start_marker, end_marker):
                 inside_solution = False
                 break
             elif inside_solution:
-                line = remove_four_spaces_from_beginning_of_one_line(line)
+                line = remove_four_spaces(line)
                 code_lines.append(line.rstrip())
 
     return '\n'.join(code_lines)
@@ -128,11 +133,11 @@ def extract_alternative_solutions_code(file_path, start_marker, end_marker, comm
                 code_lines = []
                 continue
             elif comment_marker in line and inside_solution:
-                comment = "**" + "Soluzione alternativa: " + line.strip().replace("#comment:",
-                                                                                  "").lstrip("//").strip()+"**"
+                comment = "**" + "La soluzione alternativa: " + line.strip().replace(ALTERNATIVE_SOLUTION_MARKERS["comment"],
+                                                                                     "").lstrip("//").strip()+"**"
                 continue
             elif inside_solution and comment_marker not in line:
-                line = remove_four_spaces_from_beginning_of_one_line(line)
+                line = remove_four_spaces(line)
                 line = remove_dollarnumberunderscore_from_line(line)
                 code_lines.append(line.rstrip())
 
@@ -157,12 +162,12 @@ def generate_markdowns():
     for file_path in java_files:
         # Extract solution code
         solution_code = extract_solution_code(
-            file_path, solution_markers["begin"], solution_markers["end"])
+            file_path, SOLUTION_MARKERS["begin"], SOLUTION_MARKERS["end"])
         # Extract alternative solutions
         alternative_solutions = extract_alternative_solutions_code(file_path,
-                                                                   alternative_solution_markers["begin"],
-                                                                   alternative_solution_markers["end"],
-                                                                   comment_marker="#comment:")
+                                                                   ALTERNATIVE_SOLUTION_MARKERS["begin"],
+                                                                   ALTERNATIVE_SOLUTION_MARKERS["end"],
+                                                                   ALTERNATIVE_SOLUTION_MARKERS["comment"])
 
         # Create Markdown file
         markdown_file_path = os.path.splitext(file_path)[0] + '.md'
@@ -182,3 +187,5 @@ def generate_markdowns():
 
 
 generate_markdowns()
+
+print("Markdown files generated successfully.")
