@@ -104,6 +104,18 @@ def extract_alternative_solutions_code(file_path, start_marker, end_marker, comm
 
 
 def generate_markdowns():
+    """
+    Generate Markdown files from Java files.
+
+    This function extracts solution code and alternative solutions from Java files,
+    and creates corresponding Markdown files with the extracted code.
+
+    Args:
+        None
+
+    Returns:
+        None
+    """
     java_files = get_java_files(JAVA_FILES_ROOT)
 
     for file_path in java_files:
