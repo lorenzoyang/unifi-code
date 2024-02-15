@@ -29,6 +29,7 @@ class ScorrimentoRighe {
     // #solution:end
 
     // #alternativesolution:begin
+    // #comment: alternativa a "scorrimentoRighe"
     int[][] $1_scorrimentoRighe(int[][] m) {
         int temp;
         for (int i = 0; i < m.length; i++) {

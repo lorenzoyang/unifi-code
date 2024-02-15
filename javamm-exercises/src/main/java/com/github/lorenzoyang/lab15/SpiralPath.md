@@ -1,7 +1,5 @@
 ```java
-
 int spiralPath(int n, int i) {
-
     int valoreMatrice = (n / 2) * n + (n / 2) + 1;
     int giro = 0;
     int iTh = 1;
@@ -41,5 +39,4 @@ int spiralPath(int n, int i) {
     }
     return 0;
 }
-
 ```

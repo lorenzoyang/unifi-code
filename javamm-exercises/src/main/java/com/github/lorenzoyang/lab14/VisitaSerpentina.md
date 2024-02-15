@@ -1,5 +1,5 @@
 ```java
-int[] visitaSerpentina(int[][] m, int riga, int colonna) {
+int[] _visitaSerpentina(int[][] m, int riga, int colonna) {
     // il numero di righe e' pari
     int lunghezzaArray = m.length * m[0].length;
     int[] cammino = new int[lunghezzaArray];
@@ -27,6 +27,24 @@ int[] visitaSerpentina(int[][] m, int riga, int colonna) {
             i = (i + 1) % m.length;
             versoDestra = !versoDestra;
         }
+    }
+    return cammino;
+}
+```
+
+**La soluzione alternativa: sostituito "versoDestra" di tipo booleana con "direzione" di tipo intero risparmiando un if**
+```java
+int[] visitaSerpentina(int[][] m, int r, int c) {
+    int[] cammino = new int[m.length * m[0].length];
+    int indice = 0, direzione = 1;
+    while (indice < cammino.length) {
+        if (c >= 0 && c < m[0].length) {
+            cammino[indice++] = m[r][c];
+        } else {
+            direzione = -direzione;
+            r = (r + 1) % m.length;
+        }
+        c += direzione;
     }
     return cammino;
 }

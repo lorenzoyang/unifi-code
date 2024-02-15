@@ -15,6 +15,7 @@ int[][] generaMatriceDaArray(int[] arr) {
     return matrice;
 }
 
+// falcotativa
 int[][] generaMatriceDaArrayRicorsivo(int[] arr) {
     int[] dimensione = calcolaDimensione(arr);
     int[][] matrice = new int[dimensione[0]][dimensione[1]];

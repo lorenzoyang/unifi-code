@@ -2,9 +2,7 @@ package com.github.lorenzoyang.lab15;
 
 class SpiralPath {
     // #solution:begin
-
     int spiralPath(int n, int i) {
-
         int valoreMatrice = (n / 2) * n + (n / 2) + 1;
         int giro = 0;
         int iTh = 1;
@@ -44,6 +42,5 @@ class SpiralPath {
         }
         return 0;
     }
-
     // #solution:end
 }

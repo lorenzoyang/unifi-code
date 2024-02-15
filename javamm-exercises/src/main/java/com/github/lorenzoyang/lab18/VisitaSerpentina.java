@@ -2,7 +2,6 @@ package com.github.lorenzoyang.lab18;
 
 class VisitaSerpentina {
     // #solution:begin
-
     int[] visitaSerpentina(int[][] m) {
         int[] risultato = new int[m[0].length];
         int colonna = 0, riga = 0, direzione = 1;
@@ -19,12 +18,11 @@ class VisitaSerpentina {
         }
         return risultato;
     }
+    // #solution:end
 
-
-    /**************************************************************************
-     * Soluzione alternativa (del docente)
-     **************************************************************************/
-    int[] alternativa_visitaSerpentina(int[][] m) {
+    // #alternativesolution: begin
+    // #comment: del prof
+    int[] $1_visitaSerpentina(int[][] m) {
         // Array di output.
         int[] serpentina = new int[m[0].length];
 
@@ -55,9 +53,7 @@ class VisitaSerpentina {
             if ((riga == m.length - 1) || (riga == 0))
                 versoIlBasso = !versoIlBasso;
         }
-
         return serpentina;
     }
-
-    // #solution:end
+    // #alternativesolution:end
 }

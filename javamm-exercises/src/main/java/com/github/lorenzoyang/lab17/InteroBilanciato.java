@@ -4,15 +4,15 @@ class InteroBilanciato {
     // #solution:begin
     boolean bilanciato(int n) {
         int numCifre = contaCifre(n);
-        int a = (int) ((n / Math.pow(10, numCifre - 1))); // la prima cifra
-        int b = (int) ((n % Math.pow(10, 1))); // l'ultima cifra
-        if (numCifre == 2) return a == b;
+        int left = (int) ((n / Math.pow(10, numCifre - 1))); // la prima cifra
+        int right = (int) ((n % Math.pow(10, 1))); // l'ultima cifra
+        if (numCifre == 2) return left == right;
 
-        int somma = a + b;
+        int somma = left + right;
         for (int i = 1; i < numCifre / 2; i++) { // i = 1 perchè la prima cifra è già stata controllata
-            a = (int) ((n / Math.pow(10, (numCifre - i) - 1)) % 10);
-            b = (int) ((n / Math.pow(10, numCifre - (numCifre - i))) % 10);
-            if (a + b != somma) return false;
+            left = (int) ((n / Math.pow(10, numCifre - i - 1)) % 10); // 4
+            right = (int) ((n / Math.pow(10, i)) % 10); // 1
+            if (left + right != somma) return false;
         }
         return true;
     }

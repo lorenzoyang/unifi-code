@@ -25,6 +25,7 @@ int[][] scorrimentoRigheNposizioni(int[][] m, short p) {
 }
 ```
 
+**La soluzione alternativa: alternativa a "scorrimentoRighe"**
 ```java
 int[][] scorrimentoRighe(int[][] m) {
     int temp;
