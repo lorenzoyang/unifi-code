@@ -1,8 +1,6 @@
 # Unifi code
 
-Questo è il mio progetto personale per tenere traccia del codice
-Java ([JDK 11](https://adoptium.net/temurin/releases/?variant=openjdk11)) che ho scritto durante gli anni di studi
-universitari. Il progetto è composto dalle seguenti parti:
+Questo è il mio progetto personale per tenere traccia del codice Java ([JDK 11](https://adoptium.net/temurin/releases/?variant=openjdk11)) che ho scritto durante gli anni di studi universitari. Il progetto è composto dalle seguenti parti:
 
 - [Unifi code](#unifi-code)
   - [Algoritmi e struttura dati](#algoritmi-e-struttura-dati)
@@ -12,7 +10,7 @@ universitari. Il progetto è composto dalle seguenti parti:
 
 ## Algoritmi e struttura dati
 
-In questa sezione, troverai alcune implementazioni in Java di algoritmi e strutture dati selezionati. L'obiettivo principale è fornire implementazioni semplici e chiare che dimostrino l'applicazione delle funzionalità di Java. Cerco di mantenere il codice pulito e leggibile, mentre applico le caratteristiche e le convenzioni tipiche di Java.
+Alcune implementazioni di algoritmi e strutture dati scritti in Java ([Java 21](https://adoptium.net/temurin/releases/)).
 
 [torna su](#unifi-code)
 
@@ -25,8 +23,7 @@ In corso.
 
 ## Esercizi di Javamm 
 
-Ho risolto una serie di esercizi in [Javamm](https://github.com/LorenzoBettini/javamm) (Java procedurale). e ognuno di
-essi è elencato di seguito:
+Gli esercizi di [Javamm](https://github.com/LorenzoBettini/javamm) (Java procedurale):
 
 - **Simulazioni**
     - **2023-01-24** ([PDF](./javamm-exercises/src/main/java/com/github/lorenzoyang/simulazioni/prova2023_01_24/20230124%20-%20Terza%20Simulazione%20PI%20-%20finale.pdf))
