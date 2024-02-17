@@ -5,10 +5,23 @@ Java ([JDK 11](https://adoptium.net/temurin/releases/?variant=openjdk11)) che ho
 universitari. Il progetto è composto dalle seguenti parti:
 
 - [Unifi code](#unifi-code)
-  - [Esercizi di Javamm](#esercizi-di-javamm)
   - [Algoritmi e struttura dati](#algoritmi-e-struttura-dati)
   - [Esercizi di Java](#esercizi-di-java)
+  - [Esercizi di Javamm](#esercizi-di-javamm)
   - [Licenza](#licenza)
+
+## Algoritmi e struttura dati
+
+In questa sezione, troverai alcune implementazioni in Java di algoritmi e strutture dati selezionati. L'obiettivo principale è fornire implementazioni semplici e chiare che dimostrino l'applicazione delle funzionalità di Java. Cerco di mantenere il codice pulito e leggibile, mentre applico le caratteristiche e le convenzioni tipiche di Java.
+
+[torna su](#unifi-code)
+
+## Esercizi di Java 
+
+In corso.
+
+[torna su](#unifi-code)
+
 
 ## Esercizi di Javamm 
 
@@ -71,48 +84,6 @@ essi è elencato di seguito:
 - **Laboratorio 20** ([PDF](./javamm-exercises/src/main/java/com/github/lorenzoyang/lab20/Lab20%20-%20esercizi.pdf))
     - [x] [TrovaParolaDiagonale](./javamm-exercises/src/main/java/com/github/lorenzoyang/lab20/TrovaParolaDiagonale.md)
     - [x] [GeneraMatriceDaArray](./javamm-exercises/src/main/java/com/github/lorenzoyang/lab20/GeneraMatriceDaArray.md)
-
-[torna su](#unifi-code)
-
-## Algoritmi e struttura dati
-
-Le mie implementazioni in Java di algoritmi e strutture dati. L'obiettivo principale qui è la semplicità. Ho cercato di
-rendere chiare e accessibili queste implementazioni, in modo che possano essere comprese facilmente anche da chi è alle
-prime armi con la programmazione.
-
-- **Data Structures**
-    - [x] [Dynamic array](./algorithms-datastructures/src/main/java/com/github/lorenzoyang/algorithms/datastructures/DynamicArray.java)
-    - [x] [Linked list](./algorithms-datastructures/src/main/java/com/github/lorenzoyang/algorithms/datastructures/LinkedList.java)
-    - [x] [Linked stack](./algorithms-datastructures/src/main/java/com/github/lorenzoyang/algorithms/datastructures/LinkedStack.java)
-    - [x] [Linked queue](./algorithms-datastructures/src/main/java/com/github/lorenzoyang/algorithms/datastructures/LinkedQueue.java)
-    - [x] [Array based queue](./algorithms-datastructures/src/main/java/com/github/lorenzoyang/algorithms/datastructures/ArrayQueue.java)
-    - Priority queue
-        - [x] [Heap based priority queue](./algorithms-datastructures/src/main/java/com/github/lorenzoyang/algorithms/datastructures/priorityqueue/HeapPriorityQueue.java)
-        - [x] [Unordered array based priority queue](./algorithms-datastructures/src/main/java/com/github/lorenzoyang/algorithms/datastructures/priorityqueue/UnorderedArrayPriorityQueue.java)
-        - [x] [Ordered array based priority queue](./algorithms-datastructures/src/main/java/com/github/lorenzoyang/algorithms/datastructures/priorityqueue/OrderedArrayPriorityQueue.java)
-    - [x] [Binary search tree](./algorithms-datastructures/src/main/java/com/github/lorenzoyang/algorithms/datastructures/BinarySearchTree.java)
-    - [ ] 2-3 tree
-    - [ ] Avl tree
-- **Algorithms**
-    - [x] [Tree traversal](./algorithms-datastructures/src/main/java/com/github/lorenzoyang/algorithms/TreeTraversal.java)
-    - Search
-        - [x] [Sequential search](./algorithms-datastructures/src/main/java/com/github/lorenzoyang/algorithms/search/SequentialSearch.java)
-        - [x] [Binary search](./algorithms-datastructures/src/main/java/com/github/lorenzoyang/algorithms/search/BinarySearch.java)
-    - Sort
-        - [ ] Selection sort
-        - [ ] Insertion sort
-        - [ ] Bubble sort
-        - [ ] Merge sort
-        - [ ] Quick sort
-        - [ ] Heap sort
-- **Applications**
-    - [x] [Calculator (Linked stack)](./algorithms-datastructures/src/main/java/com/github/lorenzoyang/algorithms/applications/Calculator.java)
-
-[torna su](#unifi-code)
-
-## Esercizi di Java 
-
-In corso.
 
 [torna su](#unifi-code)
 
