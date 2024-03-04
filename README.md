@@ -12,6 +12,14 @@ Questo è il mio progetto personale per tenere traccia del codice Java ([JDK 11]
 
 Alcune implementazioni di algoritmi e strutture dati scritti in Java ([Java 21](https://adoptium.net/temurin/releases/)).
 
+- **Ordinamenti**
+  - [x] [BubbleSort](algorithms-datastructures\src\main\java\com\github\lorenzoyang\algorithms\sorting\BubbleSort.java)
+  - [x] [InsertionSort](algorithms-datastructures\src\main\java\com\github\lorenzoyang\algorithms\sorting\InsertionSort.java)
+  - [x] [SelectionSort](algorithms-datastructures\src\main\java\com\github\lorenzoyang\algorithms\sorting\SelectionSort.java)
+  - [x] [CountingSort](algorithms-datastructures\src\main\java\com\github\lorenzoyang\algorithms\sorting\CountingSort.java) 
+- **applicazioni**
+  - [x] [Calculator](algorithms-datastructures\src\main\java\com\github\lorenzoyang\algorithms\applications\Calculator.java)
+
 [torna su](#unifi-code)
 
 ## Esercizi di Java 
