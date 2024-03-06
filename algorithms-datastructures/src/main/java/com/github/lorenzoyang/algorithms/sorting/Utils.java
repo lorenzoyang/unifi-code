@@ -6,12 +6,6 @@ import java.util.Random;
 public class Utils {
     private static final Random random = new Random();
 
-    public static <T> void swap(T[] array, int i, int j) {
-        T temp = array[i];
-        array[i] = array[j];
-        array[j] = temp;
-    }
-
     public static <T> void printArray(T[] array) {
         for (var i : array) {
             System.out.print(i + " ");
@@ -26,17 +20,18 @@ public class Utils {
         System.out.println();
     }
 
+    public static <T> void swap(T[] array, int i, int j) {
+        T temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+    }
+
     public static <T extends Comparable<T>> boolean less(T[] array, int i, int j) {
         return array[i].compareTo(array[j]) < 0;
     }
 
-    public static <T extends Comparable<T>> void isSortedTest(T[] array) {
-        for (int i = 1; i < array.length; i++) {
-            if (less(array, i, i - 1)) {
-                throw new IllegalStateException("Array is not sorted");
-            }
-        }
-        System.out.println("Array is sorted");
+    public static <T extends Comparable<T>> boolean less(T i, T j) {
+        return i.compareTo(j) < 0;
     }
 
     public static Integer[] generateIntegerArray(int size) {
