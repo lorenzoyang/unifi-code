@@ -11,7 +11,7 @@ Questo è il mio progetto personale per tenere traccia del codice che ho scritto
 
 ## Algoritmi e struttura dati
 
-Alcune implementazioni di algoritmi e strutture dati scritti in Java ([Java 21](https://adoptium.net/temurin/releases/)).
+Alcune implementazioni di algoritmi e strutture dati scritti in Java.
 
 - **Ordinamenti**
   - [x] [BubbleSort](algorithms-datastructures\src\main\java\com\github\lorenzoyang\algorithms\sorting\BubbleSort.java)
