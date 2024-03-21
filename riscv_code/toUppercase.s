@@ -1,61 +1,64 @@
 .data
-    str: .string "hello world" # la stringa da convertire
+    # la stringa da convertire
+    # \0 funziona da 'null terminator'
+    str: .string "hello world\0"
 
 .text
 main:
-    la t0, str # carico str nel registro t0
-    sb zero, 11(t0) # inserisco un null dopo l'ultimo
+    la a2, str # argomento della funzione 'insertNullToEndString'
+    jal InsertNullToEndString
     
-    la a0, str # argomento della funzione 'printString'
-    jal printlnString
+    la a2, str # argomento della funzione 'printString'
+    jal PrintlnString
     
-    la a0, str # argomento della funzione 'toUpperCase'
-    jal toUpperCase
+    la a2, str # argomento della funzione 'toUpperCase'
+    jal ToUpperCase
     
-    la a0, str # argomento della funzione 'printString'
-    jal printlnString
+    la a2, str # argomento della funzione 'printString'
+    jal PrintlnString
     
     li a7, 10 # system call: exit
     ecall
     
-# argomento: a0, stringa da convertire
-toUpperCase:
-    addi sp, sp, -4 # alloco memoria nello stack
-    sw ra, 0(sp) # salvo l'indirizzo di ritorno
-    
-    ciclo:
-        # t0 = carattere attuale
-        lb t0, 0(a0)
-        
-        beq t0 zero fine # se e' null salta a 'fine'
-        
-        # controllo se il carattere e' minuscolo
-        li t1, 97 # il valore ascii di a
-        li t2, 122 # il valore ascii di z
-        
-        blt t0, t1, prossimo # se il carattere < a
-        bgt t0, t2, prossimo # se il carattere > z
-        
-        # convertire il carattere in maiuscolo sottraendo per 32
-        addi t0, t0, -32
-        sb t0 0(a0) # salvo il carattere convertito
-        
-        # prossimo ciclo
-        prossimo:
-            addi a0, a0, 1 # incremento a0 per ottenere il prossimo carattere
-            j ciclo
-        
-    fine:
-        lw ra 0(sp) # ripristino l'indirizzo di ritorno
-        addi sp, sp, 4 # libero la memoria dello stack
-        ret
-        
-# argomento: a0, la stringa da stampare
-printlnString:
+# argument: a2, stringa da convertire
+#     stringa passata per 'riferimento'
+# return: none
+ToUpperCase:
     addi sp, sp, -4
     sw ra, 0(sp)
     
-    la a0, str # argomento del system call
+    cycle_0:
+        lbu t0, 0(a2) # carattere attuale
+        
+        beq t0, zero end_0 # se null salta a 'fine'
+        
+        # se carattere minuscolo
+        li t1, 97 # il valore ascii di 'a'
+        li t2, 122 # il valore ascii di 'z'
+        
+        blt t0, t1, next_0 # se carattere < 'a'
+        bgt t0, t2, next_0 # se carattere > 'z'
+        
+        # convertire carattere in maiuscolo sottraendo per 32
+        addi t0, t0, -32
+        sb t0, 0(a2) # salvo carattere convertito
+        
+        next_0:
+            addi a2, a2, 1 # prossimo carattere
+            j cycle_0
+        
+    end_0:
+        lw ra 0(sp)
+        addi sp, sp, 4
+        ret
+        
+# argument: a2, la stringa da stampare
+# return: none
+PrintlnString:
+    addi sp, sp, -4
+    sw ra, 0(sp)
+    
+    mv a0, a2 # argomento del system call
     li a7, 4 # system call: print string
     ecall
     
@@ -66,3 +69,38 @@ printlnString:
     lw ra, 0(sp)
     addi sp, sp, 4
     ret
+    
+# argument: a2, la stringa in cui inserire null (0)
+#     stringa passata per 'riferimento'
+# return: none
+InsertNullToEndString:
+    addi sp, sp, -4
+    sw ra, 0(sp)
+    
+    li t0, 92 # t0 = backslash (92 ascii)
+    cycle_1:
+        lbu t1, 0(a2) # carattere attuale
+        bne t1, t0 next_1 # se diverso dal backslash, prossimo ciclo
+        # altrimenti
+        li t3, 48 # t3 = '0' (48 ascii)
+        mv t2, a2 # temp per non perdere a2
+        addi t2, t2, 1 # punta al prossimo carattere
+        lbu t2, 0(t2) # carico il prossimo carattere
+        bne t2, t3 next_1 # se diverso da '0', prossimo ciclo
+        # altrimenti
+        sb zero 0(a2) # inserisco lo zero nel a2
+        
+        end_1:
+            lw ra, 0(sp)
+            addi sp, sp, 4
+            ret
+        
+        next_1:
+            addi a2, a2, 1 # incremento a2 di 1
+            j cycle_1 # prossimo ciclo
+        
+            
+            
+            
+        
+    

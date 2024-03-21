@@ -1,9 +1,10 @@
 # Unifi code
 
-Questo è il mio progetto personale per tenere traccia del codice Java ([JDK 11](https://adoptium.net/temurin/releases/?variant=openjdk11)) che ho scritto durante gli anni di studi universitari. Il progetto è composto dalle seguenti parti:
+Questo è il mio progetto personale per tenere traccia del codice che ho scritto durante gli anni di studi universitari. Il progetto è composto dalle seguenti parti:
 
 - [Unifi code](#unifi-code)
   - [Algoritmi e struttura dati](#algoritmi-e-struttura-dati)
+  - [RISC-V code snippets](#risc-v-code-snippets)
   - [Esercizi di Java](#esercizi-di-java)
   - [Esercizi di Javamm](#esercizi-di-javamm)
   - [Licenza](#licenza)
@@ -21,6 +22,13 @@ Alcune implementazioni di algoritmi e strutture dati scritti in Java ([Java 21](
   - [x] [Calculator](algorithms-datastructures\src\main\java\com\github\lorenzoyang\algorithms\applications\Calculator.java)
 
 [torna su](#unifi-code)
+
+## RISC-V code snippets
+
+Una serie di file RISC-V che implementano varie funzioni utili.
+Per eseguire questi codici RISC-V, è necessario utilizzare un simulatore RISC-V come [Ripes](https://github.com/mortbopet/Ripes).
+
+- [x] [ToUpperCase](./riscv_code/ToUpperCase.s)
 
 ## Esercizi di Java 
 
