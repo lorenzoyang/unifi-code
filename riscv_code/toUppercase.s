@@ -5,13 +5,13 @@
 .text
 main:
     la a2, str # argomento della funzione 'printString'
-    jal PrintlnString
+    jal PrintString
     
     la a2, str # argomento della funzione 'toUpperCase'
     jal ToUpperCase
     
     la a2, str # argomento della funzione 'printString'
-    jal PrintlnString
+    jal PrintString
     
     li a7, 10 # system call: exit
     ecall
@@ -49,8 +49,10 @@ ToUpperCase:
         ret
         
 # argument: a2, la stringa da stampare
+# argument: a3, non aggiungere '\n' se a3 == 1
+#     altrimenti un '\n' viene aggiunto
 # return: none
-PrintlnString:
+PrintString:
     addi sp, sp, -4
     sw ra, 0(sp)
     
@@ -58,15 +60,18 @@ PrintlnString:
     li a7, 4 # system call: print string
     ecall
     
-    li a0, 10 # stampare \n
+    li t0, 1 # costante 1 nel registro t0
+    beq a3, t0 end_2 # se uguale a 0 salto alla fine
+    
+    # altrimenti '\n'
+    li a0, 10 # 10 = '\n'
     li a7, 11
     ecall
     
-    lw ra, 0(sp)
-    addi sp, sp, 4
-    ret
-        
-            
+    end_2:
+        lw ra, 0(sp)
+        addi sp, sp, 4
+        ret            
             
             
         

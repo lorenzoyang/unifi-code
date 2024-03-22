@@ -28,7 +28,9 @@ Alcune implementazioni di algoritmi e strutture dati scritti in Java.
 Una serie di file RISC-V che implementano varie funzioni utili.
 Per eseguire questi codici RISC-V, è necessario utilizzare un simulatore RISC-V come [Ripes](https://github.com/mortbopet/Ripes).
 
+- [x] [PrintString](./riscv_code/PrintString.s) 
 - [x] [ToUpperCase](./riscv_code/ToUpperCase.s)
+- [ ] [Factorial](./riscv_code/Factorial.s)
 
 ## Esercizi di Java 
 
