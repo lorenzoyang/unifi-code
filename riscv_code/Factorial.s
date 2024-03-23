@@ -1,30 +1,26 @@
 .data
-
-n: .word 5 # 'input' dell'utente
-
-errorMsg: .string "n deve essere maggiore o uguale a 1"
+n: .word 6 # 'input' dell'utente
+errorMsg: .string "n deve essere un numero positivo"
 resultMsg: .string "il valore del fattoriale: "
 
 .text
-
 main:
-    li t0, 1 # t0 = 1
-    bge a2, t0 input_is_ok # se n >= 1 salto a input_is_ok
+    lw t0, n # carico input 'n' in un registro
+    bge t0, zero, input_is_ok # se n >= 0 input_is_ok
     # altrimenti
     la a2 errorMsg # argomento della funzione 'PrintlnString'
     jal PrintString
-    
     j end_1
     
     input_is_ok:
-        la a2, n # argomento della funzione 'Factorial'
-        jal Factorial
-        
         la a2, resultMsg # argomento della funzione 'PrintString'
-        li a3, 0 # argomento della funzione 'PrintString'
+        li a3, 1 # argomento della funzione 'PrintString'
         jal PrintString
         
-        mv a0, a0 # return value del fattoriale->argomento del syscall
+        lw a2, n # argomento della funzione 'Factorial'
+        jal Factorial
+        
+        mv a0, a2 # argomento del syscall = fattoriale
         li a7, 1 # System Call: 'PrintInt'
         ecall
         
@@ -32,21 +28,35 @@ main:
         li a7 10
         ecall # exit from programm
     
-# argument: a2, un numero intero >= 1
-# return: a0, il risultato del fattoriale
+    
+    
+# argument: a2 (n), un numero intero >= 0
+# return: a2, il risultato del fattoriale
 Factorial:
-    addi sp, sp -8
-    sw ra, 4(sp)
-    sw a2, 0(sp) # salvataggio del parametro n
+    # caso base: se n == 0 restituisce 1
+    beqz a2, caso_base
     
-    li t0, 1 # t0 = 1
-    bge a2, t0 input_is_ok
+    caso_induttivo:
+        addi sp, sp -8
+        sw ra, 0(sp) # salvo return address
+        sw a2, 4(sp) # salvo n
     
-    end_0:
-        lw a2, 0(sp)
-        lw ra, 4(sp)
+        addi a2, a2, -1 # decremento n
+        jal Factorial # calcolo Factorial(n-1)
+    
+        mv t1, a2 # salvo il risultato del Factorial precedente
+        lw a2 4(sp) # riprendo n
+        mul a2, a2, t1
+    
+        lw ra, 0(sp) # riprendo ra
         addi sp, sp, 8
         ret
+
+    caso_base:
+        li a2 1 # restituisce 1
+        ret
+     
+        
         
 # argument: a2, la stringa da stampare
 # argument: a3, non aggiungere '\n' se a3 == 1

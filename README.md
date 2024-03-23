@@ -30,7 +30,7 @@ Per eseguire questi codici RISC-V, è necessario utilizzare un simulatore RISC-V
 
 - [x] [PrintString](./riscv_code/PrintString.s) 
 - [x] [ToUpperCase](./riscv_code/ToUpperCase.s)
-- [ ] [Factorial](./riscv_code/Factorial.s)
+- [x] [Factorial](./riscv_code/Factorial.s)
 
 ## Esercizi di Java 
 
