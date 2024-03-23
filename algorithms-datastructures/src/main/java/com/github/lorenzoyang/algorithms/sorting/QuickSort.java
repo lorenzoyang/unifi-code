@@ -58,24 +58,12 @@ public class QuickSort {
     }
 
     public static void main(String[] args) {
-        Integer[] array1 = {3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5};
-        Integer[] array2 = {5, 3, 534, 3, 2, 44};
-        Integer[] array3 = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+        var array1 = generateIntegerArray(10);
+        printArray(array1, QuickSort::sort);
 
-        QuickSort.sort(array1);
-        QuickSort.sort(array2);
-        QuickSort.sort(array3);
-
-        printArray(array1);
+        int k = 5;
+        var array2 = generateIntegerArray(10);
+        System.out.println("Select " + k + " rd element: " + QuickSort.select(array2, k));
         printArray(array2);
-        printArray(array3);
-
-        System.out.println("-----------------");
-        int k = 0;
-        var array4 = new Integer[]{1, 33, 3, 55, 2, 4, 6};
-        System.out.println("Select " + k + " rd element: " + QuickSort.select(array4, k));
-        QuickSort.sort(array4);
-        printArray(array4);
-
     }
 }

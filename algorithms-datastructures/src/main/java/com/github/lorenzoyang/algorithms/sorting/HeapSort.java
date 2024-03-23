@@ -47,15 +47,6 @@ public class HeapSort {
 
     public static void main(String[] args) {
         var array1 = generateIntegerArray(10);
-        var array2 = generateIntegerArray(10);
-        var array3 = generateIntegerArray(10);
-
-        HeapSort.sort(array1);
-        HeapSort.sort(array2);
-        HeapSort.sort(array3);
-
-        printArray(array1);
-        printArray(array2);
-        printArray(array3);
+        printArray(array1, HeapSort::sort);
     }
 }

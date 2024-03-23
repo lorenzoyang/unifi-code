@@ -55,23 +55,18 @@ public class MegeSort {
         }
     }
 
-    // --------------------------------------------------
-    // test
-    // --------------------------------------------------
     public static void main(String[] args) {
         // test top-down merge sort
         System.out.println("Top-down merge sort");
-        var array = generateIntegerArray(10);
-        sort(array);
-        printArray(array);
+        var array1 = generateIntegerArray(10);
+        printArray(array1, MegeSort::sort);
 
         System.out.println();
 
         // test bottom-up merge sort
         System.out.println("Bottom-up merge sort");
-        array = generateIntegerArray(10);
-        bottomUpSort(array);
-        printArray(array);
+        var array2 = generateIntegerArray(10);
+        printArray(array2, MegeSort::bottomUpSort);
     }
 
 }

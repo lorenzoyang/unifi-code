@@ -1,5 +1,6 @@
 package com.github.lorenzoyang.algorithms.sorting;
 
+import static com.github.lorenzoyang.algorithms.sorting.Utils.generateIntegerArray;
 import static com.github.lorenzoyang.algorithms.sorting.Utils.printArray;
 
 public class InsertionSort {
@@ -16,16 +17,7 @@ public class InsertionSort {
     }
 
     public static void main(String[] args) {
-        Integer[] array1 = {3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5};
-        Integer[] array2 = {5, 3, 534, 3, 2, 44};
-        Integer[] array3 = {1, 2, 3, 4, 5, 6, 7, 8, 9};
-
-        InsertionSort.sort(array1);
-        InsertionSort.sort(array2);
-        InsertionSort.sort(array3);
-
-        printArray(array1);
-        printArray(array2);
-        printArray(array3);
+        var array1 = generateIntegerArray(10);
+        printArray(array1, InsertionSort::sort);
     }
 }

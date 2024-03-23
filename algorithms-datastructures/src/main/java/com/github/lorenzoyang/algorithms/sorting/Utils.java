@@ -1,6 +1,5 @@
 package com.github.lorenzoyang.algorithms.sorting;
 
-import java.util.Arrays;
 import java.util.Random;
 
 public class Utils {
@@ -13,13 +12,14 @@ public class Utils {
         System.out.println();
     }
 
-    public static void printArray(int[] array) {
-        for (var i : array) {
-            System.out.print(i + " ");
-        }
-        System.out.println();
+    public static <T extends Comparable<T>> void printArray(T[] array, ArraySorter<T> sorter) {
+        System.out.println("Before sorting: ");
+        printArray(array);
+        sorter.sort(array);
+        System.out.println("After sorting: ");
+        printArray(array);
     }
-
+    
     public static <T> void swap(T[] array, int i, int j) {
         T temp = array[i];
         array[i] = array[j];
@@ -35,15 +35,11 @@ public class Utils {
     }
 
     public static Integer[] generateIntegerArray(int size) {
-        var array = generateIntArray(size);
-        return Arrays.stream(array).boxed().toArray(Integer[]::new);
-    }
-
-    public static int[] generateIntArray(int size) {
-        var array = new int[size];
+        Integer[] array = new Integer[size];
         for (int i = 0; i < size; i++) {
             array[i] = random.nextInt(size);
         }
         return array;
     }
 }
+

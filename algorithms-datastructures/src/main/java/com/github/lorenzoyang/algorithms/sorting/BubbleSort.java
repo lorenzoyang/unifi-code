@@ -30,27 +30,8 @@ public class BubbleSort {
 
     public static void main(String[] args) {
         var array1 = generateIntegerArray(10);
+        printArray(array1, BubbleSort::sort);
         var array2 = generateIntegerArray(10);
-        var array3 = generateIntegerArray(10);
-        sort(array1);
-        sort(array2);
-        sort(array3);
-
-        printArray(array1);
-        printArray(array2);
-        printArray(array3);
-
-        System.out.println("sorting with flag");
-        array1 = generateIntegerArray(10);
-        array2 = generateIntegerArray(10);
-        array3 = generateIntegerArray(10);
-        sortWithFlag(array1);
-        sortWithFlag(array2);
-        sortWithFlag(array3);
-
-        printArray(array1);
-        printArray(array2);
-        printArray(array3);
-
+        printArray(array2, BubbleSort::sortWithFlag);
     }
 }
