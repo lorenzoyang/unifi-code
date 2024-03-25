@@ -2,7 +2,7 @@ package com.github.lorenzoyang.algorithms.sorting;
 
 import java.util.Random;
 
-public class Utils {
+class Utils {
     private static final Random random = new Random();
 
     public static <T> void printArray(T[] array) {
@@ -19,7 +19,7 @@ public class Utils {
         System.out.println("After sorting: ");
         printArray(array);
     }
-    
+
     public static <T> void swap(T[] array, int i, int j) {
         T temp = array[i];
         array[i] = array[j];
