@@ -63,10 +63,15 @@ public class Graph {
         for (int v = 0; v < vertices(); v++) {
             s.append(v).append(": ");
             for (int w : adjacencies[v]) {
-                s.append(w).append(" ");
+                s.append(w).append(", ");
             }
             s.append(System.lineSeparator());
         }
         return s.toString();
+    }
+
+    public static void main(String[] args) {
+        var graph = GraphGenerator.generateGraphFromString(GraphGenerator.graphString1);
+        System.out.println(graph);
     }
 }
