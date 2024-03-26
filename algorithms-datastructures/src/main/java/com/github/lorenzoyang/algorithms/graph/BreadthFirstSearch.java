@@ -4,7 +4,10 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 public class BreadthFirstSearch {
-    public static void bfs(Graph graph, int source) {
+    private BreadthFirstSearch() {
+    }
+
+    public static void breadthFirstSearch(Graph graph, int source) {
         if (source < 0 || source >= graph.vertices())
             throw new IllegalArgumentException("Il vertice " + source + " non è valido");
 
@@ -15,7 +18,7 @@ public class BreadthFirstSearch {
         queue.add(source);
         while (!queue.isEmpty()) {
             int v = queue.poll();
-            System.out.print(v + " ");
+            System.out.print(v + ", ");
             // per ogni vertice adiacente a v
             for (int w : graph.adjacencies(v)) {
                 if (!visited[w]) {
@@ -31,6 +34,6 @@ public class BreadthFirstSearch {
         var graph = GraphGenerator.generateGraphFromString(GraphGenerator.graphString1);
         System.out.println(graph);
         System.out.println("BFS: ");
-        bfs(graph, 0);
+        breadthFirstSearch(graph, 0);
     }
 }
