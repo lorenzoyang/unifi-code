@@ -13,13 +13,14 @@ Questo è il mio progetto personale per tenere traccia del codice che ho scritto
 
 Alcune implementazioni di algoritmi e strutture dati scritti in Java.
 
+
 - **Ordinamenti**
-  - [x] [BubbleSort](algorithms-datastructures\src\main\java\com\github\lorenzoyang\algorithms\sorting\BubbleSort.java)
-  - [x] [InsertionSort](algorithms-datastructures\src\main\java\com\github\lorenzoyang\algorithms\sorting\InsertionSort.java)
-  - [x] [SelectionSort](algorithms-datastructures\src\main\java\com\github\lorenzoyang\algorithms\sorting\SelectionSort.java)
-  - [x] [CountingSort](algorithms-datastructures\src\main\java\com\github\lorenzoyang\algorithms\sorting\CountingSort.java) 
+  - [x] [BubbleSort](./algorithms-datastructures/src/main/java/com/github/lorenzoyang/algorithms/sorting/BubbleSort.java)
+  - [x] [InsertionSort](./algorithms-datastructures/src/main/java/com/github/lorenzoyang/algorithms/sorting/InsertionSort.java)
+  - [x] [SelectionSort](./algorithms-datastructures/src/main/java/com/github/lorenzoyang/algorithms/sorting/SelectionSort.java)
+  - [x] [CountingSort](./algorithms-datastructures/src/main/java/com/github/lorenzoyang/algorithms/sorting/CountingSort.java) 
 - **applicazioni**
-  - [x] [Calculator](algorithms-datastructures\src\main\java\com\github\lorenzoyang\algorithms\applications\Calculator.java)
+  - [x] [Calculator](./algorithms-datastructures/src/main/java/com/github/lorenzoyang/algorithms/applications/Calculator.java)
 
 [torna su](#unifi-code)
 
@@ -31,6 +32,7 @@ Per eseguire questi codici RISC-V, è necessario utilizzare un simulatore RISC-V
 - [x] [PrintString](./riscv_code/PrintString.s) 
 - [x] [ToUpperCase](./riscv_code/ToUpperCase.s)
 - [x] [Factorial](./riscv_code/Factorial.s)
+- [x] [SwapWithNext](./riscv_code/SwapWithNext.s)
 
 ## Esercizi di Java 
 
