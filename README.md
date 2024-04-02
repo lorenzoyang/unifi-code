@@ -13,12 +13,19 @@ Questo è il mio progetto personale per tenere traccia del codice che ho scritto
 
 Alcune implementazioni di algoritmi e strutture dati scritti in Java.
 
-
 - **Ordinamenti**
   - [x] [BubbleSort](./algorithms-datastructures/src/main/java/com/github/lorenzoyang/algorithms/sorting/BubbleSort.java)
   - [x] [InsertionSort](./algorithms-datastructures/src/main/java/com/github/lorenzoyang/algorithms/sorting/InsertionSort.java)
   - [x] [SelectionSort](./algorithms-datastructures/src/main/java/com/github/lorenzoyang/algorithms/sorting/SelectionSort.java)
   - [x] [CountingSort](./algorithms-datastructures/src/main/java/com/github/lorenzoyang/algorithms/sorting/CountingSort.java) 
+  - [x] [QuickSort](./algorithms-datastructures/src/main/java/com/github/lorenzoyang/algorithms/sorting/QuickSort.java)
+  - [x] [MergeSort](./algorithms-datastructures/src/main/java/com/github/lorenzoyang/algorithms/sorting/MergeSort.java)
+  - [x] [HeapSort](./algorithms-datastructures/src/main/java/com/github/lorenzoyang/algorithms/sorting/HeapSort.java)
+  - [x] [ShellSort](./algorithms-datastructures/src/main/java/com/github/lorenzoyang/algorithms/sorting/ShellSort.java)
+- **Grafi**
+  - [x] [Graph](./algorithms-datastructures/src/main/java/com/github/lorenzoyang/algorithms/graph/Graph.java)
+  - [x] [DepthFirstSearch](./algorithms-datastructures/src/main/java/com/github/lorenzoyang/algorithms/graph/DepthFirstSearch.java)
+  - [x] [BreadthFirstSearch](./algorithms-datastructures/src/main/java/com/github/lorenzoyang/algorithms/graph/BreadthFirstSearch.java)
 - **applicazioni**
   - [x] [Calculator](./algorithms-datastructures/src/main/java/com/github/lorenzoyang/algorithms/applications/Calculator.java)
 
