@@ -8,13 +8,15 @@ import java.util.List;
  *
  * @author Lorenzo Yang
  */
-class Nodo {
+public class Nodo {
     private final String info;
     private final List<String> listaAdiacenti;
+    private final List<Nodo> figli;
 
     public Nodo(String info) {
         this.info = info;
         this.listaAdiacenti = new LinkedList<>();
+        this.figli = new LinkedList<>();
     }
 
     public String info() {
@@ -23,6 +25,10 @@ class Nodo {
 
     public List<String> listaAdiacenti() {
         return listaAdiacenti;
+    }
+
+    public List<Nodo> figli() {
+        return figli;
     }
 
     public int numeroArchiIncidenti() {

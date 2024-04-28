@@ -1,7 +1,9 @@
 package com.github.lorenzoyang.algorithms.progettoasd2324;
 
 import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.Map;
+import java.util.Queue;
 
 /**
  * Grafo non orientato rappresentato con liste di adiacenza.
@@ -83,6 +85,48 @@ public class Grafo {
         for (String adiacente : listaNodi.get(vertice).listaAdiacenti()) {
             System.out.println("    (" + vertice + ", " + adiacente + ")");
         }
+    }
+
+    public Nodo getAlberoBFS(String vertice) {
+        controlliVertici(vertice);
+
+        Map<String, Boolean> visitati = new HashMap<>();
+        Queue<String> coda = new LinkedList<>();
+
+        coda.add(vertice);
+        visitati.put(vertice, true);
+        Nodo radice = new Nodo(vertice);
+        while (!coda.isEmpty()) {
+            String nodo = coda.poll();
+            for (String adiacente : listaNodi.get(nodo).listaAdiacenti()) {
+                if (!visitati.get(adiacente)) {
+                    visitati.put(adiacente, true);
+                    coda.add(adiacente);
+                    Nodo figlio = new Nodo(adiacente);
+                    radice.figli().add(figlio);
+                }
+            }
+        }
+        return radice;
+    }
+
+    public Nodo getAlberoDFS(String vertice) {
+        controlliVertici(vertice);
+        Map<String, Boolean> visitati = new HashMap<>();
+        return getAlberoDFS(vertice, visitati);
+    }
+
+    // Metodo privato per la visita in profondità.
+    private Nodo getAlberoDFS(String vertice, Map<String, Boolean> visitati) {
+        visitati.put(vertice, true);
+        Nodo radice = new Nodo(vertice);
+        for (String adiacente : listaNodi.get(vertice).listaAdiacenti()) {
+            if (!visitati.get(adiacente)) {
+                Nodo figlio = getAlberoDFS(adiacente, visitati);
+                radice.figli().add(figlio);
+            }
+        }
+        return radice;
     }
 
     // Metodo privato per controllare l'esistenza dei vertici.
