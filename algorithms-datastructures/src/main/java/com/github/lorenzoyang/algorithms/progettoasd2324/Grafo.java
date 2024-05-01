@@ -77,16 +77,18 @@ public class Grafo {
         numeroArchi--;
     }
 
-    public void informazioneVertice(Nodo vertice) {
+    public String informazioneVertice(Nodo vertice) {
         if (!listeAdiacenza.containsKey(vertice)) {
             System.out.println("Il vertice " + vertice + " non fa parte del grafo.");
         }
-        System.out.println("Vertice: " + vertice);
-        System.out.println("Numero archi incidenti: " + numeroArchiIncidenti(vertice));
-        System.out.println("Archi incidenti su " + vertice + ": ");
+        StringBuilder sb = new StringBuilder();
+        sb.append("Vertice ").append(vertice).append(":\n");
+        sb.append("    Numero archi incidenti: ").append(numeroArchiIncidenti(vertice)).append("\n");
+        sb.append("    Archi incidenti su ").append(vertice).append(":").append("\n");
         for (Nodo adiacente : listeAdiacenza.get(vertice)) {
-            System.out.println("    (" + vertice + ", " + adiacente + ")");
+            sb.append("        (").append(vertice).append(", ").append(adiacente).append(")\n");
         }
+        return sb.toString();
     }
 
     public Albero getAlberoBFS(Nodo vertice) {
@@ -129,6 +131,18 @@ public class Grafo {
         }
 
         return getAlberoDFS(vertice, visitati);
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("Grafo con ").append(numeroVertici()).append(" vertici e ")
+                .append(numeroArchi()).append(" archi >>>>>>\n");
+        for (Nodo vertice : listeAdiacenza.keySet()) {
+            sb.append(informazioneVertice(vertice));
+        }
+        sb.append("<<<<<<");
+        return sb.toString();
     }
 
     // Metodo privato per la visita in profondità.
