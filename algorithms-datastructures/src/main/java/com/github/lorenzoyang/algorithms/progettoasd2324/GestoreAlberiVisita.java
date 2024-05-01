@@ -1,37 +1,21 @@
 package com.github.lorenzoyang.algorithms.progettoasd2324;
 
 public class GestoreAlberiVisita {
-    private Nodo radice;
+    private Albero albero;
 
-    public GestoreAlberiVisita() {
-        this.radice = null;
+    public GestoreAlberiVisita(Albero albero) {
+        this.albero = albero;
     }
 
-    public void salvaAlberoVisita(Nodo radice) {
-        this.radice = radice;
+    public void aggiornaAlbero(Albero albero) {
+        this.albero = albero;
     }
 
-    public String figliDelNodo(String vertice) {
-        if (radice == null)
-            throw new IllegalStateException("Devi prima effettuare una visita e salvare il risultato nel gestore");
-        Nodo nodo = cercaNodo(radice, vertice);
-        if (nodo == null)
-            return "Nodo non trovato";
-        StringBuilder sb = new StringBuilder();
-        sb.append("Figli di ").append(vertice).append(": ");
-        for (Nodo figlio : nodo.figli())
-            sb.append(figlio.info()).append(", ");
-        return sb.toString();
-    }
-
-    private Nodo cercaNodo(Nodo nodo, String info) {
-        if (nodo.info().equals(info))
-            return nodo;
-        for (Nodo figlio : nodo.figli()) {
-            Nodo n = cercaNodo(figlio, info);
-            if (n != null)
-                return n;
+    public String figliDiNodo(Nodo nodo) {
+        if (albero == null) {
+            throw new IllegalStateException("Albero non inizializzato");
         }
-        return null;
+        StringBuilder sb = new StringBuilder();
+        return sb.toString();
     }
 }

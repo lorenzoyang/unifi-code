@@ -11,7 +11,9 @@ import java.util.Queue;
  * @author Lorenzo Yang
  */
 public class Grafo {
-    private final Map<String, LinkedList<String>> listeAdiacenza;
+    // HashMap per memorizzare le liste di adiacenza.
+    // Ogni lista di adiacenza (LinkedList<Nodo>) e' associata ad un nodo/vertice (Nodo).
+    private final Map<Nodo, LinkedList<Nodo>> listeAdiacenza;
     private int numeroArchi;
 
     public Grafo() {
@@ -27,27 +29,27 @@ public class Grafo {
         return numeroArchi;
     }
 
-    public int numeroArchiIncidenti(String vertice) {
-        controlliVertici(vertice);
+    public int numeroArchiIncidenti(Nodo vertice) {
+        controlliEsistenzaVertici(vertice);
         return listeAdiacenza.get(vertice).size();
     }
 
-    public boolean adiacenti(String vertice1, String vertice2) {
-        controlliVertici(vertice1, vertice2);
+    public boolean adiacenti(Nodo vertice1, Nodo vertice2) {
+        controlliEsistenzaVertici(vertice1, vertice2);
         return listeAdiacenza.get(vertice1).contains(vertice2);
         // oppure
         // return listeAdiacenza.get(vertice2).contains(vertice1);
     }
 
-    public void aggiungiVertice(String vertice) {
+    public void aggiungiVertice(Nodo vertice) {
         if (listeAdiacenza.containsKey(vertice)) {
             throw new IllegalArgumentException("Il vertice " + vertice + " esiste già.");
         }
         listeAdiacenza.put(vertice, new LinkedList<>());
     }
 
-    public void aggiungiArco(String vertice1, String vertice2) {
-        controlliVertici(vertice1, vertice2);
+    public void aggiungiArco(Nodo vertice1, Nodo vertice2) {
+        controlliEsistenzaVertici(vertice1, vertice2);
         if (adiacenti(vertice1, vertice2)) {
             throw new IllegalArgumentException("L'arco tra " + vertice1 + " e " + vertice2 + " esiste già.");
         }
@@ -56,17 +58,17 @@ public class Grafo {
         numeroArchi++;
     }
 
-    public void rimuoviVertice(String vertice) {
-        controlliVertici(vertice);
-        for (String adiacente : listeAdiacenza.get(vertice)) {
+    public void rimuoviVertice(Nodo vertice) {
+        controlliEsistenzaVertici(vertice);
+        for (Nodo adiacente : listeAdiacenza.get(vertice)) {
             listeAdiacenza.get(adiacente).remove(vertice);
             numeroArchi--;
         }
         listeAdiacenza.remove(vertice);
     }
 
-    public void rimuoviArco(String vertice1, String vertice2) {
-        controlliVertici(vertice1, vertice2);
+    public void rimuoviArco(Nodo vertice1, Nodo vertice2) {
+        controlliEsistenzaVertici(vertice1, vertice2);
         if (!adiacenti(vertice1, vertice2)) {
             throw new IllegalArgumentException("L'arco tra " + vertice1 + " e " + vertice2 + " non esiste.");
         }
@@ -75,63 +77,76 @@ public class Grafo {
         numeroArchi--;
     }
 
-    public void informazioneVertice(String vertice) {
+    public void informazioneVertice(Nodo vertice) {
         if (!listeAdiacenza.containsKey(vertice)) {
             System.out.println("Il vertice " + vertice + " non fa parte del grafo.");
         }
         System.out.println("Vertice: " + vertice);
         System.out.println("Numero archi incidenti: " + numeroArchiIncidenti(vertice));
         System.out.println("Archi incidenti su " + vertice + ": ");
-        for (String adiacente : listeAdiacenza.get(vertice)) {
+        for (Nodo adiacente : listeAdiacenza.get(vertice)) {
             System.out.println("    (" + vertice + ", " + adiacente + ")");
         }
     }
 
-    public Nodo getAlberoBFS(String vertice) {
-        controlliVertici(vertice);
+    public Albero getAlberoBFS(Nodo vertice) {
+        controlliEsistenzaVertici(vertice);
 
-        Map<String, Boolean> visitati = new HashMap<>();
-        Queue<Nodo> coda = new LinkedList<>();
-        Nodo radice = new Nodo(vertice);
-        coda.add(radice);
-        visitati.put(radice.info(), true);
+        // Inizializzazione della mappa dei vertici visitati.
+        Map<Nodo, Boolean> visitati = new HashMap<>();
+        for (Nodo nodo : listeAdiacenza.keySet()) {
+            visitati.put(nodo, false);
+        }
+        // la coda per la visita in ampiezza
+        Queue<Albero> coda = new LinkedList<>();
+
+        // Creazione dell'albero con la radice vertice.
+        Albero albero = new Albero(vertice);
+        coda.add(albero);
+        visitati.put(vertice, true);
 
         while (!coda.isEmpty()) {
-            Nodo radiceCorrente = coda.poll();
-            for (String adiacente : listeAdiacenza.get(radiceCorrente.info())) {
-                if (!visitati.containsKey(adiacente)) {
-                    Nodo figlio = new Nodo(adiacente);
+            Albero alberoCorrente = coda.poll();
+            Nodo verticeCorrente = alberoCorrente.radice();
+            for (Nodo adiacente : listeAdiacenza.get(verticeCorrente)) {
+                if (!visitati.get(adiacente)) {
+                    Albero figlio = new Albero(adiacente);
+                    alberoCorrente.aggiungiFiglio(figlio);
                     coda.add(figlio);
                     visitati.put(adiacente, true);
-                    radiceCorrente.figli().add(figlio);
                 }
             }
         }
-        return radice;
+        return albero;
     }
 
-    public Nodo getAlberoDFS(String vertice) {
-        controlliVertici(vertice);
-        Map<String, Boolean> visitati = new HashMap<>();
+    public Albero getAlberoDFS(Nodo vertice) {
+        controlliEsistenzaVertici(vertice);
+
+        Map<Nodo, Boolean> visitati = new HashMap<>();
+        for (Nodo nodo : listeAdiacenza.keySet()) {
+            visitati.put(nodo, false);
+        }
+
         return getAlberoDFS(vertice, visitati);
     }
 
     // Metodo privato per la visita in profondità.
-    private Nodo getAlberoDFS(String vertice, Map<String, Boolean> visitati) {
+    private Albero getAlberoDFS(Nodo vertice, Map<Nodo, Boolean> visitati) {
         visitati.put(vertice, true);
-        Nodo radice = new Nodo(vertice);
-        for (String adiacente : listeAdiacenza.get(vertice)) {
+        Albero albero = new Albero(vertice);
+        for (Nodo adiacente : listeAdiacenza.get(vertice)) {
             if (!visitati.get(adiacente)) {
-                Nodo figlio = getAlberoDFS(adiacente, visitati);
-                radice.figli().add(figlio);
+                Albero figlio = getAlberoDFS(adiacente, visitati);
+                albero.aggiungiFiglio(figlio);
             }
         }
-        return radice;
+        return albero;
     }
 
     // Metodo privato per controllare l'esistenza dei vertici.
-    private void controlliVertici(String... vertici) {
-        for (String vertice : vertici) {
+    private void controlliEsistenzaVertici(Nodo... vertici) {
+        for (Nodo vertice : vertici) {
             if (!listeAdiacenza.containsKey(vertice)) {
                 throw new IllegalArgumentException("Il vertice " + vertice + " non esiste.");
             }
