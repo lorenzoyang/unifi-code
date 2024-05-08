@@ -37,7 +37,7 @@ class Utils {
     public static Integer[] generateIntegerArray(int size) {
         Integer[] array = new Integer[size];
         for (int i = 0; i < size; i++) {
-            array[i] = random.nextInt(size);
+            array[i] = random.nextInt(size * 10);
         }
         return array;
     }
