@@ -6,7 +6,7 @@ import java.util.Map;
 import java.util.Queue;
 
 /**
- * Grafo non orientato rappresentato con liste di adiacenza.
+ * Grafo non orientato rappresentato con le liste di adiacenza.
  *
  * @author Lorenzo Yang
  */
@@ -91,7 +91,7 @@ public class Grafo {
         return sb.toString();
     }
 
-    public Albero getAlberoBFS(Nodo vertice) {
+    public NodoLF getAlberoBFS(Nodo vertice) {
         controlliEsistenzaVertici(vertice);
 
         // Inizializzazione della mappa dei vertici visitati.
@@ -100,19 +100,19 @@ public class Grafo {
             visitati.put(nodo, false);
         }
         // la coda per la visita in ampiezza
-        Queue<Albero> coda = new LinkedList<>();
+        Queue<NodoLF> coda = new LinkedList<>();
 
         // Creazione dell'albero con la radice vertice.
-        Albero albero = new Albero(vertice);
+        NodoLF albero = new NodoLF(vertice);
         coda.add(albero);
         visitati.put(vertice, true);
 
         while (!coda.isEmpty()) {
-            Albero alberoCorrente = coda.poll();
+            NodoLF alberoCorrente = coda.poll();
             Nodo verticeCorrente = alberoCorrente.radice();
             for (Nodo adiacente : listeAdiacenza.get(verticeCorrente)) {
                 if (!visitati.get(adiacente)) {
-                    Albero figlio = new Albero(adiacente);
+                    NodoLF figlio = new NodoLF(adiacente);
                     alberoCorrente.aggiungiFiglio(figlio);
                     coda.add(figlio);
                     visitati.put(adiacente, true);
@@ -122,7 +122,7 @@ public class Grafo {
         return albero;
     }
 
-    public Albero getAlberoDFS(Nodo vertice) {
+    public NodoLF getAlberoDFS(Nodo vertice) {
         controlliEsistenzaVertici(vertice);
 
         Map<Nodo, Boolean> visitati = new HashMap<>();
@@ -133,25 +133,13 @@ public class Grafo {
         return getAlberoDFS(vertice, visitati);
     }
 
-    @Override
-    public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append("Grafo con ").append(numeroVertici()).append(" vertici e ")
-                .append(numeroArchi()).append(" archi >>>>>>\n");
-        for (Nodo vertice : listeAdiacenza.keySet()) {
-            sb.append(informazioneVertice(vertice));
-        }
-        sb.append("<<<<<<");
-        return sb.toString();
-    }
-
     // Metodo privato per la visita in profondità.
-    private Albero getAlberoDFS(Nodo vertice, Map<Nodo, Boolean> visitati) {
+    private NodoLF getAlberoDFS(Nodo vertice, Map<Nodo, Boolean> visitati) {
         visitati.put(vertice, true);
-        Albero albero = new Albero(vertice);
+        NodoLF albero = new NodoLF(vertice);
         for (Nodo adiacente : listeAdiacenza.get(vertice)) {
             if (!visitati.get(adiacente)) {
-                Albero figlio = getAlberoDFS(adiacente, visitati);
+                NodoLF figlio = getAlberoDFS(adiacente, visitati);
                 albero.aggiungiFiglio(figlio);
             }
         }
@@ -165,5 +153,17 @@ public class Grafo {
                 throw new IllegalArgumentException("Il vertice " + vertice + " non esiste.");
             }
         }
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("Grafo con ").append(numeroVertici()).append(" vertici e ")
+                .append(numeroArchi()).append(" archi >>>>>>\n");
+        for (Nodo vertice : listeAdiacenza.keySet()) {
+            sb.append(informazioneVertice(vertice));
+        }
+        sb.append("<<<<<<");
+        return sb.toString();
     }
 }
