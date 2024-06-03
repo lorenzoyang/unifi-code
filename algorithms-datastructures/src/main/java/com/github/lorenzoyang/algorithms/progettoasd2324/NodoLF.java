@@ -4,21 +4,22 @@ import java.util.LinkedList;
 import java.util.List;
 
 /**
- * 'Nodo Lista Figli': Nodo di un albero che ha un numero imprecisato di figli
- *
- * @author Lorenzo Yang
+ * Lorenzo Yang
+ * Matricola: 7136074
  */
 public class NodoLF {
-    private final Nodo radice; // l'informazione contenuta nel nodo
-    private final LinkedList<NodoLF> figli;
+    // NodoLF è una classe che rappresenta un nodo di un "albero lista figli (LF)".
 
-    public NodoLF(Nodo radice) {
-        this.radice = radice;
+    private final Nodo vertice; // l'informazione contenuta nel nodo
+    private final LinkedList<NodoLF> figli; // lista dei figli del nodo
+
+    public NodoLF(Nodo vertice) {
+        this.vertice = vertice;
         this.figli = new LinkedList<>();
     }
 
-    public Nodo radice() {
-        return radice;
+    public Nodo vertice() {
+        return vertice;
     }
 
     public List<NodoLF> figli() {

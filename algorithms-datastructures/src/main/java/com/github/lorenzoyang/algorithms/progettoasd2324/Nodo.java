@@ -3,9 +3,8 @@ package com.github.lorenzoyang.algorithms.progettoasd2324;
 import java.util.Objects;
 
 /**
- * Nodo di un grafo non orientato rappresentato con liste di adiacenza.
- *
- * @author Lorenzo Yang
+ * Lorenzo Yang
+ * Matricola: 7136074
  */
 public class Nodo {
     private final String info;

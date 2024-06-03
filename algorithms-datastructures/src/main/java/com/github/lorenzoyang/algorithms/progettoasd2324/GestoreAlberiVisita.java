@@ -1,12 +1,11 @@
 package com.github.lorenzoyang.algorithms.progettoasd2324;
 
 /**
- * Classe per la gestione degli alberi di visita di un grafo.
- *
- * @author Lorenzo Yang
+ * Lorenzo Yang
+ * Matricola: 7136074
  */
 public class GestoreAlberiVisita {
-    private NodoLF albero;
+    private NodoLF albero; // la radice dell'albero di visita
 
     public GestoreAlberiVisita() {
         this(null);
@@ -26,18 +25,18 @@ public class GestoreAlberiVisita {
         }
         NodoLF alberoNodo = cercaNodo(albero, nodo);
         if (alberoNodo == null) {
-            return "Nodo non trovato";
+            return "Nodo '" + nodo + "' non appartiene all'albero di visita";
         }
         StringBuilder sb = new StringBuilder();
-        sb.append("Figli di ").append(nodo).append(": ");
+        sb.append("Figli del vertice '").append(nodo).append("': ");
         for (NodoLF figlio : alberoNodo.figli()) {
-            sb.append(figlio.radice()).append(", ");
+            sb.append(figlio.vertice()).append(", ");
         }
         return sb.toString();
     }
 
     private NodoLF cercaNodo(NodoLF albero, Nodo nodo) {
-        if (albero.radice().equals(nodo)) {
+        if (albero.vertice().equals(nodo)) {
             return albero;
         }
         for (NodoLF figlio : albero.figli()) {

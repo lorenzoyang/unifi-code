@@ -6,14 +6,11 @@ import java.util.Map;
 import java.util.Queue;
 
 /**
- * Grafo non orientato rappresentato con le liste di adiacenza.
- *
- * @author Lorenzo Yang
+ * Lorenzo Yang
+ * Matricola: 7136074
  */
 public class Grafo {
-    // HashMap per memorizzare le liste di adiacenza.
-    // Ogni lista di adiacenza (LinkedList<Nodo>) e' associata ad un nodo/vertice (Nodo).
-    private final Map<Nodo, LinkedList<Nodo>> listeAdiacenza;
+    private final Map<Nodo, LinkedList<Nodo>> listeAdiacenza; // HashMap per memorizzare le liste di adiacenza.
     private int numeroArchi;
 
     public Grafo() {
@@ -94,7 +91,7 @@ public class Grafo {
     public NodoLF getAlberoBFS(Nodo vertice) {
         controlliEsistenzaVertici(vertice);
 
-        // Inizializzazione della mappa dei vertici visitati.
+        // map per tenere traccia dei vertici visitati.
         Map<Nodo, Boolean> visitati = new HashMap<>();
         for (Nodo nodo : listeAdiacenza.keySet()) {
             visitati.put(nodo, false);
@@ -102,24 +99,24 @@ public class Grafo {
         // la coda per la visita in ampiezza
         Queue<NodoLF> coda = new LinkedList<>();
 
-        // Creazione dell'albero con la radice vertice.
-        NodoLF albero = new NodoLF(vertice);
-        coda.add(albero);
+        // creazione della radice dell'albero BFS
+        NodoLF radice = new NodoLF(vertice);
         visitati.put(vertice, true);
+        coda.add(radice);
 
         while (!coda.isEmpty()) {
-            NodoLF alberoCorrente = coda.poll();
-            Nodo verticeCorrente = alberoCorrente.radice();
+            NodoLF alberoCorrente = coda.poll(); // il primo elemento della coda sara' la radice dell'albero corrente
+            Nodo verticeCorrente = alberoCorrente.vertice();
             for (Nodo adiacente : listeAdiacenza.get(verticeCorrente)) {
                 if (!visitati.get(adiacente)) {
                     NodoLF figlio = new NodoLF(adiacente);
                     alberoCorrente.aggiungiFiglio(figlio);
-                    coda.add(figlio);
                     visitati.put(adiacente, true);
+                    coda.add(figlio);
                 }
             }
         }
-        return albero;
+        return radice;
     }
 
     public NodoLF getAlberoDFS(Nodo vertice) {
