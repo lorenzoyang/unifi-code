@@ -4,7 +4,7 @@ Questo è il mio progetto personale per tenere traccia del codice che ho scritto
 
 - [Unifi code](#unifi-code)
   - [Algoritmi e struttura dati](#algoritmi-e-struttura-dati)
-  - [RISC-V code snippets](#risc-v-code-snippets)
+  - [RISC-V code](#risc-v-code)
   - [Esercizi di Java](#esercizi-di-java)
   - [Esercizi di Javamm](#esercizi-di-javamm)
   - [Licenza](#licenza)
@@ -38,15 +38,21 @@ Alcune implementazioni di algoritmi e strutture dati scritti in Java.
 
 [torna su](#unifi-code)
 
-## RISC-V code snippets
 
-Una serie di file RISC-V che implementano varie funzioni utili.
+## RISC-V code
+
 Per eseguire questi codici RISC-V, è necessario utilizzare un simulatore RISC-V come [Ripes](https://github.com/mortbopet/Ripes).
 
-- [x] [PrintString](./riscv_code/PrintString.s) 
-- [x] [ToUpperCase](./riscv_code/ToUpperCase.s)
-- [x] [Factorial](./riscv_code/Factorial.s)
-- [x] [SwapWithNext](./riscv_code/SwapWithNext.s)
+- **RISC-V code snippets:** Una serie di file RISC-V che implementano varie funzioni utili.
+  - [x] [PrintString](./riscv_code/PrintString.s) 
+  - [x] [ToUpperCase](./riscv_code/ToUpperCase.s)
+  - [x] [Factorial](./riscv_code/Factorial.s)
+  - [x] [SwapWithNext](./riscv_code/SwapWithNext.s)
+
+- **[Progetto Assembly RISC-V per il Corso di Architetture degli Elaboratori A.A. 2023/2024 - Valutatore di Espressioni](https://github.com/lorenzoyang/ArithmeticExprEval)**
+
+[torna su](#unifi-code)
+
 
 ## Esercizi di Java 
 
@@ -133,3 +139,4 @@ Gli esercizi di [Javamm](https://github.com/LorenzoBettini/javamm) (Java procedu
 Questo progetto è distribuito con la licenza MIT. Consulta il file [LICENSE](./LICENSE) per ulteriori dettagli.
 
 [torna su](#unifi-code)
+
