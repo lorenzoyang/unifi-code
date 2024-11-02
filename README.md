@@ -56,7 +56,7 @@ Per eseguire questi codici RISC-V, è necessario utilizzare un simulatore RISC-V
 
 ## Esercizi di Java 
 
-In corso.
+- [Espressioni Aritmetiche](./java-mp/src/main/java/com/github/lorenzoyang/expressions/) ([PDF](./java-mp/src/main/java/com/github/lorenzoyang/expressions/1%20-%20Esercizio%20Espressioni%20Aritmetiche%20-%20svolgimento.pdf))
 
 [torna su](#unifi-code)
 

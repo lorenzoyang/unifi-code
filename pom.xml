@@ -11,6 +11,7 @@
     <modules>
         <module>javamm-exercises</module>
         <module>algorithms-datastructures</module>
+        <module>java-mp</module>
     </modules>
 
     <properties>
