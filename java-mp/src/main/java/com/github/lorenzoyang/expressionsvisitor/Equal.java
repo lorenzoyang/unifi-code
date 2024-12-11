@@ -12,3 +12,4 @@ public class Equal extends BinaryExpression {
     }
 
 }
+

@@ -17,3 +17,4 @@ public class BooleanConstant implements Expression {
         return visitor.visitBooleanConstant(this);
     }
 }
+

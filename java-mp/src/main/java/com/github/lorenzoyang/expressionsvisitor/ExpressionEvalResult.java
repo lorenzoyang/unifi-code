@@ -5,6 +5,16 @@ public abstract class ExpressionEvalResult {
     private ExpressionEvalResult() {
     }
 
+    public abstract Object getValue();
+
+    public int asInt() {
+        throw new ExpressionEvalResultException("Not a valid int: " + getValue());
+    }
+
+    public boolean asBoolean() {
+        throw new ExpressionEvalResultException("Not a valid boolean: " + getValue());
+    }
+
     public static ExpressionEvalResult ofInt(int value) {
         return new ExpressionEvalResult() {
             @Override
@@ -31,15 +41,5 @@ public abstract class ExpressionEvalResult {
                 return value;
             }
         };
-    }
-
-    public abstract Object getValue();
-
-    public int asInt() {
-        throw new ExpressionEvalResultException("Not a valid int: " + getValue());
-    }
-
-    public boolean asBoolean() {
-        throw new ExpressionEvalResultException("Not a valid boolean: " + getValue());
     }
 }

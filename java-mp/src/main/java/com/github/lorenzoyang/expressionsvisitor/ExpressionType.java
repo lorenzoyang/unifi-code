@@ -15,16 +15,8 @@ public abstract class ExpressionType {
             return "boolean";
         }
     };
- 
+
     private ExpressionType() {
-    }
-
-    public static ExpressionType ofInt() {
-        return INT;
-    }
-
-    public static ExpressionType ofBoolean() {
-        return BOOLEAN;
     }
 
     public boolean isInt() {
@@ -34,4 +26,13 @@ public abstract class ExpressionType {
     public boolean isBoolean() {
         return this == BOOLEAN;
     }
+
+    public static ExpressionType ofInt() {
+        return INT;
+    }
+
+    public static ExpressionType ofBoolean() {
+        return BOOLEAN;
+    }
 }
+

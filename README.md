@@ -59,6 +59,7 @@ Per eseguire questi codici RISC-V, è necessario utilizzare un simulatore RISC-V
 - [Espressioni Aritmetiche](./java-mp/src/main/java/com/github/lorenzoyang/expressions/) ([PDF](./java-mp/src/main/java/com/github/lorenzoyang/expressions/1%20-%20Esercizio%20Espressioni%20Aritmetiche%20-%20svolgimento.pdf))
 - [File System](./java-mp/src/main/java/com/github/lorenzoyang/filesystem/) ([PDF](./java-mp/src/main/java/com/github/lorenzoyang/filesystem/2%20-%20Esercizio%20Composite%20FileSystem%20-%20svolgimento.pdf))
 - [Espressioni Visitor](./java-mp/src/main/java/com/github/lorenzoyang/expressionsvisitor/) ([PDF](./java-mp/src/main/java/com/github/lorenzoyang/expressionsvisitor/3%20-%20Esercizio%20Espressioni%20Visitor%20-%20svolgimento.pdf))
+- [File System Visitor](./java-mp/src/main/java/com/github/lorenzoyang/filesystemvisitor/) ([PDF](./java-mp/src/main/java/com/github/lorenzoyang/filesystemvisitor/4%20-%20Esercizio%20Composite%20FileSystem%20Visitor%20-%20svolgimento%20(1).pdf))
 
 [torna su](#unifi-code)
 
