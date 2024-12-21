@@ -5,7 +5,7 @@ Questo è il mio progetto personale per tenere traccia del codice che ho scritto
 - [Unifi code](#unifi-code)
   - [Algoritmi e struttura dati](#algoritmi-e-struttura-dati)
   - [RISC-V code](#risc-v-code)
-  - [Esercizi di Java](#esercizi-di-java)
+  - [Progetto di Java per l'Esame di MP](#progetto-di-java-per-lesame-di-mp)
   - [Esercizi di Javamm](#esercizi-di-javamm)
   - [Licenza](#licenza)
 
@@ -54,12 +54,7 @@ Per eseguire questi codici RISC-V, è necessario utilizzare un simulatore RISC-V
 [torna su](#unifi-code)
 
 
-## Esercizi di Java 
-
-- [Espressioni Aritmetiche](./java-mp/src/main/java/com/github/lorenzoyang/expressions/) ([PDF](./java-mp/src/main/java/com/github/lorenzoyang/expressions/1%20-%20Esercizio%20Espressioni%20Aritmetiche%20-%20svolgimento.pdf))
-- [File System](./java-mp/src/main/java/com/github/lorenzoyang/filesystem/) ([PDF](./java-mp/src/main/java/com/github/lorenzoyang/filesystem/2%20-%20Esercizio%20Composite%20FileSystem%20-%20svolgimento.pdf))
-- [Espressioni Visitor](./java-mp/src/main/java/com/github/lorenzoyang/expressionsvisitor/) ([PDF](./java-mp/src/main/java/com/github/lorenzoyang/expressionsvisitor/3%20-%20Esercizio%20Espressioni%20Visitor%20-%20svolgimento.pdf))
-- [File System Visitor](./java-mp/src/main/java/com/github/lorenzoyang/filesystemvisitor/) ([PDF](./java-mp/src/main/java/com/github/lorenzoyang/filesystemvisitor/4%20-%20Esercizio%20Composite%20FileSystem%20Visitor%20-%20svolgimento%20(1).pdf))
+## Progetto di Java per l'Esame di MP
 
 [torna su](#unifi-code)
 

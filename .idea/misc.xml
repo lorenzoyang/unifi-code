@@ -10,6 +10,7 @@
     <option name="ignoredFiles">
       <set>
         <option value="$PROJECT_DIR$/benchmark/pom.xml" />
+        <option value="$PROJECT_DIR$/java-mp/pom.xml" />
       </set>
     </option>
   </component>
