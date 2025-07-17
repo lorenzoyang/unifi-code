@@ -56,8 +56,10 @@ Per eseguire questi codici RISC-V, è necessario utilizzare un simulatore RISC-V
 
 ## Progetto di Java per l'Esame di MP
 
-[torna su](#unifi-code)
+Il progetto per l'esame di Metodologie di Programmazione è disponibile su GitHub:
+- [design-pattern-mp](https://github.com/lorenzoyang/design-pattern-mp)
 
+[torna su](#unifi-code)
 
 ## Esercizi di Javamm 
 
