@@ -6,6 +6,7 @@ Questo è il mio progetto personale per tenere traccia del codice che ho scritto
   - [Algoritmi e struttura dati](#algoritmi-e-struttura-dati)
   - [RISC-V code](#risc-v-code)
   - [Progetto di Java per l'Esame di MP](#progetto-di-java-per-lesame-di-mp)
+  - [Progetto di Sistemi Operativi (A.A. 2024/2025)](#progetto-di-sistemi-operativi-aa-20242025)
   - [Esercizi di Javamm](#esercizi-di-javamm)
   - [Licenza](#licenza)
 
@@ -58,6 +59,14 @@ Per eseguire questi codici RISC-V, è necessario utilizzare un simulatore RISC-V
 
 Il progetto per l'esame di Metodologie di Programmazione è disponibile su GitHub:
 - [design-pattern-mp](https://github.com/lorenzoyang/design-pattern-mp)
+
+[torna su](#unifi-code)
+
+
+## Progetto di Sistemi Operativi (A.A. 2024/2025)
+
+Il progetto per l'esame di Sistemi Operativi è disponibile su GitHub:
+- [ticketing-system](https://github.com/lorenzoyang/ticketing-system): sistema di ticketing (Help Desk) per la gestione di richieste di supporto.
 
 [torna su](#unifi-code)
 
