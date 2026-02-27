@@ -36,3 +36,32 @@ build/
 
 ### Mac OS ###
 .DS_Store
+
+### Python ###
+# Ignora l'ambiente virtuale creato da uv
+.venv/
+venv/
+env/
+# Ignora i file compilati e la cache di Python
+__pycache__/
+*.py[cod]
+*$py.class
+# Test (pytest)
+.pytest_cache/
+.coverage
+
+# IDE e OS (dal tuo file originale)
+.idea/
+*.iws
+*.iml
+*.ipr
+
+.vscode/
+
+.DS_Store
+Thumbs.db
+
+# Build (per eventuali futuri pacchetti Python)
+build/
+dist/
+*.egg-info/
