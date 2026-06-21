@@ -4,6 +4,7 @@ Questo è il mio progetto personale per tenere traccia del codice che ho scritto
 
 - [Unifi code](#unifi-code)
   - [Algoritmi e struttura dati](#algoritmi-e-struttura-dati)
+  - [Algoritmi e Programmazione per l'Analisi dei Dati](#algoritmi-e-programmazione-per-lanalisi-dei-dati)
   - [RISC-V code](#risc-v-code)
   - [Progetto di Java per l'Esame di MP](#progetto-di-java-per-lesame-di-mp)
   - [Progetto di Sistemi Operativi (A.A. 2024/2025)](#progetto-di-sistemi-operativi-aa-20242025)
@@ -36,6 +37,17 @@ Alcune implementazioni di algoritmi e strutture dati scritti in Java.
   - [x] [BreadthFirstSearch](./algorithms-datastructures/src/main/java/com/github/lorenzoyang/algorithms/graph/BreadthFirstSearch.java)
 - **applicazioni**
   - [x] [Calculator](./algorithms-datastructures/src/main/java/com/github/lorenzoyang/algorithms/applications/Calculator.java)
+
+[torna su](#unifi-code)
+
+
+## Algoritmi e Programmazione per l'Analisi dei Dati
+
+Materiale del corso **Algoritmi e Programmazione per l'Analisi dei Dati** (A.A. 2025/2026), con il progetto svolto in Python sul dataset DBLP e una cartella per aggiungere via via gli algoritmi visti a lezione.
+
+- [README della sezione APAD](./APAD/README.md)
+- [Progetto APAD](./APAD/progetto/)
+- [Algoritmi in Python](./APAD/algoritmi/)
 
 [torna su](#unifi-code)
 
