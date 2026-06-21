@@ -1,0 +1,14 @@
+{
+  "name": "dblp-orale-reveal",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "serve": "node server.mjs",
+    "pdf": "node export-pdf.mjs"
+  },
+  "dependencies": {
+    "playwright-core": "^1.47.2",
+    "reveal.js": "^5.1.0"
+  }
+}

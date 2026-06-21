@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analisi DBLP con grafi e sketch</title>
+    <link rel="stylesheet" href="./node_modules/reveal.js/dist/reveal.css">
+    <link rel="stylesheet" href="./styles.css">
+    <script>
+      const printStylesheet = window.location.search.match(/print-pdf/gi)
+        ? "./node_modules/reveal.js/dist/print/pdf.css"
+        : "./node_modules/reveal.js/dist/print/paper.css";
+      document.write(`<link rel="stylesheet" href="${printStylesheet}">`);
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section class="title-slide" data-background-color="#f5f7fb">
+          <div class="title-layout">
+            <div>
+              <p class="kicker">Algoritmi e Programmazione per l'Analisi dei Dati 2025-2026</p>
+              <h1>Analisi del dataset DBLP con grafi e sketch</h1>
+              <p class="subtitle">QUESTION 1.I, 2.(ii), 3.I, 4.2 e 5</p>
+            </div>
+            <div class="title-panel">
+              <span>Autore</span>
+              <strong>Lorenzo Yang</strong>
+              <span>Output</span>
+              <strong>Grafo bipartito, Bottom-k, BFS campionate</strong>
+            </div>
+          </div>
+          <aside class="notes">
+            Aprire con il contesto: dataset bibliografico molto grande e obiettivo di rispondere con algoritmi quasi-lineari.
+          </aside>
+        </section>
+
+        <section>
+          <p class="kicker">Traccia e modello</p>
+          <h2>Dal CSV al grafo bipartito</h2>
+          <div class="two-columns">
+            <div>
+              <ul class="clean-list">
+                <li>Ogni pubblicazione e' un nodo.</li>
+                <li>Ogni autore e' un nodo.</li>
+                <li>Un arco collega autore e pubblicazione scritta.</li>
+                <li>I nodi hanno attributi: anno, titolo, venue, publisher.</li>
+              </ul>
+              <div class="metric-row">
+                <div class="metric"><span>7</span><small>dataset</small></div>
+                <div class="metric"><span>8</span><small>limiti temporali</small></div>
+                <div class="metric"><span>21M</span><small>archi nel grafo unione</small></div>
+              </div>
+            </div>
+            <div class="diagram bipartite-diagram" aria-label="Schema grafo bipartito">
+              <svg viewBox="0 0 620 390" role="img">
+                <g class="edges">
+                  <line x1="150" y1="92" x2="470" y2="80"></line>
+                  <line x1="150" y1="92" x2="470" y2="190"></line>
+                  <line x1="150" y1="196" x2="470" y2="190"></line>
+                  <line x1="150" y1="300" x2="470" y2="190"></line>
+                  <line x1="150" y1="300" x2="470" y2="305"></line>
+                </g>
+                <g class="nodes authors">
+                  <circle cx="150" cy="92" r="28"></circle>
+                  <circle cx="150" cy="196" r="28"></circle>
+                  <circle cx="150" cy="300" r="28"></circle>
+                </g>
+                <g class="nodes pubs">
+                  <rect x="442" y="52" width="56" height="56" rx="7"></rect>
+                  <rect x="442" y="162" width="56" height="56" rx="7"></rect>
+                  <rect x="442" y="277" width="56" height="56" rx="7"></rect>
+                </g>
+                <text x="95" y="42">Autori</text>
+                <text x="392" y="42">Pubblicazioni</text>
+                <text class="node-label" x="150" y="92">A1</text>
+                <text class="node-label" x="150" y="196">A2</text>
+                <text class="node-label" x="150" y="300">A3</text>
+                <text class="node-label" x="470" y="80">P1</text>
+                <text class="node-label" x="470" y="190">P2</text>
+                <text class="node-label" x="470" y="305">P3</text>
+              </svg>
+            </div>
+          </div>
+          <aside class="notes">
+            Sottolineare che la stessa struttura permette di rispondere a tutte le question scelte.
+          </aside>
+        </section>
+
+        <section>
+          <p class="kicker">Implementazione</p>
+          <h2>Lettura a chunk e ID numerici</h2>
+          <div class="two-columns code-layout">
+            <div>
+              <pre><code class="language-python">reader = pd.read_csv(
+    csv_path,
+    sep=";",
+    usecols=usecols,
+    chunksize=100_000,
+)
+
+for chunk in reader:
+    for row in chunk.itertuples(index=False, name=None):
+        pub_node = _add_node(...)
+        for author_name in split_authors(row[author_index]):
+            graph.add_edge(_add_node(...), pub_node)</code></pre>
+            </div>
+            <div class="flow-list">
+              <div><strong>1</strong><span>Carico solo colonne necessarie.</span></div>
+              <div><strong>2</strong><span>Converto autori e pubblicazioni in ID numerici.</span></div>
+              <div><strong>3</strong><span>Salvo attributi utili sui nodi pubblicazione.</span></div>
+              <div><strong>4</strong><span>Evito caricamenti completi dei CSV grandi.</span></div>
+            </div>
+          </div>
+          <aside class="notes">
+            Qui vale la pena nominare NetworkX, Pandas e la scelta di non leggere file grandi interamente in memoria.
+          </aside>
+        </section>
+
+        <section>
+          <p class="kicker">QUESTION 1.I</p>
+          <h2>Autore con piu' pubblicazioni scritte da solo</h2>
+          <div class="two-columns">
+            <div>
+              <ol class="steps">
+                <li>Filtro le pubblicazioni con anno minore o uguale a x.</li>
+                <li>Controllo i vicini della pubblicazione.</li>
+                <li>Se c'e' un solo autore incremento il suo contatore.</li>
+                <li>Scelgo il massimo, con tie-break alfabetico.</li>
+              </ol>
+              <div class="callout">Tempo totale Q1.I: <strong data-field="q1-time">175.150 s</strong></div>
+            </div>
+            <div class="table-frame">
+              <h3>Risultati a year_limit = 2023</h3>
+              <div id="q1-table"></div>
+            </div>
+          </div>
+          <aside class="notes">
+            Far notare che article e inproceedings sono i dataset dove emergono i contatori piu' alti.
+          </aside>
+        </section>
+
+        <section>
+          <p class="kicker">QUESTION 2.(ii)</p>
+          <h2>Bottom-k sketch</h2>
+          <div class="two-columns">
+            <div>
+              <p class="lead">Lo sketch conserva i k elementi con ranking hash piu' piccolo.</p>
+              <div class="formula-grid">
+                <div><span>SIZE</span><strong>|A| ~= (k - 1) / kth(A)</strong></div>
+                <div><span>JACCARD</span><strong>frazione comune nello sketch dell'unione</strong></div>
+              </div>
+              <ul class="clean-list compact">
+                <li>Universo: stringhe.</li>
+                <li>Ranking implicito: hash in [0, 1).</li>
+                <li>Sketch confrontabili: stesso k e stesso seed.</li>
+                <li>Uso dichiarato di ChatGPT come supporto per implementazione e spiegazione.</li>
+              </ul>
+            </div>
+            <pre><code class="language-python">def update(self, element):
+    element = str(element)
+    if element in self._ranks:
+        return
+
+    rank = self._rank(element)
+    if len(self._ranks) < self.k:
+        self._ranks[element] = rank
+        return
+
+    worst = max(self._ranks, key=self._ranks.get)
+    if rank < self._ranks[worst]:
+        del self._ranks[worst]
+        self._ranks[element] = rank</code></pre>
+          </div>
+          <aside class="notes">
+            Spiegare l'intuizione: campione deterministico dei rank minimi, riusabile per cardinalita' e similarita'.
+          </aside>
+        </section>
+
+        <section>
+          <p class="kicker">QUESTION 3.I</p>
+          <h2>Autori distinti: esatto vs Bottom-k</h2>
+          <div class="two-columns">
+            <div class="table-frame">
+              <h3>k = 512</h3>
+              <div id="q3-size-table"></div>
+            </div>
+            <div>
+              <h3>Errore relativo con k = 512</h3>
+              <div id="q3-error-bars" class="chart-frame"></div>
+              <p class="mini-note">Aumentare k migliora in generale la stima, ma con un singolo seed non impone monotonia perfetta.</p>
+            </div>
+          </div>
+          <aside class="notes">
+            Evidenziare i casi piccoli: se lo sketch contiene tutti gli elementi, la stima diventa esatta.
+          </aside>
+        </section>
+
+        <section>
+          <p class="kicker">QUESTION 3.I</p>
+          <h2>Jaccard tra insiemi di autori</h2>
+          <div class="two-columns">
+            <div>
+              <p class="lead">La similarita' piu' alta e' tra <strong>article</strong> e <strong>inproceedings</strong>: molti autori pubblicano sia su riviste sia in conferenze.</p>
+              <div class="formula-grid small">
+                <div><span>k</span><strong>512</strong></div>
+                <div><span>tempo Q3.I</span><strong data-field="q3-time">211.471 s</strong></div>
+              </div>
+            </div>
+            <div class="table-frame">
+              <h3>Coppie piu' informative</h3>
+              <div id="q3-jaccard-table"></div>
+            </div>
+          </div>
+          <aside class="notes">
+            Collegare questa slide al vantaggio degli sketch: stimare similarita' senza mantenere sempre tutto l'insieme completo.
+          </aside>
+        </section>
+
+        <section>
+          <p class="kicker">QUESTION 4.2</p>
+          <h2>Distanza media nella componente connessa piu' grande</h2>
+          <div class="two-columns code-layout">
+            <div>
+              <ol class="steps">
+                <li>Costruisco il sottografo fino all'anno x.</li>
+                <li>Trovo la componente connessa piu' grande.</li>
+                <li>Campiono fino a 16 nodi.</li>
+                <li>Eseguo BFS da ogni nodo campionato.</li>
+                <li>Media delle distanze raggiunte.</li>
+              </ol>
+            </div>
+            <pre><code class="language-python">sampled_nodes = random_generator.sample(nodes, sample_count)
+
+total = 0
+for source in sampled_nodes:
+    distances = bfs_distances(graph, source)
+    total += sum(distances.values())
+
+return total / (sample_count * (n - 1))</code></pre>
+          </div>
+          <div class="callout wide">Parte piu' costosa: BFS ripetute su grafi con milioni di nodi.</div>
+          <aside class="notes">
+            Dire chiaramente che e' una stima per campionamento, non il calcolo esatto di tutte le coppie.
+          </aside>
+        </section>
+
+        <section>
+          <p class="kicker">QUESTION 4.2</p>
+          <h2>Risultati principali per dataset</h2>
+          <div class="two-columns">
+            <div class="table-frame">
+              <h3>year_limit = 2023</h3>
+              <div id="q4-table"></div>
+            </div>
+            <div>
+              <h3>Distanza media stimata</h3>
+              <div id="q4-distance-bars" class="chart-frame"></div>
+              <p class="mini-note">Article e inproceedings formano componenti giganti; incollection mostra distanze medie piu' alte.</p>
+            </div>
+          </div>
+          <aside class="notes">
+            Usare questa slide per interpretare la struttura: componenti grandi ma distanze relativamente contenute nei dataset principali.
+          </aside>
+        </section>
+
+        <section>
+          <p class="kicker">QUESTION 5</p>
+          <h2>Grafo unione: crescita e distanza</h2>
+          <div class="two-columns">
+            <div>
+              <div class="metric-row vertical" id="union-metrics"></div>
+              <p class="mini-note">Il grafo unione riusa gli stessi ID per autori uguali e mantiene distinte le pubblicazioni per dataset.</p>
+            </div>
+            <div>
+              <h3>Distanza media stimata - Q5/Q4.2</h3>
+              <div id="union-line" class="chart-frame line-chart"></div>
+              <p class="mini-note">Corrisponde alla tabella "Ripetizione di QUESTION 4.2 sul grafo unione".</p>
+            </div>
+          </div>
+          <aside class="notes">
+            Notare il trend: la componente cresce molto, ma la distanza stimata finale scende sotto 10.
+          </aside>
+        </section>
+
+        <section>
+          <p class="kicker">QUESTION 5</p>
+          <h2>Author graph</h2>
+          <div class="two-columns">
+            <div>
+              <p class="lead">Nel grafo degli autori, due autori sono collegati se hanno scritto almeno una pubblicazione insieme.</p>
+              <pre><code class="language-python">for author_a, author_b in combinations(authors, 2):
+    if author_graph.has_edge(author_a, author_b):
+        author_graph[author_a][author_b]["weight"] += 1
+    else:
+        author_graph.add_edge(author_a, author_b, weight=1)</code></pre>
+            </div>
+            <div id="author-card" class="result-card"></div>
+          </div>
+          <aside class="notes">
+            Chiudere la parte Q5 con un risultato concreto e facile da ricordare.
+          </aside>
+        </section>
+
+        <section>
+          <p class="kicker">Tempi e conclusioni</p>
+          <h2>Cosa e' costato di piu'</h2>
+          <div class="two-columns">
+            <div id="timing-bars" class="chart-frame"></div>
+            <div class="closing-points">
+              <div><strong>Modello unico</strong><span>Il grafo bipartito supporta tutte le question scelte.</span></div>
+              <div><strong>Sketch</strong><span>Bottom-k riduce memoria e permette stime di size e Jaccard.</span></div>
+              <div><strong>Campionamento</strong><span>La distanza media diventa trattabile anche su componenti molto grandi.</span></div>
+              <div><strong>Collo di bottiglia</strong><span>Q4.2 domina i tempi per le BFS ripetute.</span></div>
+            </div>
+          </div>
+          <aside class="notes">
+            Conclusione secca: requisiti soddisfatti, risultati misurati, tempi riportati nei CSV.
+          </aside>
+        </section>
+      </div>
+    </div>
+
+    <script type="module" src="./slides.js"></script>
+  </body>
+</html>
