@@ -1,0 +1,57 @@
+dataset,year_limit,author,solo_publications,execution_time_seconds
+article,1960,Willard Van Orman Quine,23,175.15
+article,1970,Henry C. Thacher Jr.,37,175.15
+article,1980,Boleslaw Sobocinski,75,175.15
+article,1990,Harold Joseph Highland,136,175.15
+article,2000,Harold Joseph Highland,208,175.15
+article,2010,Robert L. Glass,251,175.15
+article,2020,T. D. Wilson 0001,347,175.15
+article,2023,T. D. Wilson 0001,347,175.15
+book,1960,Abraham Wald,1,175.15
+book,1970,Donald E. Knuth,2,175.15
+book,1980,Donald E. Knuth,4,175.15
+book,1990,C. J. Date 0001,11,175.15
+book,2000,C. J. Date 0001,14,175.15
+book,2010,Andrew S. Tanenbaum,20,175.15
+book,2020,Andrew S. Tanenbaum,20,175.15
+book,2023,John A. Vince,21,175.15
+incollection,1960,,0,175.15
+incollection,1970,David Birch,1,175.15
+incollection,1980,Ketil Bo,4,175.15
+incollection,1990,Michael Stonebraker,7,175.15
+incollection,2000,Andrew P. Sage,45,175.15
+incollection,2010,Andrew P. Sage,46,175.15
+incollection,2020,Gerrit Bleumer,71,175.15
+incollection,2023,Gerrit Bleumer,71,175.15
+inproceedings,1960,Maurice V. Wilkes,4,175.15
+inproceedings,1970,Robert M. Hayes,10,175.15
+inproceedings,1980,Edsger W. Dijkstra,22,175.15
+inproceedings,1990,Vaughan R. Pratt,27,175.15
+inproceedings,2000,Vaughan R. Pratt,40,175.15
+inproceedings,2010,John K. Debenham,73,175.15
+inproceedings,2020,Ichiro Satoh,116,175.15
+inproceedings,2023,Ichiro Satoh,118,175.15
+mastersthesis,1960,,0,175.15
+mastersthesis,1970,,0,175.15
+mastersthesis,1980,,0,175.15
+mastersthesis,1990,Peter Van Roy,1,175.15
+mastersthesis,2000,Christian Schulte 0001,1,175.15
+mastersthesis,2010,Christian Schulte 0001,1,175.15
+mastersthesis,2020,Adams Wei Yu,1,175.15
+mastersthesis,2023,Adams Wei Yu,1,175.15
+phdthesis,1960,Robert Charuel,2,175.15
+phdthesis,1970,Gabrièle Saucier,2,175.15
+phdthesis,1980,François Rodriguez,2,175.15
+phdthesis,1990,Abbas Dandache,2,175.15
+phdthesis,2000,Abbas Dandache,2,175.15
+phdthesis,2010,Abbas Dandache,2,175.15
+phdthesis,2020,Mohammad Jafari,3,175.15
+phdthesis,2023,Mohammad Jafari,3,175.15
+proceedings,1960,,0,175.15
+proceedings,1970,,0,175.15
+proceedings,1980,,0,175.15
+proceedings,1990,,0,175.15
+proceedings,2000,,0,175.15
+proceedings,2010,,0,175.15
+proceedings,2020,Bruce L. Jacob,1,175.15
+proceedings,2023,Bruce L. Jacob,1,175.15

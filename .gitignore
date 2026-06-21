@@ -50,6 +50,9 @@ __pycache__/
 .pytest_cache/
 .coverage
 
+# APAD project data
+APAD/progetto/csv/
+
 # IDE e OS (dal tuo file originale)
 .idea/
 *.iws
@@ -65,3 +68,6 @@ Thumbs.db
 build/
 dist/
 *.egg-info/
+
+# APAD project data
+APAD/progetto/csv/

@@ -1,0 +1,9 @@
+dataset,year_limit,author,solo_publications,execution_time_seconds,question_5_total_execution_time_seconds
+union,1960,Willard Van Orman Quine,23,54.972,2794.805
+union,1970,Henry C. Thacher Jr.,37,54.972,2794.805
+union,1980,Boleslaw Sobocinski,75,54.972,2794.805
+union,1990,Harold Joseph Highland,140,54.972,2794.805
+union,2000,Harold Joseph Highland,214,54.972,2794.805
+union,2010,Ronald R. Yager,262,54.972,2794.805
+union,2020,Ronald R. Yager,348,54.972,2794.805
+union,2023,Ronald R. Yager,351,54.972,2794.805
