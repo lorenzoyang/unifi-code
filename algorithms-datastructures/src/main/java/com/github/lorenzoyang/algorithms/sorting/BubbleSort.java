@@ -28,7 +28,7 @@ public class BubbleSort {
         }
     }
 
-    public static void main(String[] args) {
+    static void main() {
         var array1 = generateIntegerArray(10);
         printArray(array1, BubbleSort::sort);
         var array2 = generateIntegerArray(10);

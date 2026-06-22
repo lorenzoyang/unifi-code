@@ -1,7 +1,10 @@
 package com.github.lorenzoyang.algorithms.sorting;
 
+import static com.github.lorenzoyang.algorithms.sorting.Utils.generateIntegerArray;
+import static com.github.lorenzoyang.algorithms.sorting.Utils.printArray;
+
 public class CountingSort {
-    public static void sort(int[] array) {
+    public static void sort(Integer[] array) {
         int max = array[0];
         int min = array[0];
         for (int i : array) {
@@ -24,5 +27,10 @@ public class CountingSort {
                 array[index++] = i + min;
             }
         }
+    }
+
+    static void main() {
+        var array1 = generateIntegerArray(10);
+        printArray(array1, CountingSort::sort);
     }
 }
