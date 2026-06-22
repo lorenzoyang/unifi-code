@@ -45,7 +45,7 @@ public class HeapSort {
         array[j - 1] = tmp;
     }
 
-    public static void main(String[] args) {
+    static void main() {
         var array1 = generateIntegerArray(10);
         printArray(array1, HeapSort::sort);
     }
