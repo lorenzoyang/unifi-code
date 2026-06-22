@@ -57,7 +57,7 @@ public class QuickSort {
         return array[low];
     }
 
-    public static void main(String[] args) {
+    static void main() {
         var array1 = generateIntegerArray(10);
         printArray(array1, QuickSort::sort);
 

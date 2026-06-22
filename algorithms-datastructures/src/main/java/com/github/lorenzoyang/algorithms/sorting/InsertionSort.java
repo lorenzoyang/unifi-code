@@ -31,17 +31,18 @@ public class InsertionSort {
             indices[j] = tmp;
         }
         System.out.println("Indices: ");
-        for (int i = 0; i < indices.length; i++) {
-            System.out.print(indices[i] + " ");
+        for (int index : indices) {
+            System.out.print(index + " ");
         }
 
 
     }
 
-    public static void main(String[] args) {
+    static void main() {
         var array1 = generateIntegerArray(10);
-        printArray(array1, InsertionSort::sort);
+        var array2 = array1.clone();
 
-        indirectSort(array1);
+        printArray(array1, InsertionSort::sort);
+        indirectSort(array2);
     }
 }

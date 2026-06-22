@@ -55,7 +55,7 @@ public class MegeSort {
         }
     }
 
-    public static void main(String[] args) {
+    static void main() {
         // test top-down merge sort
         System.out.println("Top-down merge sort");
         var array1 = generateIntegerArray(10);

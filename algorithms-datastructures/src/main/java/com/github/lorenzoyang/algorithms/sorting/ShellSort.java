@@ -22,7 +22,7 @@ public class ShellSort {
         }
     }
 
-    public static void main(String[] args) {
+    static void main() {
         var array = generateIntegerArray(10);
         printArray(array, ShellSort::sort);
     }
